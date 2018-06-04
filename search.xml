@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[第一章：概述]]></title>
+    <url>%2F2018%2F06%2F04%2F%E6%95%B0%E6%8D%AE%E5%BA%93_%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E6%A6%82%E8%BF%B0%2F</url>
+    <content type="text"><![CDATA[]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[前言]]></title>
     <url>%2F2018%2F05%2F21%2Fpython%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B_%E5%89%8D%E8%A8%80%2F</url>
-    <content type="text"><![CDATA[在开始学习这门语言之前，我首先要明确几件事&emsp;&emsp;&emsp;&emsp; 1.为什么要学习Python？&emsp;&emsp;&emsp;&emsp; 2.怎样来学习Python？ 我为什么要学习Python？&emsp;&emsp;对于这个问题，我个人一开始的出发点就是因为三个因素：&emsp;&emsp;&emsp;&emsp;易学、就业机会多、热门语言 &emsp;&emsp;先说说易学，相信大家都有听说过都听说过C语言和Java这门语言，如果你先用C写一个程序或者用java语言来写一个程序,再用Python语言来写一个程序，相信你就会明白什么是易学了。因为用python语言来写一个程序，实在是一个令人心情舒畅的过程。这里不是在贬低c语言和Java语言,每种语言都有着各自的优缺点，但是如果让我来做为一个刚入门的新手，去评价去选择一门语言做为编程方面入门的话，我一定会选择Python，因为python的语法规则非常接近于自然语言，代码语句较少，书写简单，适合新手去学习。下面上代码实例说明。 c语言写hello world12345#include&lt;stdio&gt;int main()&#123; printf("hello world!"); return;&#125; java写hello world12345public class Hello &#123; public static void main(String[] args) &#123; System.out.println("hello world!"); &#125;&#125; python 写hello world1print("hello world!") &emsp;&emsp; 就业机会多：在进入这篇博客之前，如果你细心观察了的话，就会发现我提出的一个问题：Python为什么这么火？实际上这是一个非常好的问题。得益很很多因素，最重要的因素是越来越多的大数据和云计算解决方案。它被用于机器学习、人工智能系统和各种现代技术中。也是因为它能够非常简便的分析和处理数据。有兴趣的童鞋可以参考这篇文章&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;万能的Python背后：这6大原因让它爆火&emsp;&emsp;如果前往一些知名网站，可以看到许多招聘企业需要这方面的人才。java需求范围很大，但这几年让各种培训、院校堆的人挤人。对于Python来说，这门语言的需要人才市场还远远没有饱和，许多公司都缺少数据分析这方面的人才 &emsp;&emsp; 热门语言：这我就直接链出TIOBE编程语言排行好了 怎样来学习Python？&emsp;&emsp;这方面我也在摸索，大概方向已经确定好了，基础系列的目标主要是解决Python的基础语法的学习]]></content>
+    <content type="text"><![CDATA[在开始学习这门语言之前，我首先要明确几件事&emsp;&emsp;&emsp;&emsp; 1.为什么要学习Python？&emsp;&emsp;&emsp;&emsp; 2.怎样来学习Python？ 我为什么要学习Python？&emsp;&emsp;对于这个问题，我个人一开始的出发点就是因为三个因素：&emsp;&emsp;&emsp;&emsp;易学、就业机会多、热门语言 &emsp;&emsp;先说说易学，相信大家都有听说过都听说过C语言和Java这门语言，如果你先用C写一个程序或者用java语言来写一个程序,再用Python语言来写一个程序，相信你就会明白什么是易学了。因为用python语言来写一个程序，实在是一个令人心情舒畅的过程。这里不是在贬低c语言和Java语言,每种语言都有着各自的优缺点，但是如果让我来做为一个刚入门的新手，去评价去选择一门语言做为编程方面入门的话，我一定会选择Python，因为python的语法规则非常接近于自然语言，代码语句较少，书写简单，适合新手去学习。下面上代码实例说明。 c语言写hello world12345#include&lt;stdio&gt;int main()&#123; printf("hello world!"); return;&#125; java写hello world12345public class Hello &#123; public static void main(String[] args) &#123; System.out.println("hello world!"); &#125;&#125; python 写hello world1print("hello world!") &emsp;&emsp; 就业机会多：在进入这篇博客之前，如果你细心观察了的话，就会发现我提出的一个问题：Python为什么这么火？实际上这是一个非常好的问题。得益很很多因素，最重要的因素是越来越多的大数据和云计算解决方案。它被用于机器学习、人工智能系统和各种现代技术中。也是因为它能够非常简便的分析和处理数据。有兴趣的童鞋可以参考这篇文章&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;万能的Python背后：这6大原因让它爆火&emsp;&emsp;如果前往一些知名网站，可以看到许多招聘企业需要这方面的人才。java需求范围很大，但这几年让各种培训、院校堆的人挤人。对于Python来说，这门语言的需要人才市场还远远没有饱和，许多公司都缺少数据分析这方面的人才 &emsp;&emsp; 热门语言：达到什么样的标准才叫热门语言呢，当然是从该语言的使用人数、搜索引擎中该词条的搜索次数和培训机构的多少来看，这我就直接链出TIOBE编程语言排行供大家参考好了 怎样来学习Python？&emsp;&emsp;这方面我也在摸索，大概方向已经确定好了，基础系列的目标主要是解决Python的基础语法的学习，后续再学习Python的核心编程、网络编程、爬虫等，等学完前面这些后再想后面的怎么学]]></content>
       <categories>
         <category>python基础编程</category>
       </categories>
@@ -14,7 +25,7 @@
   <entry>
     <title><![CDATA[我的第一篇博客]]></title>
     <url>%2F2018%2F05%2F19%2F%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%2F</url>
-    <content type="text"><![CDATA[&emsp;&emsp;从上大学开始就想着有一个属于自己的个人网站，可以在上面记录下自己的学习历程。到今天，这才实现了我这个想法。 &emsp;&emsp;想起了大一时的一腔热血，一头扎进了各种快速建站，结果在服务器的价格与域名备案上退缩了，想起来也是好笑。不管怎样，今天，是一个开心的日子。 &emsp;&emsp;有句话想对有缘来到这个网站的人说：不管你之前，为梦想做过什么或者没有做过什么，只有认认真真的去做了，才不仅仅停留在自己的想象里。 &emsp;&emsp;&emsp;&emsp;每一个不曾起舞的日子都是对生命的辜负 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;加油，越努力，越幸运！]]></content>
+    <content type="text"><![CDATA[&emsp;&emsp;从上大学开始就想着有一个属于自己的个人网站，可以在上面记录下自己的学习历程。到今天，这才实现了我这个想法。 &emsp;&emsp;想起了大一时的一腔热血，一头扎进了各种快速建站，结果在服务器的价格与域名备案上退缩了，想起来也是好笑。不管怎样，今天，是一个开心的日子。 &emsp;&emsp;&emsp;&emsp;每一个不曾起舞的日子都是对生命的辜负 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;加油，越努力，越幸运！]]></content>
       <categories>
         <category>日记</category>
       </categories>
