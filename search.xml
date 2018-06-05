@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[python基础教程_安装]]></title>
+    <url>%2F2018%2F06%2F05%2Fpython%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E5%AE%89%E8%A3%85%2F</url>
+    <content type="text"><![CDATA[基础知识在Windows上安装Python首先，根据你的Windows版本（64位还是32位）从Python的官方网站下载Python。然后，运行下载的EXE安装包：我们可以通过Python官方网站下载获得Python。因为Python是跨平台的，在Windows上写Python程序，放到Linux上也是能够运行的。特别要注意勾上Add Python 3.5 to PATH，然后点“Install Now”即可完成安装。 注：这里特别说明，最好安装32位的，因为64位写出来的程序是无法在你32位的机器上跑起来的 使用IDLE使用IDLE来帮助学习Python因为这个对新手非常友好，刚开始学习Python的话建议使用这个 * IDLE是安装Python时就同时安装好的，在windows环境下，你可以在开始菜单中找到。 * 第一次启动IDLE时，会显示“三个大于号”提示符(&gt;&gt;&gt;)，可以在这里输入代码。shell在得到你的代码后会立即执行，并在屏幕上显示生成的结果。与交互模式下的运行方式一样： 使用文本编辑器选择IDLE里的新建选项打开我们的Python自带的文本编辑器。请注意，绝对不能用Word和Windows自带的记事本。Word保存的不是纯文本文件，而记事本会自作聪明地在文件开始的地方加上几个特殊字符（UTF-8 BOM），结果会导致程序运行出现莫名其妙的错误。 Python的文件你可以用任意文本编辑器建立源代码，但是绝大多数Python文件为了统一都是以.py命名的。]]></content>
+      <categories>
+        <category>python基础编程</category>
+      </categories>
+      <tags>
+        <tag>python基础编程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Python简介(了解)]]></title>
     <url>%2F2018%2F06%2F05%2Fpython%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E7%AE%80%E4%BB%8B%2F</url>
     <content type="text"><![CDATA[Python简介（了解）Python是一种面向对象的解释型计算机程序设计语言，由荷兰人Guido van Rossum于1989年发明，第一个公开发行版发行1991年。Python是纯粹的自由软件， 源代码和解释器CPython遵循 GPL协议。Python语法简洁清晰，特色之一是强制用空白符(white space)作为语句缩进。 排行：7月20日，IEEE发布2017年编程语言排行榜：Python高居首位。 设计定位:Python的设计哲学是“优雅”、“明确”、“简单”。“总是有多种方法来做同一件事”通常是难以忍受的。Python的哲学是“用一种方法，最好是只有一种方法来做一件事”。由于这种设计观念的差异，Python源代码通常被认为比Perl具备更好的可读性，并且能够支撑大规模的软件开发。 Python更新:开发人员尽量避开不成熟或者不重要的优化。一些针对非重要部位的加快运行速度的补丁通常不会被合并到Python内。所以很多人认为Python很慢。不过，根据二八定律，大多数程序对速度要求不高。在某些对运行速度要求很高的情况，Python设计师倾向于使用JIT技术，或者用使用C/C++语言改写这部分程序。可用的JIT技术是PyPy。 执行:Python在执行时，首先会将.py文件中的源代码编译成Python的字节码，然后再由 Python虚拟机 来执行这些编译好的字节码。这种机制的基本思想跟Java，.NET是一致的。然而不同的是，Python的虚拟机是一种更高级的虚拟机。这里的高级并不是通常意义上的高级，不是说比Java或.NET的功能更强大，而是和Java 或.NET相比，Python的虚拟机距离真实机器的距离更远。或者可以认为Python的虚拟机是一种抽象层次更高的虚拟机。基于C的Python编译出的字节码文件，通常是.pyc格式。除此之外，Python还可以以交互模式运行，比如主流操作系统Unix/Linux、Mac、Windows都可以直接在命令模式下直接运行Python交互环境。直接下达操作指令即可实现交互操作。 优点简单：Python是一种代表简单主义思想的语言。阅读一个良好的Python程序就感觉像是在读英语一样。它使你能够专注于解决问题而不是去搞明白语言本身。 免费、开源：使用者可以自由地发布这个软件的拷贝、阅读它的源代码、对它做改动、把它的一部分用于新的自由软件中。可移植性：这些平台包括Linux、Windows、FreeBSD、Macintosh、Solaris、OS/2、Amiga、AROS、AS/400、BeOS、OS/390、z/OS、PalmOS、QNX、VMS、Psion、Acom RISC OS、VxWorks、PlayStation、Sharp Zaurus、Windows CE、PocketPC、Symbian以及Google基于linux开发的android平台。可扩展性：如果需要一段关键代码运行得更快或者希望某些算法不公开，可以部分程序用C或C++编写，然后在Python程序中使用它们。规范的代码：Python采用强制缩进的方式使得代码具有较好可读性。而Python语言写的程序不需要编译成二进制代码。 缺点⑴运行速度。但是如果有速度要求的话，可以用C/C++改写关键部分吧。 ⑵python的开源性使Python语言不能加密。关于不能加密这点，作者想说，在这个时代，大家的时间辣么宝贵，才有那闲功夫去破解你的软件，洗洗睡吧 ⑶构架选择太多。不过这也从另一个侧面说明，python比较优秀，吸引的人才多，项目也多。]]></content>
