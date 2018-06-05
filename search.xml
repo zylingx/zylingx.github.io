@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[python基础教程_安装]]></title>
+    <title><![CDATA[python安装]]></title>
     <url>%2F2018%2F06%2F05%2Fpython%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E5%AE%89%E8%A3%85%2F</url>
-    <content type="text"><![CDATA[基础知识在Windows上安装Python首先，根据你的Windows版本（64位还是32位）从Python的官方网站下载Python。然后，运行下载的EXE安装包：我们可以通过Python官方网站下载获得Python。因为Python是跨平台的，在Windows上写Python程序，放到Linux上也是能够运行的。特别要注意勾上Add Python 3.5 to PATH，然后点“Install Now”即可完成安装。 注：这里特别说明，最好安装32位的，因为64位写出来的程序是无法在你32位的机器上跑起来的 使用IDLE使用IDLE来帮助学习Python因为这个对新手非常友好，刚开始学习Python的话建议使用这个 * IDLE是安装Python时就同时安装好的，在windows环境下，你可以在开始菜单中找到。 * 第一次启动IDLE时，会显示“三个大于号”提示符(&gt;&gt;&gt;)，可以在这里输入代码。shell在得到你的代码后会立即执行，并在屏幕上显示生成的结果。与交互模式下的运行方式一样： 使用文本编辑器选择IDLE里的新建选项打开我们的Python自带的文本编辑器。请注意，绝对不能用Word和Windows自带的记事本。Word保存的不是纯文本文件，而记事本会自作聪明地在文件开始的地方加上几个特殊字符（UTF-8 BOM），结果会导致程序运行出现莫名其妙的错误。 Python的文件你可以用任意文本编辑器建立源代码，但是绝大多数Python文件为了统一都是以.py命名的。]]></content>
+    <content type="text"><![CDATA[基础知识在Windows上安装Python首先，根据你的Windows版本（64位还是32位）从Python的官方网站下载Python。然后，运行下载的EXE安装包：我们可以通过Python官方网站下载获得Python。因为Python是跨平台的，在Windows上写Python程序，放到Linux上也是能够运行的。特别要注意勾上Add Python 3.5 to PATH，然后点“Install Now”即可完成安装。 注：特别说明，最好安装32位的，因为64位写出来的程序是无法在你32位的机器上跑起来的 使用IDLE使用IDLE来帮助学习Python因为这个对新手非常友好，刚开始学习Python的话建议使用这个 * IDLE是安装Python时就同时安装好的，在windows环境下，你可以在开始菜单中找到。 * 第一次启动IDLE时，会显示“三个大于号”提示符(&gt;&gt;&gt;)，可以在这里输入代码。shell在得到你的代码后会立即执行，并在屏幕上显示生成的结果。与交互模式下的运行方式一样： 使用文本编辑器选择IDLE里的新建选项打开我们的Python自带的文本编辑器。请注意，绝对不能用Word和Windows自带的记事本。Word保存的不是纯文本文件，而记事本会自作聪明地在文件开始的地方加上几个特殊字符（UTF-8 BOM），结果会导致程序运行出现莫名其妙的错误。 Python的文件你可以用任意文本编辑器建立源代码，但是绝大多数Python文件为了统一都是以.py命名的。]]></content>
       <categories>
         <category>python基础编程</category>
       </categories>
