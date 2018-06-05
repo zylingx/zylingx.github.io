@@ -90,9 +90,7 @@
 <meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%80%E8%AE%B2/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9E%84%E6%88%90.PNG">
 <meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%80%E8%AE%B2/%E8%AE%B0%E5%BD%95.PNG">
 <meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%80%E8%AE%B2/%E5%AD%97%E6%AE%B5.PNG">
-<meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%80%E8%AE%B2/%E5%A4%96%E9%94%AE.PNG">
-<meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%80%E8%AE%B2/%E5%A4%96%E9%94%AE2.PNG">
-<meta property="og:updated_time" content="2018-06-05T08:14:44.528Z">
+<meta property="og:updated_time" content="2018-06-05T10:16:39.621Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一讲">
 <meta name="twitter:description" content="有人或许会问，为什么要学习数据库？在这个信息化的时代，每时每刻都会有大量的数据产生，只有科学地处理和利用这些数据，才能发现数据本身的价值，而数据库的作用，就是科学而高效的存储数据和利用数据。从今天开始，算是正式开始记录我学习数据库的过程了">
@@ -402,7 +400,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  805 字
+                  564 字
                 </span>
               
 
@@ -418,7 +416,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3 分钟
+                  2 分钟
                 </span>
               
             </div>
@@ -445,9 +443,9 @@
       
         <!-- 图片资源 -->
 <h2 id="为什么要学习数据库？"><a href="#为什么要学习数据库？" class="headerlink" title="为什么要学习数据库？"></a>为什么要学习数据库？</h2><p>&emsp;&emsp;在这个信息化的时代，每时每刻都会有大量的数据产生，只有科学地处理和利用这些数据，才能发现数据本身的价值，而数据库的作用，就是科学而高效的存储数据和利用数据。</p>
-<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><pre><code>* 表：记录的组合 表示同一类事物的组合  
-* 数据库：有组织的、可共享的、相关数据的集合
-* 数据库管理系统：管理数据库的软件系统  
+<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><pre><code>* 表(Table)：记录的组合 表示同一类事物的组合  
+* 数据库(DB)：有组织的、可共享的、相关数据的集合
+* 数据库管理系统(DBMS)：管理数据库的软件系统  
 </code></pre><h2 id="数据库系统的构成"><a href="#数据库系统的构成" class="headerlink" title="数据库系统的构成"></a>数据库系统的构成</h2><p><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%80%E8%AE%B2/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9E%84%E6%88%90.PNG" alt=""></p>
 <h2 id="数据库库管理系统的功能"><a href="#数据库库管理系统的功能" class="headerlink" title="数据库库管理系统的功能"></a>数据库库管理系统的功能</h2><pre><code>* 数据库定义： 负责定义表格式
 * 数据库操纵： 负责表操作(增、删、改、查等)
@@ -464,9 +462,7 @@
 <p><strong>字段</strong>(列/属性)：某一个事物的一个特征<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%80%E8%AE%B2/%E5%AD%97%E6%AE%B5.PNG" alt=""></p>
 <p><strong>冗余</strong>：当出现两个姓名，性别、年龄都相同的张三时，就无法辨别，我们管这种现象叫做冗余  </p>
 <p><strong>主键</strong>：能唯一标识信息的事物<br>&emsp;&emsp;当出现冗余，这两信息就无法辨别，这里就需要设置一个唯一的标识信息。上面表格的学号是主键。这个能唯一标识信息的事物叫做主键。  </p>
-<p><strong>外键</strong>：一个执行另个一个表的指针<br>当在上面表格上添加上班级，教学楼属性后。考虑下能不能把学生信息和班级信息放到一起？<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%80%E8%AE%B2/%E5%A4%96%E9%94%AE.PNG" alt=""><br>答案是不能！因为从前三名可以看出，如果几个人都属于一个班级，那么班级名，所属二级学院、教学楼地址信息重复了三次，会造成信息冗余。<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%80%E8%AE%B2/%E5%A4%96%E9%94%AE2.PNG" alt=""></p>
-<p>通过将信息分开的方法，的确减少的信息冗余，但是如何建立关系呢？这时我们可以通过班级编号建立关系，此时的“班级编号”就是”学生信息表”的外键。（注意在两个表分开写后，我们为“学生信息”增加一个主键“班级编号”当然如果不增加的话，班级名称同样可以成为“班级信息”表的主键）</p>
-<p>通过学生信息表中班级编号这一外键，可以去班级信息表中找到对应的班级信息。</p>
+<p><strong>外键</strong>：一个执行另个一个表的指针  </p>
 
       
     </div>

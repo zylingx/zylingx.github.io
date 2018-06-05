@@ -79,20 +79,23 @@
 
 
 
-<meta name="description" content="模式(Schema)是对数据的抽象，即描述数据的结构 视图(View)是从一个或多个表导出的虚拟表，其内容由查询定义，具有普通表的结构，但不实现数据存储 数据模型对模式的抽象，即描述模式的结构 三级模式（三级视图）* 外模式(用户模式)：某一用户能看到与处理的数据的结构描述 * 模式 (全局模式) ：从全局角度理解/管理的数据的结构描述 * 内模式(物理模式)：存储在介质上的数据的结构描述 以图">
+<meta name="description" content="第二讲主要讲述了三级模式、两层映像、两个独立性、关系模型的组成、表的严格定义、关系">
 <meta name="keywords" content="数据库">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第二讲">
 <meta property="og:url" content="https://zylingx.github.io/2018/06/05/数据库_第二讲/index.html">
 <meta property="og:site_name" content="疯疯癫癫">
-<meta property="og:description" content="模式(Schema)是对数据的抽象，即描述数据的结构 视图(View)是从一个或多个表导出的虚拟表，其内容由查询定义，具有普通表的结构，但不实现数据存储 数据模型对模式的抽象，即描述模式的结构 三级模式（三级视图）* 外模式(用户模式)：某一用户能看到与处理的数据的结构描述 * 模式 (全局模式) ：从全局角度理解/管理的数据的结构描述 * 内模式(物理模式)：存储在介质上的数据的结构描述 以图">
+<meta property="og:description" content="第二讲主要讲述了三级模式、两层映像、两个独立性、关系模型的组成、表的严格定义、关系">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%BA%8C%E8%AE%B2/%E5%AE%B6%E5%BA%AD%E5%85%B3%E7%B3%BB.PNG">
 <meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%BA%8C%E8%AE%B2/%E4%BB%A3%E7%A0%81.png">
-<meta property="og:updated_time" content="2018-06-05T08:26:43.949Z">
+<meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%BA%8C%E8%AE%B2/%E5%A4%96%E7%A0%81.PNG">
+<meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%80%E8%AE%B2/%E5%A4%96%E9%94%AE.PNG">
+<meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%80%E8%AE%B2/%E5%A4%96%E9%94%AE2.PNG">
+<meta property="og:updated_time" content="2018-06-05T10:23:28.222Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第二讲">
-<meta name="twitter:description" content="模式(Schema)是对数据的抽象，即描述数据的结构 视图(View)是从一个或多个表导出的虚拟表，其内容由查询定义，具有普通表的结构，但不实现数据存储 数据模型对模式的抽象，即描述模式的结构 三级模式（三级视图）* 外模式(用户模式)：某一用户能看到与处理的数据的结构描述 * 模式 (全局模式) ：从全局角度理解/管理的数据的结构描述 * 内模式(物理模式)：存储在介质上的数据的结构描述 以图">
+<meta name="twitter:description" content="第二讲主要讲述了三级模式、两层映像、两个独立性、关系模型的组成、表的严格定义、关系">
 <meta name="twitter:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%BA%8C%E8%AE%B2/%E5%AE%B6%E5%BA%AD%E5%85%B3%E7%B3%BB.PNG">
 
 
@@ -399,7 +402,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  746 字
+                  1,392 字
                 </span>
               
 
@@ -415,12 +418,16 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3 分钟
+                  5 分钟
                 </span>
               
             </div>
           
 
+          
+              <div class="post-description">
+                  第二讲主要讲述了三级模式、两层映像、两个独立性、关系模型的组成、表的严格定义、关系
+              </div>
           
 
         </div>
@@ -437,34 +444,41 @@
 
       
         <!-- 图片资源 -->
-<h2 id="模式-Schema"><a href="#模式-Schema" class="headerlink" title="模式(Schema)"></a>模式(Schema)</h2><p>是对数据的抽象，即描述数据的结构</p>
-<h2 id="视图-View"><a href="#视图-View" class="headerlink" title="视图(View)"></a>视图(View)</h2><p>是从一个或多个表导出的虚拟表，其内容由查询定义，具有普通表的结构，但不实现数据存储</p>
-<h2 id="数据模型"><a href="#数据模型" class="headerlink" title="数据模型"></a>数据模型</h2><p>对模式的抽象，即描述模式的结构</p>
-<h2 id="三级模式（三级视图）"><a href="#三级模式（三级视图）" class="headerlink" title="三级模式（三级视图）"></a>三级模式（三级视图）</h2><pre><code>* 外模式(用户模式)：某一用户能看到与处理的数据的结构描述
+<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><pre><code>* 模式(Schema)：是对数据的抽象，即描述数据的结构
+* 视图(View):是从一个或多个表导出的虚拟表，其内容由查询定义，具有普通表的结构，但不实现数据存储
+* 数据模型:对模式的抽象，即描述模式的结构
+</code></pre><h2 id="三级模式（三级视图）"><a href="#三级模式（三级视图）" class="headerlink" title="三级模式（三级视图）"></a>三级模式（三级视图）</h2><pre><code>* 外模式(用户模式)：某一用户能看到与处理的数据的结构描述
 * 模式 (全局模式) ：从全局角度理解/管理的数据的结构描述
 * 内模式(物理模式)：存储在介质上的数据的结构描述
-</code></pre><p>以图书管理系统为例：<br>外模式是学生查询显示的借阅记录，全局模式是图书管理员看到的全部数据，内模式是在服务器上储存的数据。</p>
-<h2 id="两层映像"><a href="#两层映像" class="headerlink" title="两层映像"></a>两层映像</h2><pre><code>* E-C Mapping：将外模式映射为概念模式，从而支持实现数据概念视图向外部视图的转换
-* C-I Mapping：将概念模式映射为内模式，从而支持实现数据概念视图向内部视图的转换
+</code></pre><p>以图书管理系统为例：<br>&emsp;&emsp;外模式是学生查询显示的借阅记录，全局模式是图书管理员看到的全部数据，内模式是在服务器上储存的数据。</p>
+<h2 id="两层映像"><a href="#两层映像" class="headerlink" title="两层映像"></a>两层映像</h2><pre><code>* E-C Mapping：将外模式映射为全局模式，从而支持实现数据概念视图向外部视图的转换
+* C-I Mapping：将全局模式映射为内模式，从而支持实现数据概念视图向内部视图的转换
 </code></pre><h2 id="独立性"><a href="#独立性" class="headerlink" title="独立性"></a>独立性</h2><pre><code>* 逻辑数据独立性：当概念模式改变时，可以不改变外部模式（只改变E-C Mapping），从而无需改变应用程序。
 * 物理数据独立性：当内部模式改变时，可以不改变概念模式（只改变C-I Mapping），从而无需改变外部模式。
 </code></pre><h2 id="三个经典数据模型"><a href="#三个经典数据模型" class="headerlink" title="三个经典数据模型"></a>三个经典数据模型</h2><pre><code>* 层次模型(树)
 * 网状模型(图)
 * 关系模型(表)
-</code></pre><h2 id="关系模型"><a href="#关系模型" class="headerlink" title="关系模型"></a>关系模型</h2><p>关系模型就是处理Table的，它由三个部分组成：</p>
+</code></pre><h2 id="关系模型的组成"><a href="#关系模型的组成" class="headerlink" title="关系模型的组成"></a>关系模型的组成</h2><p>关系模型就是处理Table的，它由三个部分组成：</p>
 <pre><code>* 描述DB各种数据的基本结构形式(Table/Relation)
 * 描述Table与Table之间所可能发生的各种操作(关系运算)
 * 描述这些操作所应遵循的约束条件(完整性约束)
 </code></pre><h2 id="表的严格定义"><a href="#表的严格定义" class="headerlink" title="表的严格定义"></a>表的严格定义</h2><pre><code>* 指出有多少列
-
 * 指出 列 的取值范围  
 </code></pre><p>我们称这种取值范围为 域，集合中元素的个数称为域的基数</p>
 <pre><code>* 指出一个元组及所有可能的元组。  
 </code></pre><p>元组是值的一个组合。元组的每一个值叫做一个分量。这里引入一个概念–笛卡尔积：所有这种可能组合的集合称为笛卡尔积</p>
 <pre><code>* 指出关系中的元组
 </code></pre><h2 id="关系"><a href="#关系" class="headerlink" title="关系"></a>关系</h2><p>举例:如图所示，从图中这个笛卡尔积里抽出一个家庭的关系<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%BA%8C%E8%AE%B2/%E5%AE%B6%E5%BA%AD%E5%85%B3%E7%B3%BB.PNG" alt=""><br>笛卡尔积中具有某一方面意义的那些元组被称作一个 关系</p>
-<p>关系可用R(A1:D1,A2:D2,,,An:Dn)表示，又称为 关系模式<br>R是关系的名字，Ai是 属性，Di是属性所对应的 域<br>n是关系的 度(目)，关系中元组的数目称为关系的 基数</p>
-<p>注：==上图中的家庭关系是一个三度(目)关系，因为他有三个属性<br>==在DBMS中，关系模式一般直接说明为属性的类型、长度等，如图<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%BA%8C%E8%AE%B2/%E4%BB%A3%E7%A0%81.png" alt=""></p>
+<p>&emsp;&emsp;关系可用R(A1:D1,A2:D2,,,An:Dn)表示，又称为 关系模式。R是关系的名字，Ai是 属性，Di是属性所对应的 域。n是关系的 度(目)，关系中元组的数目称为关系的 基数</p>
+<p>注：上图中的家庭关系是一个三度(目)关系，因为他有三个属性。在DBMS中，关系模式一般直接说明为属性的类型、长度等，如图<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%BA%8C%E8%AE%B2/%E4%BB%A3%E7%A0%81.png" alt=""></p>
+<h2 id="关系上的重要概念"><a href="#关系上的重要概念" class="headerlink" title="关系上的重要概念"></a>关系上的重要概念</h2><p><strong>候选码</strong>(Candidate Key)<br>关系中的一个属性组，其值能唯一标识一个元组，这样的属性组称为候选码</p>
+<p>eg:<br>==学生的学号，身份证号都是可以唯一标识一个人<br>==选课的学号、课程号联合起来构成一个属性组可以做为一个候选码</p>
+<p><strong>主码</strong>(Primary key)<br>当有多个候选码时，可以选定一个作为主码</p>
+<p><strong>外码</strong>(Foreign Key)<br>关系Ｒ中的一个属性组，它不是Ｒ的候选码，但它与另一个关系S的候选码相对应，则称这个属性组为R的外码或外键<br>外码的作用：连接两个或多个关系<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%BA%8C%E8%AE%B2/%E5%A4%96%E7%A0%81.PNG" alt=""></p>
+<p>看下图，考虑下能不能把学生信息和班级信息放到一起？<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%80%E8%AE%B2/%E5%A4%96%E9%94%AE.PNG" alt=""><br>答案是不能！因为从前三名可以看出，如果几个人都属于一个班级，那么班级名，所属二级学院、教学楼地址信息重复了三次，会造成信息冗余。<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%80%E8%AE%B2/%E5%A4%96%E9%94%AE2.PNG" alt=""></p>
+<p>通过将信息分开的方法，的确减少的信息冗余，但是如何建立关系呢？这时我们可以通过班级编号建立关系，此时的“班级编号”就是”学生信息表”的外键。（注意在两个表分开写后，我们为“学生信息”增加一个主键“班级编号”当然如果不增加的话，班级名称同样可以成为“班级信息”表的主键）</p>
+<p>通过学生信息表中班级编号这一外键，可以去班级信息表中找到对应的班级信息。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这讲主要讲述了关系和表的概念<br>==关系是对表进行了一个严格的定义，更多的是一个数学上的定义<br>==关系包含有域和域值、元组、和笛卡尔积的概念。值域是值的集合，从每个值域中取出指定的元素构成一个元组，所有可能的元组是笛卡尔积<br>==关系还有度数与基数的概念，元组的个数对应着基数，关系属性的个数对应着度数(目)<br>==表包含有表的标题、列名与列值、行和记录。关系的元组对应着表的行，关系的属性对应着表的列，表的列的范围对应着关系的域<br>==候选码是唯一能区分关系中每个元组的那个属性或者属性组，多个候选码可以选出其中一个做为主码</p>
 
       
     </div>
@@ -671,7 +685,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#模式-Schema"><span class="nav-number">1.</span> <span class="nav-text">模式(Schema)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#视图-View"><span class="nav-number">2.</span> <span class="nav-text">视图(View)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据模型"><span class="nav-number">3.</span> <span class="nav-text">数据模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三级模式（三级视图）"><span class="nav-number">4.</span> <span class="nav-text">三级模式（三级视图）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#两层映像"><span class="nav-number">5.</span> <span class="nav-text">两层映像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#独立性"><span class="nav-number">6.</span> <span class="nav-text">独立性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三个经典数据模型"><span class="nav-number">7.</span> <span class="nav-text">三个经典数据模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关系模型"><span class="nav-number">8.</span> <span class="nav-text">关系模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表的严格定义"><span class="nav-number">9.</span> <span class="nav-text">表的严格定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关系"><span class="nav-number">10.</span> <span class="nav-text">关系</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本概念"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三级模式（三级视图）"><span class="nav-number">2.</span> <span class="nav-text">三级模式（三级视图）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#两层映像"><span class="nav-number">3.</span> <span class="nav-text">两层映像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#独立性"><span class="nav-number">4.</span> <span class="nav-text">独立性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三个经典数据模型"><span class="nav-number">5.</span> <span class="nav-text">三个经典数据模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关系模型的组成"><span class="nav-number">6.</span> <span class="nav-text">关系模型的组成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表的严格定义"><span class="nav-number">7.</span> <span class="nav-text">表的严格定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关系"><span class="nav-number">8.</span> <span class="nav-text">关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关系上的重要概念"><span class="nav-number">9.</span> <span class="nav-text">关系上的重要概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">10.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>

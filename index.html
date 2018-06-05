@@ -397,7 +397,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  746 字
+                  1,392 字
                 </span>
               
 
@@ -413,7 +413,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3 分钟
+                  5 分钟
                 </span>
               
             </div>
@@ -435,38 +435,14 @@
 
       
         
-          
-            <!-- 图片资源 -->
-<h2 id="模式-Schema"><a href="#模式-Schema" class="headerlink" title="模式(Schema)"></a>模式(Schema)</h2><p>是对数据的抽象，即描述数据的结构</p>
-<h2 id="视图-View"><a href="#视图-View" class="headerlink" title="视图(View)"></a>视图(View)</h2><p>是从一个或多个表导出的虚拟表，其内容由查询定义，具有普通表的结构，但不实现数据存储</p>
-<h2 id="数据模型"><a href="#数据模型" class="headerlink" title="数据模型"></a>数据模型</h2><p>对模式的抽象，即描述模式的结构</p>
-<h2 id="三级模式（三级视图）"><a href="#三级模式（三级视图）" class="headerlink" title="三级模式（三级视图）"></a>三级模式（三级视图）</h2><pre><code>* 外模式(用户模式)：某一用户能看到与处理的数据的结构描述
-* 模式 (全局模式) ：从全局角度理解/管理的数据的结构描述
-* 内模式(物理模式)：存储在介质上的数据的结构描述
-</code></pre><p>以图书管理系统为例：<br>外模式是学生查询显示的借阅记录，全局模式是图书管理员看到的全部数据，内模式是在服务器上储存的数据。</p>
-<h2 id="两层映像"><a href="#两层映像" class="headerlink" title="两层映像"></a>两层映像</h2><pre><code>* E-C Mapping：将外模式映射为概念模式，从而支持实现数据概念视图向外部视图的转换
-* C-I Mapping：将概念模式映射为内模式，从而支持实现数据概念视图向内部视图的转换
-</code></pre><h2 id="独立性"><a href="#独立性" class="headerlink" title="独立性"></a>独立性</h2><pre><code>* 逻辑数据独立性：当概念模式改变时，可以不改变外部模式（只改变E-C Mapping），从而无需改变应用程序。
-* 物理数据独立性：当内部模式改变时，可以不改变概念模式（只改变C-I Mapping），从而无需改变外部模式。
-</code></pre><h2 id="三个经典数据模型"><a href="#三个经典数据模型" class="headerlink" title="三个经典数据模型"></a>三个经典数据模型</h2><pre><code>* 层次模型(树)
-* 网状模型(图)
-* 关系模型(表)
-</code></pre><h2 id="关系模型"><a href="#关系模型" class="headerlink" title="关系模型"></a>关系模型</h2><p>关系模型就是处理Table的，它由三个部分组成：</p>
-<pre><code>* 描述DB各种数据的基本结构形式(Table/Relation)
-* 描述Table与Table之间所可能发生的各种操作(关系运算)
-* 描述这些操作所应遵循的约束条件(完整性约束)
-</code></pre><h2 id="表的严格定义"><a href="#表的严格定义" class="headerlink" title="表的严格定义"></a>表的严格定义</h2><pre><code>* 指出有多少列
-
-* 指出 列 的取值范围  
-</code></pre><p>我们称这种取值范围为 域，集合中元素的个数称为域的基数</p>
-<pre><code>* 指出一个元组及所有可能的元组。  
-</code></pre><p>元组是值的一个组合。元组的每一个值叫做一个分量。这里引入一个概念–笛卡尔积：所有这种可能组合的集合称为笛卡尔积</p>
-<pre><code>* 指出关系中的元组
-</code></pre><h2 id="关系"><a href="#关系" class="headerlink" title="关系"></a>关系</h2><p>举例:如图所示，从图中这个笛卡尔积里抽出一个家庭的关系<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%BA%8C%E8%AE%B2/%E5%AE%B6%E5%BA%AD%E5%85%B3%E7%B3%BB.PNG" alt=""><br>笛卡尔积中具有某一方面意义的那些元组被称作一个 关系</p>
-<p>关系可用R(A1:D1,A2:D2,,,An:Dn)表示，又称为 关系模式<br>R是关系的名字，Ai是 属性，Di是属性所对应的 域<br>n是关系的 度(目)，关系中元组的数目称为关系的 基数</p>
-<p>注：==上图中的家庭关系是一个三度(目)关系，因为他有三个属性<br>==在DBMS中，关系模式一般直接说明为属性的类型、长度等，如图<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%BA%8C%E8%AE%B2/%E4%BB%A3%E7%A0%81.png" alt=""></p>
-
-          
+          第二讲主要讲述了三级模式、两层映像、两个独立性、关系模型的组成、表的严格定义、关系
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/05/数据库_第二讲/">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1539,7 +1515,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  805 字
+                  564 字
                 </span>
               
 
@@ -1555,7 +1531,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3 分钟
+                  2 分钟
                 </span>
               
             </div>
