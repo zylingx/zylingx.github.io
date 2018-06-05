@@ -99,7 +99,7 @@
 <meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E7%AE%97%E6%B3%95/%E7%AC%AC%E4%B8%80%E7%AB%A0_%E6%A1%88%E4%BE%8B%E4%BA%8C_%E7%AE%97%E6%B3%95%E4%B8%89_%E5%88%86%E6%B2%BB%E6%80%9D%E6%83%B3.png">
 <meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E7%AE%97%E6%B3%95/%E7%AC%AC%E4%B8%80%E7%AB%A0_%E6%A1%88%E4%BE%8B%E4%BA%8C_%E7%AE%97%E6%B3%95%E4%B8%89_%E5%88%86%E6%B2%BB%E6%80%9D%E6%83%B32.png">
 <meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E7%AE%97%E6%B3%95/%E7%AC%AC%E4%B8%80%E7%AB%A0_%E6%A1%88%E4%BE%8B%E4%BA%8C_%E7%AE%97%E6%B3%95%E5%9B%9B.png">
-<meta property="og:updated_time" content="2018-06-05T02:44:32.259Z">
+<meta property="og:updated_time" content="2018-06-05T02:53:39.284Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一章:绪论">
 <meta name="twitter:description" content="什么是算法，为何要学习算法？这是我将要、想要了解的内容">
@@ -409,7 +409,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  795 字
+                  807 字
                 </span>
               
 
@@ -466,24 +466,24 @@
     * 最坏情况复杂度Tworst(n)
     * 平均情况复杂度Tavg(n)
 </code></pre><p>不同复杂度的函数，在不同的数据规模下的增长趋势。<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E7%AE%97%E6%B3%95/%E7%AC%AC%E4%B8%80%E7%AB%A0_%E5%A2%9E%E9%95%BF%E8%B6%8B%E5%8A%BF.png" alt="增长趋势"><br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E7%AE%97%E6%B3%95/%E7%AC%AC%E4%B8%80%E7%AB%A0_%E6%8C%87%E4%BB%A4%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4.png" alt="指令运行时间"></p>
-<p><a href="https://www.jianshu.com/p/f4cca5ce055a" target="_blank" rel="noopener">算法时间复杂度的计算</a></p>
+<h2 id="算法时间复杂度的计算"><a href="#算法时间复杂度的计算" class="headerlink" title="算法时间复杂度的计算"></a>算法时间复杂度的计算</h2><p>点击链接学习 ：<a href="https://www.jianshu.com/p/f4cca5ce055a" target="_blank" rel="noopener">算法时间复杂度的计算</a></p>
 <h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p>若两段算法分别有复杂度T1(n) = O(f1(n)) 和 T2(n) = O(f2(n))，则:</p>
 <pre><code>* 两个算法拼在一起时，等于两段的和 T1(n) + T2(n)
 * 两个算法嵌套时，等于两段的积 T1(n) * T2(n)
 </code></pre><p>若T(n)是关于n的k阶多项式时，真正起作用的是T(n) = O(n^k) ，只需要最高次项，    次高次项及以下被忽略(具体原因自行思考或百度)</p>
 <p>一个for循环的时间复杂度等于循环次数 乘以 循环体代码的复杂度</p>
-<p>if–else结构的复杂度取决于两个分支中复杂度最高的那个  </p>
-<h2 id="案例一：写程序-计算给定多项式在定点x处的值"><a href="#案例一：写程序-计算给定多项式在定点x处的值" class="headerlink" title="案例一：写程序,计算给定多项式在定点x处的值"></a>案例一：写程序,计算给定多项式在定点x处的值</h2><p><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E7%AE%97%E6%B3%95/%E7%AC%AC%E4%B8%80%E7%AB%A0_%E6%A1%88%E4%BE%8B%E4%B8%80_%E5%85%AC%E5%BC%8F.png" alt="公式"><br>第一种写法<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E7%AE%97%E6%B3%95/%E7%AC%AC%E4%B8%80%E7%AB%A0_%E6%A1%88%E4%BE%8B%E4%B8%80_%E7%AC%AC%E4%B8%80%E7%A7%8D%E5%86%99%E6%B3%95.png" alt=""><br>上面写法不推荐</p>
-<p>第二种写法<br>秦九韶算法是中国南宋时期的数学家秦九韶提出的一种多项式简化算法。在西方被称作霍纳算法。是一种将一元n次多项式的求值问题转化为n个一次式的算法。其大大简化了计算过程，即使在现代，利用计算机解决多项式的求值问题时，<strong>霍纳规则依然是最优的算法规则</strong>。具体计算过程自行百度。</p>
+<p>if–else结构的复杂度取决于两个分支中复杂度最高的那个<br>…<br>…<br>……………………………………………<br>…<br>…</p>
+<h2 id="案例一：写程序-计算给定多项式在定点x处的值"><a href="#案例一：写程序-计算给定多项式在定点x处的值" class="headerlink" title="案例一：写程序,计算给定多项式在定点x处的值"></a>案例一：写程序,计算给定多项式在定点x处的值</h2><p><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E7%AE%97%E6%B3%95/%E7%AC%AC%E4%B8%80%E7%AB%A0_%E6%A1%88%E4%BE%8B%E4%B8%80_%E5%85%AC%E5%BC%8F.png" alt="公式"><br><strong>算法一</strong><br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E7%AE%97%E6%B3%95/%E7%AC%AC%E4%B8%80%E7%AB%A0_%E6%A1%88%E4%BE%8B%E4%B8%80_%E7%AC%AC%E4%B8%80%E7%A7%8D%E5%86%99%E6%B3%95.png" alt=""><br>上面写法不推荐</p>
+<p><strong>算法二</strong><br>&emsp;&emsp;秦九韶算法是中国南宋时期的数学家秦九韶提出的一种多项式简化算法。在西方被称作霍纳算法。是一种将一元n次多项式的求值问题转化为n个一次式的算法。其大大简化了计算过程，即使在现代，利用计算机解决多项式的求值问题时，<strong>霍纳规则依然是最优的算法规则</strong>。具体计算过程自行百度。</p>
 <p>f(x) = A0 + X (A1 + X( … ( An - 1 + X( An ) ) ) )</p>
 <p><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E7%AE%97%E6%B3%95/%E7%AC%AC%E4%B8%80%E7%AB%A0_%E6%A1%88%E4%BE%8B%E4%B8%80_%E7%AC%AC%E4%BA%8C%E7%A7%8D%E5%86%99%E6%B3%95.png" alt=""></p>
 <p>自行验证第一种与第二种时间复杂度，运行效率自行测试</p>
 <h2 id="案例二：给定N个整数的序列-A1-A2-……-An-，求下面函数的最大值。"><a href="#案例二：给定N个整数的序列-A1-A2-……-An-，求下面函数的最大值。" class="headerlink" title="案例二：给定N个整数的序列{A1,A2,……,An}，求下面函数的最大值。"></a>案例二：给定N个整数的序列{A1,A2,……,An}，求下面函数的最大值。</h2><p><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E7%AE%97%E6%B3%95/%E7%AC%AC%E4%B8%80%E7%AB%A0_%E6%A1%88%E4%BE%8B%E4%BA%8C_%E5%85%AC%E5%BC%8F.png" alt="公式"></p>
-<p>算法一：<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E7%AE%97%E6%B3%95/%E7%AC%AC%E4%B8%80%E7%AB%A0_%E6%A1%88%E4%BE%8B%E4%BA%8C_%E7%AE%97%E6%B3%95%E4%B8%80.png" alt="算法一"></p>
-<p>算法二：<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E7%AE%97%E6%B3%95/%E7%AC%AC%E4%B8%80%E7%AB%A0_%E6%A1%88%E4%BE%8B%E4%BA%8C_%E7%AE%97%E6%B3%95%E4%BA%8C.png" alt="算法二"></p>
-<p>算法三：分治思想<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E7%AE%97%E6%B3%95/%E7%AC%AC%E4%B8%80%E7%AB%A0_%E6%A1%88%E4%BE%8B%E4%BA%8C_%E7%AE%97%E6%B3%95%E4%B8%89_%E5%88%86%E6%B2%BB%E6%80%9D%E6%83%B3.png" alt="算法三">    <img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E7%AE%97%E6%B3%95/%E7%AC%AC%E4%B8%80%E7%AB%A0_%E6%A1%88%E4%BE%8B%E4%BA%8C_%E7%AE%97%E6%B3%95%E4%B8%89_%E5%88%86%E6%B2%BB%E6%80%9D%E6%83%B32.png" alt=""></p>
+<p><strong>算法一</strong><br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E7%AE%97%E6%B3%95/%E7%AC%AC%E4%B8%80%E7%AB%A0_%E6%A1%88%E4%BE%8B%E4%BA%8C_%E7%AE%97%E6%B3%95%E4%B8%80.png" alt="算法一"></p>
+<p><strong>算法二</strong><br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E7%AE%97%E6%B3%95/%E7%AC%AC%E4%B8%80%E7%AB%A0_%E6%A1%88%E4%BE%8B%E4%BA%8C_%E7%AE%97%E6%B3%95%E4%BA%8C.png" alt="算法二"></p>
+<p><strong>算法三：分治思想</strong><br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E7%AE%97%E6%B3%95/%E7%AC%AC%E4%B8%80%E7%AB%A0_%E6%A1%88%E4%BE%8B%E4%BA%8C_%E7%AE%97%E6%B3%95%E4%B8%89_%E5%88%86%E6%B2%BB%E6%80%9D%E6%83%B3.png" alt="算法三"><br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E7%AE%97%E6%B3%95/%E7%AC%AC%E4%B8%80%E7%AB%A0_%E6%A1%88%E4%BE%8B%E4%BA%8C_%E7%AE%97%E6%B3%95%E4%B8%89_%E5%88%86%E6%B2%BB%E6%80%9D%E6%83%B32.png" alt=""></p>
 <p>注：代码比较复杂，这里不展示，过程就是利用分治思想解决这个问题(分治思想后面会说)</p>
-<p>算法四：在线处理<br>“在线”指每输入一个数据进行即时处理，在任何一个地方终止，算法都能给出正解。<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E7%AE%97%E6%B3%95/%E7%AC%AC%E4%B8%80%E7%AB%A0_%E6%A1%88%E4%BE%8B%E4%BA%8C_%E7%AE%97%E6%B3%95%E5%9B%9B.png" alt="算法三"></p>
+<p><strong>算法四：在线处理</strong><br>“在线”指每输入一个数据进行即时处理，在任何一个地方终止，算法都能给出正解。<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E7%AE%97%E6%B3%95/%E7%AC%AC%E4%B8%80%E7%AB%A0_%E6%A1%88%E4%BE%8B%E4%BA%8C_%E7%AE%97%E6%B3%95%E5%9B%9B.png" alt="算法三"></p>
 
       
     </div>
@@ -690,7 +690,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是算法？"><span class="nav-number">1.</span> <span class="nav-text">什么是算法？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为何要学习算法？"><span class="nav-number">2.</span> <span class="nav-text">为何要学习算法？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是数据结构？"><span class="nav-number">3.</span> <span class="nav-text">什么是数据结构？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法的特性："><span class="nav-number">4.</span> <span class="nav-text">算法的特性：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是好的算法？"><span class="nav-number">5.</span> <span class="nav-text">什么是好的算法？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结："><span class="nav-number">6.</span> <span class="nav-text">总结：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#案例一：写程序-计算给定多项式在定点x处的值"><span class="nav-number">7.</span> <span class="nav-text">案例一：写程序,计算给定多项式在定点x处的值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#案例二：给定N个整数的序列-A1-A2-……-An-，求下面函数的最大值。"><span class="nav-number">8.</span> <span class="nav-text">案例二：给定N个整数的序列{A1,A2,……,An}，求下面函数的最大值。</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是算法？"><span class="nav-number">1.</span> <span class="nav-text">什么是算法？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为何要学习算法？"><span class="nav-number">2.</span> <span class="nav-text">为何要学习算法？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是数据结构？"><span class="nav-number">3.</span> <span class="nav-text">什么是数据结构？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法的特性："><span class="nav-number">4.</span> <span class="nav-text">算法的特性：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是好的算法？"><span class="nav-number">5.</span> <span class="nav-text">什么是好的算法？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法时间复杂度的计算"><span class="nav-number">6.</span> <span class="nav-text">算法时间复杂度的计算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结："><span class="nav-number">7.</span> <span class="nav-text">总结：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#案例一：写程序-计算给定多项式在定点x处的值"><span class="nav-number">8.</span> <span class="nav-text">案例一：写程序,计算给定多项式在定点x处的值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#案例二：给定N个整数的序列-A1-A2-……-An-，求下面函数的最大值。"><span class="nav-number">9.</span> <span class="nav-text">案例二：给定N个整数的序列{A1,A2,……,An}，求下面函数的最大值。</span></a></li></ol></div>
             
 
           </div>
