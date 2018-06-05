@@ -92,7 +92,7 @@
 <meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%BA%8C%E8%AE%B2/%E5%A4%96%E7%A0%81.PNG">
 <meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%80%E8%AE%B2/%E5%A4%96%E9%94%AE.PNG">
 <meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%80%E8%AE%B2/%E5%A4%96%E9%94%AE2.PNG">
-<meta property="og:updated_time" content="2018-06-05T11:06:57.495Z">
+<meta property="og:updated_time" content="2018-06-05T12:18:05.688Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第二讲">
 <meta name="twitter:description" content="主要内容三级模式、两层映像、两个独立性、关系模型的组成、表的严格定义、关系">
@@ -406,7 +406,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,392 字
+                  1,389 字
                 </span>
               
 
@@ -482,7 +482,7 @@
 <p>看下图，考虑下能不能把学生信息和班级信息放到一起？<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%80%E8%AE%B2/%E5%A4%96%E9%94%AE.PNG" alt=""><br>答案是不能！因为从前三名可以看出，如果几个人都属于一个班级，那么班级名，所属二级学院、教学楼地址信息重复了三次，会造成信息冗余。<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%80%E8%AE%B2/%E5%A4%96%E9%94%AE2.PNG" alt=""></p>
 <p>通过将信息分开的方法，的确减少的信息冗余，但是如何建立关系呢？这时我们可以通过班级编号建立关系，此时的“班级编号”就是”学生信息表”的外键。（注意在两个表分开写后，我们为“学生信息”增加一个主键“班级编号”当然如果不增加的话，班级名称同样可以成为“班级信息”表的主键）</p>
 <p>通过学生信息表中班级编号这一外键，可以去班级信息表中找到对应的班级信息。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这讲主要讲述了关系和表的概念<br>==关系是对表进行了一个严格的定义，更多的是一个数学上的定义<br>==关系包含有域和域值、元组、和笛卡尔积的概念。值域是值的集合，从每个值域中取出指定的元素构成一个元组，所有可能的元组是笛卡尔积<br>==关系还有度数与基数的概念，元组的个数对应着基数，关系属性的个数对应着度数(目)<br>==表包含有表的标题、列名与列值、行和记录。关系的元组对应着表的行，关系的属性对应着表的列，表的列的范围对应着关系的域<br>==候选码是唯一能区分关系中每个元组的那个属性或者属性组，多个候选码可以选出其中一个做为主码</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这讲主要讲述了关系和表的概念<br>==关系是对表进行了一个严格的定义，更多的是一个数学上的定义<br>==关系包含有域和域值、元组、和笛卡尔积的概念。值域是值的集合，从每个值域中取出元素构成一个元组，所有可能的元组是笛卡尔积<br>==关系还有度数与基数的概念，元组的个数对应着基数，关系属性的个数对应着度数(目)<br>==表包含有表的标题、列名与列值、行和记录。关系的元组对应着表的行，关系的属性对应着表的列，表的列的范围对应着关系的域<br>==候选码是唯一能区分关系中每个元组的那个属性或者属性组，多个候选码可以选出其中一个做为主码</p>
 
       
     </div>
