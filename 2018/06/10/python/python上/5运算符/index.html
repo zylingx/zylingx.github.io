@@ -79,24 +79,36 @@
 
 
 
-<meta name="description" content="介绍python的安装与使用，加上一些基础知识">
+<meta name="description" content="介绍python的运算符">
 <meta name="keywords" content="python基础编程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python的安装与使用">
-<meta property="og:url" content="https://zylingx.github.io/2018/06/06/python/python上/Python的安装和使用/index.html">
+<meta property="og:title" content="运算符">
+<meta property="og:url" content="https://zylingx.github.io/2018/06/10/python/python上/5运算符/index.html">
 <meta property="og:site_name" content="疯疯癫癫">
-<meta property="og:description" content="介绍python的安装与使用，加上一些基础知识">
+<meta property="og:description" content="介绍python的运算符">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/1python%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%AE%89%E8%A3%85.png">
-<meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/1python%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/IDE.png">
-<meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/1python%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/SHELL.png">
-<meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/1python%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E7%BC%96%E8%BE%91%E5%99%A81.png">
-<meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/1python%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E7%BC%96%E8%BE%91%E5%99%A82.png">
-<meta property="og:updated_time" content="2018-07-10T11:36:01.324Z">
+<meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E7%AE%97%E6%9C%AF.png">
+<meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E7%AE%97%E6%9C%AF%E6%A1%88%E4%BE%8B.png">
+<meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E6%AF%94%E8%BE%83.png">
+<meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E6%AF%94%E8%BE%83%E6%A1%88%E4%BE%8B.png">
+<meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E8%B5%8B%E5%80%BC.png">
+<meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E8%B5%8B%E5%80%BC%E6%A1%88%E4%BE%8B.PNG">
+<meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E4%BD%8D%E8%BF%90%E7%AE%97.png">
+<meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%A1%88%E4%BE%8B.png">
+<meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97.png">
+<meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E6%A1%88%E4%BE%8B.png">
+<meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E6%88%90%E5%91%98.png">
+<meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E6%88%90%E5%91%98%E6%A1%88%E4%BE%8B.png">
+<meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E8%BA%AB%E4%BB%BD.png">
+<meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E8%BA%AB%E4%BB%BD%E6%A1%88%E4%BE%8B.png">
+<meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/is%3D%3D.png">
+<meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E8%BF%90%E7%AE%97%E4%BC%98%E5%85%88%E7%BA%A7.png">
+<meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E8%BF%90%E7%AE%97%E4%BC%98%E5%85%88%E7%BA%A7%E6%A1%88%E4%BE%8B.png">
+<meta property="og:updated_time" content="2018-07-12T07:20:45.066Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python的安装与使用">
-<meta name="twitter:description" content="介绍python的安装与使用，加上一些基础知识">
-<meta name="twitter:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/1python%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%AE%89%E8%A3%85.png">
+<meta name="twitter:title" content="运算符">
+<meta name="twitter:description" content="介绍python的运算符">
+<meta name="twitter:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E7%AE%97%E6%9C%AF.png">
 
 
 
@@ -126,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="https://zylingx.github.io/2018/06/06/python/python上/Python的安装和使用/"/>
+  <link rel="canonical" href="https://zylingx.github.io/2018/06/10/python/python上/5运算符/"/>
 
 
 
 
 
-  <title>Python的安装与使用 | 疯疯癫癫</title>
+  <title>运算符 | 疯疯癫癫</title>
   
 
 
@@ -311,7 +323,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zylingx.github.io/2018/06/06/python/python上/Python的安装和使用/">
+    <link itemprop="mainEntityOfPage" href="https://zylingx.github.io/2018/06/10/python/python上/5运算符/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zylin">
@@ -328,7 +340,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python的安装与使用</h1>
+          <h1 class="post-title" itemprop="name headline">运算符</h1>
         
 
         <div class="post-meta">
@@ -340,8 +352,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-06T00:00:00+08:00">
-                2018-06-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-10T00:00:00+08:00">
+                2018-06-10
               </time>
             
 
@@ -381,8 +393,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/06/06/python/python上/Python的安装和使用/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/06/06/python/python上/Python的安装和使用/" itemprop="commentCount"></span>
+                <a href="/2018/06/10/python/python上/5运算符/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/06/10/python/python上/5运算符/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -404,7 +416,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  421 字
+                  607 字
                 </span>
               
 
@@ -420,7 +432,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  2 分钟
                 </span>
               
             </div>
@@ -428,7 +440,7 @@
 
           
               <div class="post-description">
-                  介绍python的安装与使用，加上一些基础知识
+                  介绍python的运算符
               </div>
           
 
@@ -445,11 +457,23 @@
       
 
       
-        <h2 id="Python的文件"><a href="#Python的文件" class="headerlink" title="Python的文件"></a>Python的文件</h2><p>你可以用任意文本编辑器建立源代码，但是绝大多数Python文件为了统一都是以.py命名的。  </p>
-<h2 id="在Windows上安装Python"><a href="#在Windows上安装Python" class="headerlink" title="在Windows上安装Python"></a>在Windows上安装Python</h2><p>　　首先，根据你的Windows版本（64位还是32位）从Python的官方网站下载Python．然后，运行下载的EXE安装包<br>　　我们可以通过<a href="http://http://www.python.org" title="python官方网站" target="_blank" rel="noopener">Python官方网站</a>下载获得Python。<br>因为Python是跨平台的，在Windows上写Python程序，放到Linux上也是能够运行的。<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/1python%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%AE%89%E8%A3%85.png" alt=""><br>特别要注意勾上Add Python 3.5 to PATH，然后点“Install Now”即可完成安装。<br>注：这是当时作者安装时的版本，如要安装新的版本请按类似操作进行选择<br>附：作者建议安装32位的版本，因为64位的python编写的程序无法在32位机上跑程序，</p>
-<h2 id="使用IDLE来帮助学习Python"><a href="#使用IDLE来帮助学习Python" class="headerlink" title="使用IDLE来帮助学习Python"></a>使用IDLE来帮助学习Python</h2><p>因为这个对新手非常友好<br>　　–IDLE是安装Python时就同时安装好的，在windows环境下，你可以在开始菜单中找到.<br>   <img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/1python%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/IDE.png" alt=""><br>　　–第一次启动IDLE时，会显示“三个大于号”提示符(&gt;&gt;&gt;)，可以在这里输入代码。shell在得到你的代码后会立即执行，并在屏幕上显示生成的结果。与交互模式下的运行方式一样：<br>   <img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/1python%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/SHELL.png" alt=""></p>
-<p>使用文本编辑器<br>选择IDLE里的新建选项打开我们的Python自带的文本编辑器。<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/1python%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E7%BC%96%E8%BE%91%E5%99%A81.png" alt=""><br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/1python%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E7%BC%96%E8%BE%91%E5%99%A82.png" alt="">  </p>
-<p>请注意，绝对不能用Word和Windows自带的记事本。Word保存的不是纯文本文件，而记事本会自作聪明地在文件开始的地方加上几个特殊字符（UTF-8 BOM），结果会导致程序运行出现莫名其妙的错误。</p>
+        <h1 id="Python语言支持以下类型的运算符"><a href="#Python语言支持以下类型的运算符" class="headerlink" title="Python语言支持以下类型的运算符"></a>Python语言支持以下类型的运算符</h1><p><strong>算术运算符　　　　比较（关系）运算符　　　　赋值运算符<br>逻辑运算符　　　　位运算符    　　　　　　　　成员运算符<br>身份运算符　　　　运算符优先级</strong><br>接下来让我们一个个来学习Python的运算符。<br><strong>注意：这章知识点特别多，之前没有学习过类似的知识的朋友请认认真真的学，这很重要，所有举出来的案例一定要用心的多敲几遍，理解、消化掉。</strong></p>
+<h1 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h1><p>以下假设变量a为10，变量b为21。以下实例演示了Python所有算术运算符的操作：<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E7%AE%97%E6%9C%AF.png" alt="">  </p>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E7%AE%97%E6%9C%AF%E6%A1%88%E4%BE%8B.png" alt=""></p>
+<h1 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h1><p>以下假设变量a为10，变量b为20：<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E6%AF%94%E8%BE%83.png" alt=""></p>
+<h2 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h2><p><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E6%AF%94%E8%BE%83%E6%A1%88%E4%BE%8B.png" alt="">  </p>
+<h1 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h1><p>以下假设变量a为10，变量b为20,以下实例演示了Python所有赋值运算符的操作：<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E8%B5%8B%E5%80%BC.png" alt="">  </p>
+<h2 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h2><p><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E8%B5%8B%E5%80%BC%E6%A1%88%E4%BE%8B.PNG" alt="">  </p>
+<h1 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h1><p>按位运算符是把数字看作二进制来进行计算的。Python中的按位运算法则如下：<br>下表中变量 a 为 60，b 为 13.以下实例演示了Python所有位运算符的操作：<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E4%BD%8D%E8%BF%90%E7%AE%97.png" alt=""><br>实例<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%A1%88%E4%BE%8B.png" alt="">  </p>
+<h1 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h1><p>Python语言支持逻辑运算符，以下假设变量 a 为 10, b为 20:<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97.png" alt=""><br>and运算是与运算，只有所有都为True，and运算结果才是True<br>or运算是或运算 ，只要其中有一个为True，or运算结果就是True<br>not运算是非运算， 它是一个单目运算符，把True变成False，False变成True<br>注：除零以外所有的数字都为True.  </p>
+<p>实例<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E6%A1%88%E4%BE%8B.png" alt="">  </p>
+<h1 id="成员运算符"><a href="#成员运算符" class="headerlink" title="成员运算符"></a>成员运算符</h1><p>除了以上的一些运算符之外，Python还支持成员运算符，测试实例中包含了一系列的成员，包括字符串，列表或元组。<br>以下实例演示了Python所有成员运算符的操作：<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E6%88%90%E5%91%98.png" alt="">    </p>
+<p>实例<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E6%88%90%E5%91%98%E6%A1%88%E4%BE%8B.png" alt="">   </p>
+<h1 id="身份运算符"><a href="#身份运算符" class="headerlink" title="身份运算符"></a>身份运算符</h1><p>身份运算符用于比较两个对象的存储单元<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E8%BA%AB%E4%BB%BD.png" alt=""><br>注： id() 函数用于获取对象内存地址。以下实例演示了Python所有身份运算符的操作：   </p>
+<p>实例<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E8%BA%AB%E4%BB%BD%E6%A1%88%E4%BE%8B.png" alt="">   </p>
+<p><strong><em>is 与 == 区别：</em></strong><br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/is%3D%3D.png" alt=""><br>is用于判断两个变量引用对象是否为同一个，== 判断引用变量的值是否相等。  </p>
+<h1 id="运算符优先级"><a href="#运算符优先级" class="headerlink" title="运算符优先级"></a>运算符优先级</h1><p>以下表格列出了从最高到最低优先级的所有运算符：<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E8%BF%90%E7%AE%97%E4%BC%98%E5%85%88%E7%BA%A7.png" alt=""><br>以下实例演示了Python运算符优先级的操作  </p>
+<p>实例<br><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/5%E8%BF%90%E7%AE%97%E7%AC%A6/%E8%BF%90%E7%AE%97%E4%BC%98%E5%85%88%E7%BA%A7%E6%A1%88%E4%BE%8B.png" alt="">  </p>
 
       
     </div>
@@ -509,8 +533,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/05/python/python上/Python简介(了解)/" rel="next" title="Python简介(了解)">
-                <i class="fa fa-chevron-left"></i> Python简介(了解)
+              <a href="/2018/06/09/python/python上/4基础知识/" rel="next" title="基础知识">
+                <i class="fa fa-chevron-left"></i> 基础知识
               </a>
             
           </div>
@@ -518,10 +542,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/07/python/python上/输入与输出/" rel="prev" title="输入与输出">
-                输入与输出 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -660,7 +680,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python的文件"><span class="nav-number">1.</span> <span class="nav-text">Python的文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在Windows上安装Python"><span class="nav-number">2.</span> <span class="nav-text">在Windows上安装Python</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用IDLE来帮助学习Python"><span class="nav-number">3.</span> <span class="nav-text">使用IDLE来帮助学习Python</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python语言支持以下类型的运算符"><span class="nav-number">1.</span> <span class="nav-text">Python语言支持以下类型的运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#算术运算符"><span class="nav-number">2.</span> <span class="nav-text">算术运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#实例"><span class="nav-number">2.1.</span> <span class="nav-text">实例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#比较运算符"><span class="nav-number">3.</span> <span class="nav-text">比较运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#实例-1"><span class="nav-number">3.1.</span> <span class="nav-text">实例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#赋值运算符"><span class="nav-number">4.</span> <span class="nav-text">赋值运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#实例-2"><span class="nav-number">4.1.</span> <span class="nav-text">实例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#位运算符"><span class="nav-number">5.</span> <span class="nav-text">位运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#逻辑运算符"><span class="nav-number">6.</span> <span class="nav-text">逻辑运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#成员运算符"><span class="nav-number">7.</span> <span class="nav-text">成员运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#身份运算符"><span class="nav-number">8.</span> <span class="nav-text">身份运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#运算符优先级"><span class="nav-number">9.</span> <span class="nav-text">运算符优先级</span></a></li></ol></div>
             
 
           </div>
