@@ -3,7 +3,7 @@
   <entry>
     <title></title>
     <url>%2F2018%2F07%2F13%2Fpython%2Fpython%E4%B8%8A%2F10%E5%85%83%E7%BB%84%2F</url>
-    <content type="text"><![CDATA[title: 元组tupledate: 2018-06-15tags: python基础编程 categories: python基础编程 description: 介绍python中的元组数据类型 元组是有序、不可变的元素集合，和列表的区别是tuple一旦初始化就不能修改，比如同样是列出同学的名字 &gt;&gt;&gt; classmates = (&apos;Michael&apos;, &apos;Bob&apos;, &apos;Tracy&apos;) 现在，classmates这个tuple不能变了，它也没有append()，insert()这样的方法。其他获取元素的方法和list是一样的，你可以正常地使用classmates[0]，classmates[-1]，但不能赋值成另外的元素。 因为tuple不可变，所以代码更安全。如果可能，能用tuple代替list就尽量用tuple。 空tuple写法 &gt;&gt;&gt; t = () &gt;&gt;&gt; t () 如果你这么定义1个元素的tuple写法： &gt;&gt;&gt; t = (1) &gt;&gt;&gt; t 1 定义的不是tuple，是1这个数！这是因为括号()既可以表示tuple，又可以表示数学公式中的小括号，这就产生了歧义，因此，Python规定，这种情况下，按小括号进行计算，计算结果自然是1。所以，只有1个元素的tuple定义时必须加一个逗号,，来消除歧义： &gt;&gt;&gt; t = (1,) &gt;&gt;&gt; t (1,) tuple的陷阱：当你定义一个tuple时，在定义的时候，tuple的元素就必须被确定下来，比如 &gt;&gt;&gt; t = (1, 2) &gt;&gt;&gt; t (1, 2) Python在显示只有1个元素的tuple时，也会加一个逗号,，以免你误解成数学计算意义上的括号。 最后来看一个“可变的”tuple&gt;&gt;&gt; t = (&apos;a&apos;, &apos;b&apos;, [&apos;A&apos;, &apos;B&apos;]) &gt;&gt;&gt; t[2][0] = &apos;X&apos; &gt;&gt;&gt; t[2][1] = &apos;Y&apos; &gt;&gt;&gt; t (&apos;a&apos;, &apos;b&apos;, [&apos;X&apos;, &apos;Y&apos;]) 这个tuple定义的时候有3个元素，分别是’a’，’b’和一个list。不是说tuple一旦定义后就不可变了吗？怎么后来又变了？别急，我们先看看定义的时候tuple包含的3个元素： 表面上看，tuple的元素确实变了，但其实变的不是tuple的元素，而是list的元素。tuple一开始指向的list并没有改成别的list，所以，tuple所谓的“不变”是说，tuple的每个元素，指向永远不变。即指向’a’，就不能改成指向’b’，指向一个list，就不能改成指向其他对象，但指向的这个list本身是可变的！理解了“指向不变”后，要创建一个内容也不变的tuple怎么做？那就必须保证tuple的每一个元素本身也不能变。 练习请用索引取出下面list的指定元素： -- coding: utf-8 --L = [ [&apos;Apple&apos;, &apos;Google&apos;, &apos;Microsoft&apos;], [&apos;Java&apos;, &apos;Python&apos;, &apos;Ruby&apos;, &apos;PHP&apos;], [&apos;Adam&apos;, &apos;Bart&apos;, &apos;Lisa&apos;] ] 打印Apple打印Python打印Lisa 小结list和tuple是Python内置的有序集合，一个可变，一个不可变。根据需要来选择使用它们。]]></content>
+    <content type="text"><![CDATA[title: 元组tupledate: 2018-06-15tags: python基础编程 categories: python基础编程 description: 介绍python中的元组数据类型元组是有序、不可变的元素集合，和列表的区别是tuple一旦初始化就不能修改，比如同样是列出同学的名字 &gt;&gt;&gt; classmates = (&apos;Michael&apos;, &apos;Bob&apos;, &apos;Tracy&apos;) 现在，classmates这个tuple不能变了，它也没有append()，insert()这样的方法。其他获取元素的方法和list是一样的，你可以正常地使用classmates[0]，classmates[-1]，但不能赋值成另外的元素。 因为tuple不可变，所以代码更安全。如果可能，能用tuple代替list就尽量用tuple。 空tuple写法 &gt;&gt;&gt; t = () &gt;&gt;&gt; t () 如果你这么定义1个元素的tuple写法： &gt;&gt;&gt; t = (1) &gt;&gt;&gt; t 1 定义的不是tuple，是1这个数！这是因为括号()既可以表示tuple，又可以表示数学公式中的小括号，这就产生了歧义，因此，Python规定，这种情况下，按小括号进行计算，计算结果自然是1。所以，只有1个元素的tuple定义时必须加一个逗号,，来消除歧义： &gt;&gt;&gt; t = (1,) &gt;&gt;&gt; t (1,) tuple的陷阱：当你定义一个tuple时，在定义的时候，tuple的元素就必须被确定下来，比如 &gt;&gt;&gt; t = (1, 2) &gt;&gt;&gt; t (1, 2) Python在显示只有1个元素的tuple时，也会加一个逗号,，以免你误解成数学计算意义上的括号。 最后来看一个“可变的”tuple&gt;&gt;&gt; t = (&apos;a&apos;, &apos;b&apos;, [&apos;A&apos;, &apos;B&apos;]) &gt;&gt;&gt; t[2][0] = &apos;X&apos; &gt;&gt;&gt; t[2][1] = &apos;Y&apos; &gt;&gt;&gt; t (&apos;a&apos;, &apos;b&apos;, [&apos;X&apos;, &apos;Y&apos;]) 这个tuple定义的时候有3个元素，分别是’a’，’b’和一个list。不是说tuple一旦定义后就不可变了吗？怎么后来又变了？别急，我们先看看定义的时候tuple包含的3个元素： 表面上看，tuple的元素确实变了，但其实变的不是tuple的元素，而是list的元素。tuple一开始指向的list并没有改成别的list，所以，tuple所谓的“不变”是说，tuple的每个元素，指向永远不变。即指向’a’，就不能改成指向’b’，指向一个list，就不能改成指向其他对象，但指向的这个list本身是可变的！理解了“指向不变”后，要创建一个内容也不变的tuple怎么做？那就必须保证tuple的每一个元素本身也不能变。 练习请用索引取出下面list的指定元素： -- coding: utf-8 --L = [ [&apos;Apple&apos;, &apos;Google&apos;, &apos;Microsoft&apos;], [&apos;Java&apos;, &apos;Python&apos;, &apos;Ruby&apos;, &apos;PHP&apos;], [&apos;Adam&apos;, &apos;Bart&apos;, &apos;Lisa&apos;] ] 打印Apple打印Python打印Lisa 小结list和tuple是Python内置的有序集合，一个可变，一个不可变。根据需要来选择使用它们。]]></content>
   </entry>
   <entry>
     <title><![CDATA[列表]]></title>
@@ -127,17 +127,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[我的第一篇博客]]></title>
-    <url>%2F2018%2F05%2F19%2F%E6%97%A5%E8%AE%B0%2F%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%2F</url>
-    <content type="text"><![CDATA[从上大学开始就想着有一个属于自己的个人网站，可以在上面记录下自己的学习历程。到今天，这才实现了我这个想法。 想起了大一时的一腔热血，一头扎进了各种快速建站，结果在服务器的价格与域名备案上退缩了，想起来也是好笑。不管怎样，今天，是一个开心的日子。 每一个不曾起舞的日子都是对生命的辜负 加油，越努力，越幸运！]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
-      <tags>
-        <tag>日记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[我们中间有鬼]]></title>
     <url>%2F2018%2F05%2F19%2F%E4%B8%8E%E4%BA%BA%E7%9B%B8%E5%A4%84%2F0%E6%88%BF%E9%97%B4%E9%87%8C%E6%9C%89%E5%A4%B4%E5%A4%A7%E8%B1%A1%2F</url>
     <content type="text"><![CDATA[这是很多年前的事儿了，还是我初中的时候的事情。记得当时上体育课，上课铃已经打响了。我在教室里急急忙忙的冲了出去，路过中间的一个课桌时，衣服刮在了桌子上，横冲直撞的也把桌子带倒了，一个玻璃水杯也摔碎了， 问题是，我并不知道该怎样打造这个家具。我善于按照计划开展行动，但拙于直接在行动中摸索。这件事情并没有既定规划，我试着思考怎么做，但毫无结果。所以，我就把这事儿搁置了好几个星期，期待着解决之道会在脑海中慢慢浮现出来，然后我就知道应该怎么去做了。 但一两个星期之后，什么都没有改变，事情毫无进展。“女儿的家具”被我搁置了一周又一周、一个月又一个月——因为我被难住了。当我对什么事情束手无策的时候，我的默认做法就是拖延，而不是一鼓作气去解决它。 每次萨拉跟我说话的时候，我都小心翼翼地回避这个话题。我不想让她失望，也不想承认自己的无能。我们从来不聊这事儿，她也不知道究竟是怎么了。我猜想她要么对我很生气，要么对我很失望。但我没有问她，所以也不确定——我想，我其实是不敢去问。 我终于意识到，这样的状态在我们中间形成了一道彼此心照不宣的隔阂。在这个世界上，我的女儿是我最愿意与之聊天的人之一，我希望我们父女之间亲密有爱。但是，我的沉默筑造了一堵无声的墙，两年来，这堵墙越来越高。 当我意识到发生了什么，就马上和女儿说了我的感受，并向她道歉，希望尽我所能去化解自己造成的隔阂。 我说这些的时候，她回答说：“是的，房间里有只大象。” “房间里有头大象”用来形容某些显而易见的事情正在发生，可所有人都避而不谈，而且假装什么都没发生。 我的脑海中浮现出了一个场景：我坐在客厅一端，我的女儿坐在对面的另一端，我们从大象腿之间的缝隙里互望，试着说话。那头大象几乎塞满了整个房间，气味难闻，而且非常聒噪，但是我们都不提它。 一旦我们承认了它，我们就会想：这么一个庞然大物是怎么进入房间的？跟大象比起来，门这么小，根本不可能让它通过！ 听着似曾相识？在你的生命中是否也有人与你分享着“一头大象”——你们对某些事儿心知肚明，却没人愿意提及？没人愿意谈是因为提起来会很不舒服，还会惹得人们心烦意乱。大象待在那儿的时间越长，人们就越难开口。但是它又扎眼又难闻，妨碍着人与人之间的真诚交流。 所以，那个大家伙当初是怎么进门儿的？ 在它还小的时候进来的。 如果这头大象刚刚进来的时候我们就坦诚交流，就能轻轻松松地将它引出门去。但是当我们坐视不管，任由它留下来，日复一日，小象不断长大，再处理起来就麻烦多了。一旦它长成庞然大物，我们可能需要拆房子，请求专业协助才能处理它。 当我最终向女儿承认了“那头大象”，她说：“如果你早点儿告诉我你做不出来，我们可以花上一天的时间好好商量商量，直到我们找到解决办法。”那想必会是我们父女一起度过的非常美好的一天。我们可以去咖啡馆喝杯咖啡，也可以一起去逛五金店或者木材市场。 我爱我的女儿，而且我很开心我们一起解决了问题，她很高兴我做好了那件“家具”。我们家里再也没有“大象”的臭味儿了。 明白了吗？我们一定要提防房间里出现小象，如果你放任它们待在房间里，它们真的会长得很大、很大。“房间里有头大象”用来形容某些显而易见的事情正在发生，可所有人都避而不谈，而且假装什么都没发生。]]></content>
@@ -146,6 +135,17 @@
       </categories>
       <tags>
         <tag>与人相处</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[我的第一篇博客]]></title>
+    <url>%2F2018%2F05%2F19%2F%E6%97%A5%E8%AE%B0%2F%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[从上大学开始就想着有一个属于自己的个人网站，可以在上面记录下自己的学习历程。到今天，这才实现了我这个想法。 想起了大一时的一腔热血，一头扎进了各种快速建站，结果在服务器的价格与域名备案上退缩了，想起来也是好笑。不管怎样，今天，是一个开心的日子。 每一个不曾起舞的日子都是对生命的辜负 加油，越努力，越幸运！]]></content>
+      <categories>
+        <category>日记</category>
+      </categories>
+      <tags>
+        <tag>日记</tag>
       </tags>
   </entry>
 </search>
