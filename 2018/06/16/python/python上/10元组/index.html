@@ -19,9 +19,23 @@
 
 
 
-
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "a4e017eb"
+    });
+  daovoice('update');
+  </script>
+
 
 
 
@@ -88,7 +102,7 @@
 <meta property="og:description" content="介绍python中的元组数据类型（tuple）">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/10%E5%85%83%E7%BB%84/%E5%8F%AF%E5%8F%98%E7%9A%84%E5%85%83%E7%BB%84.PNG">
-<meta property="og:updated_time" content="2018-07-13T07:15:49.249Z">
+<meta property="og:updated_time" content="2018-07-13T07:19:03.547Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="元组">
 <meta name="twitter:description" content="介绍python中的元组数据类型（tuple）">
@@ -468,7 +482,8 @@
 <p><img src="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/10%E5%85%83%E7%BB%84/%E5%8F%AF%E5%8F%98%E7%9A%84%E5%85%83%E7%BB%84.PNG" alt=""></p>
 <p>表面上看，tuple的元素确实变了，但其实变的不是tuple的元素，而是list的元素。tuple一开始指向的list并没有改成别的list，所以，tuple所谓的“不变”是说，tuple的每个元素，指向永远不变。即指向’a’，就不能改成指向’b’，指向一个list，就不能改成指向其他对象，但指向的这个list本身是可变的！<br>理解了“指向不变”后，要创建一个内容也不变的tuple怎么做？那就必须保证tuple的每一个元素本身也不能变。  </p>
 <h2 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h2><p>请用索引取出下面list的指定元素：</p>
-<h1 id="coding-utf-8"><a href="#coding-utf-8" class="headerlink" title="-- coding: utf-8 --"></a>-<em>- coding: utf-8 -</em>-</h1><pre><code>L = [
+<pre><code># -*- coding: utf-8 -*-
+L = [
     [&apos;Apple&apos;, &apos;Google&apos;, &apos;Microsoft&apos;],
     [&apos;Java&apos;, &apos;Python&apos;, &apos;Ruby&apos;, &apos;PHP&apos;],
     [&apos;Adam&apos;, &apos;Bart&apos;, &apos;Lisa&apos;]
@@ -543,6 +558,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/06/17/python/python上/11字典/" rel="prev" title="字典">
+                字典 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -626,7 +645,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -637,7 +656,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -648,7 +667,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -681,7 +700,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#最后来看一个“可变的”tuple"><span class="nav-number">1.</span> <span class="nav-text">最后来看一个“可变的”tuple</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习"><span class="nav-number">2.</span> <span class="nav-text">练习</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#coding-utf-8"><span class="nav-number"></span> <span class="nav-text">-- coding: utf-8 --</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#最后来看一个“可变的”tuple"><span class="nav-number">1.</span> <span class="nav-text">最后来看一个“可变的”tuple</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习"><span class="nav-number">2.</span> <span class="nav-text">练习</span></a></li></ol></div>
             
 
           </div>
