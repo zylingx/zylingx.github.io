@@ -98,18 +98,18 @@
 
 
 
-<meta name="description" content="介绍python的集合数据类型（set）">
+<meta name="description" content="函数可以返回多个值吗？答案是肯定的。">
 <meta name="keywords" content="python基础编程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="集合">
-<meta property="og:url" content="https://zylingx.github.io/2018/06/18/python/python上/12集合/index.html">
+<meta property="og:title" content="返回多个值">
+<meta property="og:url" content="https://zylingx.github.io/2018/06/25/python/python上/18返回多个值/index.html">
 <meta property="og:site_name" content="疯疯癫癫">
-<meta property="og:description" content="介绍python的集合数据类型（set）">
+<meta property="og:description" content="函数可以返回多个值吗？答案是肯定的。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-13T23:12:24.910Z">
+<meta property="og:updated_time" content="2018-07-14T23:24:32.649Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="集合">
-<meta name="twitter:description" content="介绍python的集合数据类型（set）">
+<meta name="twitter:title" content="返回多个值">
+<meta name="twitter:description" content="函数可以返回多个值吗？答案是肯定的。">
 
 
 
@@ -139,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="https://zylingx.github.io/2018/06/18/python/python上/12集合/"/>
+  <link rel="canonical" href="https://zylingx.github.io/2018/06/25/python/python上/18返回多个值/"/>
 
 
 
 
 
-  <title>集合 | 疯疯癫癫</title>
+  <title>返回多个值 | 疯疯癫癫</title>
   
 
 
@@ -324,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zylingx.github.io/2018/06/18/python/python上/12集合/">
+    <link itemprop="mainEntityOfPage" href="https://zylingx.github.io/2018/06/25/python/python上/18返回多个值/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zylin">
@@ -341,7 +341,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">集合</h1>
+          <h1 class="post-title" itemprop="name headline">返回多个值</h1>
         
 
         <div class="post-meta">
@@ -353,8 +353,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-18T00:00:00+08:00">
-                2018-06-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-25T00:00:00+08:00">
+                2018-06-25
               </time>
             
 
@@ -394,8 +394,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/06/18/python/python上/12集合/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/06/18/python/python上/12集合/" itemprop="commentCount"></span>
+                <a href="/2018/06/25/python/python上/18返回多个值/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/06/25/python/python上/18返回多个值/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -417,7 +417,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  517 字
+                  389 字
                 </span>
               
 
@@ -441,7 +441,7 @@
 
           
               <div class="post-description">
-                  介绍python的集合数据类型（set）
+                  函数可以返回多个值吗？答案是肯定的。
               </div>
           
 
@@ -458,40 +458,24 @@
       
 
       
-        <p>set和dict类似。是一个无序的、不可随机访问的、不可重复的元素集合。</p>
-<pre><code>&gt;&gt;&gt; s = set([1, 2, 3])
-&gt;&gt;&gt; s
-    {1, 2, 3}
-</code></pre><p>注意，传入的参数[1, 2, 3]是一个list，而显示的{1, 2, 3}只是告诉你这个set内部有1，2，3这3个元素，显示的顺序也不表示set是有序的。。<br>重复元素在set中自动被过滤：</p>
-<pre><code>&gt;&gt;&gt; s = set([1, 1, 2, 2, 3, 3])
-&gt;&gt;&gt; s
-    {1, 2, 3}
-</code></pre><p>通过add(key)方法可以添加元素到set中，可以重复添加，但不会有效果：</p>
-<pre><code>&gt;&gt;&gt; s.add(4)
-&gt;&gt;&gt; s
-    {1, 2, 3, 4}
-&gt;&gt;&gt; s.add(4)
-&gt;&gt;&gt; s
-    {1, 2 3, 4}
-</code></pre><p>通过remove(key)方法可以删除元素：</p>
-<pre><code>&gt;&gt;&gt; s.remove(4)
-&gt;&gt;&gt; s
-{1, 2, 3}
-</code></pre><p>set可以看成数学意义上的无序和无重复元素的集合，因此，两个set可以做数学意义上的交集、并集等操作：</p>
-<pre><code>&gt;&gt;&gt; s1 = {1, 2, 3}
-&gt;&gt;&gt; s2 = {2, 3, 4}
-&gt;&gt;&gt; s1 &amp; s2    {2, 3}
-&gt;&gt;&gt; s1 | s2    {1, 2, 3, 4}
-</code></pre><p>set和dict的唯一区别仅在于没有存储value，但set的原理和dict一样，所以，同样不可以放入可变对象，因为无法判断两个可变对象是否相等，也就无法保证set内部“不会有重复元素”。试试把list放入set，看看是否会报错。</p>
-<h1 id="集合分为可变集合和不可变集合"><a href="#集合分为可变集合和不可变集合" class="headerlink" title="集合分为可变集合和不可变集合"></a>集合分为可变集合和不可变集合</h1><pre><code>==set为可变集合，可以进行增、删、改等操作。
-==frozenset为不可变集合，创建好后无法修改。
-</code></pre><h2 id="可变集合定义方式"><a href="#可变集合定义方式" class="headerlink" title="可变集合定义方式"></a>可变集合定义方式</h2><p>常见的有两种：<br>方式一</p>
-<pre><code>s = {1,2,3,4}
-</code></pre><p>方式二</p>
-<pre><code>s = set(可迭代对象)  eg:s = set(1,2,3,4)
-</code></pre><p>不可变集合定义方式</p>
-<pre><code>s = frozenset(可迭代对象)
-</code></pre><p>注<br>==可迭代对象iterable可以是一个元组，列表，字典等。<br>== 当可迭代对象是一个字典时，只保留key做为集合的元素。<br>==创建空集合时，要用set()，不能直接使用 se = {}，这样会被识别为字典<br>==集合中的元素必须是不可变的。<br>==如果集合中的元素出现重复，则把重复元素合并为一个。  </p>
+        <h1 id="return语句"><a href="#return语句" class="headerlink" title="return语句"></a>return语句</h1><p>return [表达式] 语句用于退出函数，选择性地向调用方返回一个表达式。不带参数值的return语句返None。之前的例子都没有示范如何返回数值，以下实例演示了 return 语句的用法</p>
+<p>比如在游戏中经常需要从一个点移动到另一个点，给出坐标、位移和角度，就可以计算出新的新的坐标：</p>
+<pre><code>import math
+def move(x, y, step, angle=0):
+    nx = x + step * math.cos(angle)
+    ny = y - step * math.sin(angle)
+    return nx, ny
+</code></pre><p>import math语句表示导入math包，并允许后续代码引用math包里的sin、cos等函数。</p>
+<p>然后，我们就可以同时获得返回值：</p>
+<pre><code>&gt;&gt;&gt; x, y = move(100, 100, 60, math.pi / 6)
+&gt;&gt;&gt; print(x, y)
+    151.96152422706632    70.0
+</code></pre><p>但其实这只是一种假象，Python函数返回的仍然是单一值：</p>
+<pre><code>&gt;&gt;&gt; r = move(100, 100, 60, math.pi / 6)
+&gt;&gt;&gt; print(r)
+(151.96152422706632, 70.0)
+</code></pre><p>原来返回值是一个tuple！但是，在语法上，返回一个tuple可以省略括号，而多个变量可以同时接收一个tuple，按位置赋给对应的值，所以，Python的函数返回多值其实就是返回一个tuple，但写起来更方便，当然，你也可以用列表、字典来返回数据。</p>
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>定义函数时，需要确定函数名和参数个数；<br>如果有必要，可以先对参数的数据类型做检查；<br>函数体内部可以用return随时返回函数结果；<br>函数执行完毕也没有return语句时，自动return None。  </p>
 
       
     </div>
@@ -551,8 +535,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/17/python/python上/11字典/" rel="next" title="字典">
-                <i class="fa fa-chevron-left"></i> 字典
+              <a href="/2018/06/24/python/python上/17函数/" rel="next" title="函数">
+                <i class="fa fa-chevron-left"></i> 函数
               </a>
             
           </div>
@@ -561,8 +545,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/06/19/python/python上/13再议不可变对象/" rel="prev" title="不可变对象">
-                不可变对象 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/07/10/mysql数据库/01基础知识/" rel="prev" title="基础知识">
+                基础知识 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -702,7 +686,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#集合分为可变集合和不可变集合"><span class="nav-number">1.</span> <span class="nav-text">集合分为可变集合和不可变集合</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#可变集合定义方式"><span class="nav-number">1.1.</span> <span class="nav-text">可变集合定义方式</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#return语句"><span class="nav-number">1.</span> <span class="nav-text">return语句</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小结"><span class="nav-number">2.</span> <span class="nav-text">小结</span></a></li></ol></div>
             
 
           </div>
