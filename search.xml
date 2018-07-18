@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[文件操作]]></title>
+    <url>%2F2018%2F07%2F13%2Fpython%2Fpython%E4%B8%8A%2F21%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%2F</url>
+    <content type="text"><![CDATA[使用文件的目的就是把一些数据存储起来，可以让程序下一次执行的时候直接使用，而不必重新制作一份，省时省力 操作文件过程在操作文件的整体过程与使用word编写一份简历的过程是很相似的 1：打开文件，或者新建立一个文件 2：读/写数据 3：关闭文件 相对路径与绝对路径相对路径：在Python中，源代码的路径就是相对路径。 绝对路径：文件在物理磁盘上的路径 文件的打开通过open函数打开格式 open(&quot;文件路径&quot;, &quot;模式&quot;) 返回值：文件对象 f = open(&quot;temp.txt&quot;, &quot;w&quot;) 注：模式 关闭文件close()方法为什么要关闭：可以释放系统资源，会立即清空缓冲区的数据内容回写到磁盘文件 # 新建一个文件，文件名为:test.txt f = open(&apos;test.txt&apos;, &apos;w&apos;) # 关闭这个文件 f.close() 附：flush()方法可以立即刷新缓冲区中的内容并写入到磁盘 文件的读写写数据write()方法返回值：写入的字节长度 # 新建一个文件，文件名为:test.txt f = open(&apos;test.txt&apos;, &apos;w&apos;) # 写入数据 f.write(&quot;hello world&quot;) # 关闭这个文件 f.close() 读数据###read方法格式 文件对象.read(字节数) 功能：==字节数表示要从文件中读取的数据的长度，如果没有传入num，那么就表示读取文件中所有的数据。==文件指针会向右移动 字节数 test.txt中的内容：hello world , i&apos;m here. f = open(&apos;test.txt&apos;, &apos;r&apos;) string = f.read(5) print(string) string = f.read() print(string) f.close() 输出 hello world, i&apos;m here. 注==如果open是打开一个文件，那么可以不用谢打开的模式，即只写 open(‘test.txt’)==如果使用读了多次，那么后面读取的数据是从上次读完后的位置开始的 ###readline方法格式 文件对象.readline([limit]) 功能：==读取一行==limit是限制一行最大字符数 f = open(&apos;test.txt&apos;, &apos;r&apos;) string = f.readline() while string: print(string) string = f.readline() f.close() ###readlines方法格式 文件对象.readlines() 功能:自动按换行符处理，将处理好的每行组成一个列表，返回这个列表 f = open(&apos;test.txt&apos;, &apos;r&apos;) content = f.readlines() i=1 for temp in content: print(&quot;%d:%s&quot;%(i, temp)) i+=1 f.close() 输出 1:hello world, i&apos;m here 2:hello world, i&apos;m here 3:hello world, i&apos;m here 4:hello world, i&apos;m here 5:hello world, i&apos;m here 附：思考一下，如果一个文件很大，比如25G，结合自己的内存，试想应该怎样把文件的数据读取到内存然后进行处理呢？ 文件的定位读写获取当前读写的位置在读写文件的过程中，如果想知道当前的位置，可以使用tell()来获取格式 文件对象.tell() 返回值：当前文件位置 # 打开一个已经存在的文件 f = open(&quot;test.txt&quot;, &quot;r&quot;) str = f.read(3) position = f.tell() print(&quot;当前文件位置 : &quot;, position) str = f.read(3) print(&quot;读取的数据是 : &quot;, str) position = f.tell() print(&quot;当前文件位置 : &quot;, position) f.close() 定位到某个位置如果在读写文件的过程中，需要从另外一个位置进行操作的话，可以使用seek()格式 文件对象.seek(偏移量, [0|1|2]) 0:表示文件开头 1:表示当前位置 2:表示文件末尾 注：1和2只能用于二进制文件，不能用于文本文件 文件的相关操作有些时候，需要对文件进行重命名、删除等一些操作，在python中使用需要导入os模块 文件重命名格式 os.rename(src, dst) os.rename(&quot;a.txt&quot;, &quot;a123.txt&quot;) 作用：将src重命名为dst。rename不可以修改树状目录结构里的文件或目录 os.renames(old, new) os.renames(&quot;one/a.txt&quot;, &quot;two/b.txt&quot;) 作用：可以修改树状目录结构文件或目录 创建文件夹import os os.mkdir(&quot;张三&quot;) 删除文件格式 remove(待删除的文件名) 举例 import os os.remove(&quot;毕业论文.txt&quot;) 删除目录os.rmdir(path) 不能递归删除目录，如果文件夹非空会报错 os.removedirs(path) 递归删除目录，如果文件夹非空会报错附：递归删除是指如果文件夹中有子文件夹，removedirs可以删除 而rmdir不可以 获取当前目录import os os.getcwd() 改变默认目录os.chdir(&quot;目标目录&quot;) 获取目录内容列表os.listdir(&quot;文件名&quot;) 使用文件名可以获取指定目录中的内容 &quot;./&quot; 获取当前目录中所有内容 &quot;../&quot;获取当前目录上一级目录中所有内容 判断文件/文件夹是否存在os.path.exists(&quot;文件名/文件夹名&quot;) 其实这种方法还是有个问题，假设你想检查文件“test_data”是否存在，但是当前路径下有叫“test_data”的文件夹，这样就可能出现误判。 只检查文件是否存在os.path.isfile(&quot;文件名&quot;) 不存在将返回False 判断文件是否可做读写操作os.access(path, mode) path为文件路径，mode为操作模式，mode有几种: os.F_OK: 测试path是否存在。 os.R_OK: 测试path是否可读。 os.W_OK 测试path是否可写。 os.X_OK 测试path是否可执行。 该方法通过判断文件路径是否存在和各种访问模式的权限返回True或者False。 import os if os.access(&quot;/file/path/foo.txt&quot;, os.F_OK): print(&quot;Given file path is exist.&quot;) 判断是文件夹os.path.isdir(path) 判断是文件os.path.isfile(path)]]></content>
+      <categories>
+        <category>python基础编程</category>
+      </categories>
+      <tags>
+        <tag>python基础编程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[变量作用域]]></title>
     <url>%2F2018%2F07%2F12%2Fpython%2Fpython%E4%B8%8A%2F20%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F%2F</url>
     <content type="text"><![CDATA[变量的作用域是指 变量的作用范围。Python 中，程序的变量并不是在哪个位置都可以访问的，访问权限决定于这个变量是在哪里赋值的。 Python的作用域一共有4种(LEGB)L （Local） 局部作用域(函数内) E （Enclosing)闭包函数外的函数(闭包) G （Global） 全局作用域(当前的模块) B （Built-in） 内建作用域(所有模块) 以 L –&gt; E –&gt; G –&gt;B 的规则查找，即：在局部找不到，便会去局部外的局部找（例如闭包），再找不到就会去全局找，再者去内建中找。注：在Python中没有块级作用域(if/while)，有其它语言基础的要注意 实例中 msg 变量定义在 if 语句块中，但外部还是可以访问的。 &gt;&gt;&gt;if true: msg = &quot;hello world&quot; &gt;&gt;&gt;msg &quot;hello world&quot; 如果将 msg 定义在函数中，则它就是局部变量，外部不能访问 &gt;&gt;&gt; def text(): msg = &quot;hello world&quot; &gt;&gt;&gt; msg Traceback (most recent call last): File &quot;&lt;pyshell#3&gt;&quot;, line 1, in &lt;module&gt; msg NameError: name &apos;msg&apos; is not defined 从报错的信息上看，说明了 msg_inner 未定义，无法使用，因为它是局部变量，只有在函数内可以使用。 全局变量和局部变量局部变量：定义在函数内的变量，拥有一个局部作用域 全局变量：定义在函数外的变量，拥有一个全局作用域 局部变量只能在其被声明的函数内部访问，而全局变量可以在整个程序内访问。调用函数时，所有在函数内声明的变量名称都将被加入到作用域中。如下实例： total = 0 # 这是一个全局变量 # 可写函数说明 def sum( arg1, arg2 ): #返回2个参数的和.&quot; total = arg1 + arg2 # total在这里是局部变量. print (&quot;函数内是局部变量 : &quot;, total) return total #调用sum函数 sum( 10, 20 ) print (&quot;函数外是全局变量 : &quot;, total) 查看局部变量函数:locals()，查看全局变量函数：globals() #global 和 nonlocal关键字#当内部作用域想修改外部作用域的变量时，就要用global和nonlocal关键字了。 num = 1 def fun1(): global num # 需要使用 global 关键字声明 print(num) num = 123 print(num) fun1() 在函数内修改全局变量使用global关键字如果要修改嵌套作用域（闭包）则需要 nonlocal 关键字了，如下实例 def outer(): num = 10 def inner(): nonlocal num # nonlocal关键字声明 num = 100 print(num) inner() print(num) outer() 有一种特殊情况，假设这段代码被运行错误信息为局部作用域引用错误，因为 test 函数中的 a 使用的是局部，未定义，无法修改。 a = 10 def test(): a = a + 1 print(a) test() Traceback (most recent call last): File &quot;test.py&quot;, line 7, in &lt;module&gt; test() File &quot;test.py&quot;, line 5, in test a = a + 1 UnboundLocalError: local variable &apos;a&apos; referenced before assignment 附：为了便于阅读、规范化，所有的全局变量应该放在代码最上面]]></content>
@@ -254,14 +265,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[房间里有头大象]]></title>
-    <url>%2F2018%2F05%2F19%2F%E4%B8%8E%E4%BA%BA%E7%9B%B8%E5%A4%84%2F0%E6%88%BF%E9%97%B4%E9%87%8C%E6%9C%89%E5%A4%B4%E5%A4%A7%E8%B1%A1%2F</url>
-    <content type="text"><![CDATA[我的女儿萨拉问我能否为她打造一款特别的家具，我满口答应：“当然没问题！”事实上，这算是我许诺给她的圣诞礼物。 这是两年前的事儿了。 问题是，我并不知道该怎样打造这个家具。我善于按照计划开展行动，但拙于直接在行动中摸索。这件事情并没有既定规划，我试着思考怎么做，但毫无结果。所以，我就把这事儿搁置了好几个星期，期待着解决之道会在脑海中慢慢浮现出来，然后我就知道应该怎么去做了。 但一两个星期之后，什么都没有改变，事情毫无进展。“女儿的家具”被我搁置了一周又一周、一个月又一个月——因为我被难住了。当我对什么事情束手无策的时候，我的默认做法就是拖延，而不是一鼓作气去解决它。 每次萨拉跟我说话的时候，我都小心翼翼地回避这个话题。我不想让她失望，也不想承认自己的无能。我们从来不聊这事儿，她也不知道究竟是怎么了。我猜想她要么对我很生气，要么对我很失望。但我没有问她，所以也不确定——我想，我其实是不敢去问。 我终于意识到，这样的状态在我们中间形成了一道彼此心照不宣的隔阂。在这个世界上，我的女儿是我最愿意与之聊天的人之一，我希望我们父女之间亲密有爱。但是，我的沉默筑造了一堵无声的墙，两年来，这堵墙越来越高。 当我意识到发生了什么，就马上和女儿说了我的感受，并向她道歉，希望尽我所能去化解自己造成的隔阂。 我说这些的时候，她回答说：“是的，房间里有只大象。” “房间里有头大象”用来形容某些显而易见的事情正在发生，可所有人都避而不谈，而且假装什么都没发生。 我的脑海中浮现出了一个场景：我坐在客厅一端，我的女儿坐在对面的另一端，我们从大象腿之间的缝隙里互望，试着说话。那头大象几乎塞满了整个房间，气味难闻，而且非常聒噪，但是我们都不提它。 一旦我们承认了它，我们就会想：这么一个庞然大物是怎么进入房间的？跟大象比起来，门这么小，根本不可能让它通过！ 听着似曾相识？在你的生命中是否也有人与你分享着“一头大象”——你们对某些事儿心知肚明，却没人愿意提及？没人愿意谈是因为提起来会很不舒服，还会惹得人们心烦意乱。大象待在那儿的时间越长，人们就越难开口。但是它又扎眼又难闻，妨碍着人与人之间的真诚交流。 所以，那个大家伙当初是怎么进门儿的？ 在它还小的时候进来的。 如果这头大象刚刚进来的时候我们就坦诚交流，就能轻轻松松地将它引出门去。但是当我们坐视不管，任由它留下来，日复一日，小象不断长大，再处理起来就麻烦多了。一旦它长成庞然大物，我们可能需要拆房子，请求专业协助才能处理它。 当我最终向女儿承认了“那头大象”，她说：“如果你早点儿告诉我你做不出来，我们可以花上一天的时间好好商量商量，直到我们找到解决办法。”那想必会是我们父女一起度过的非常美好的一天。我们可以去咖啡馆喝杯咖啡，也可以一起去逛五金店或者木材市场。 我爱我的女儿，而且我很开心我们一起解决了问题，她很高兴我做好了那件“家具”。我们家里再也没有“大象”的臭味儿了。 明白了吗？我们一定要提防房间里出现小象，如果你放任它们待在房间里，它们真的会长得很大、很大。]]></content>
+    <title><![CDATA[python的学习教程]]></title>
+    <url>%2F2018%2F06%2F01%2Fpython%2Fpython%E4%B8%8A%2F00%E5%AD%A6%E4%B9%A0%E6%9D%A5%E6%BA%90%2F</url>
+    <content type="text"><![CDATA[后面所有写的内容都是我从下面这些网站上学习的笔记，大家也可以前往这些网站去学习，里面有非常多的优秀的教学资源，而且都是免费的 CSDN专业IT技术社区瘳雪峰的官方网站菜鸟教程]]></content>
       <categories>
-        <category>与人相处</category>
+        <category>python基础编程</category>
       </categories>
       <tags>
-        <tag>与人相处</tag>
+        <tag>python基础编程</tag>
       </tags>
   </entry>
   <entry>
@@ -273,6 +284,17 @@
       </categories>
       <tags>
         <tag>日记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[房间里有头大象]]></title>
+    <url>%2F2018%2F05%2F19%2F%E4%B8%8E%E4%BA%BA%E7%9B%B8%E5%A4%84%2F0%E6%88%BF%E9%97%B4%E9%87%8C%E6%9C%89%E5%A4%B4%E5%A4%A7%E8%B1%A1%2F</url>
+    <content type="text"><![CDATA[我的女儿萨拉问我能否为她打造一款特别的家具，我满口答应：“当然没问题！”事实上，这算是我许诺给她的圣诞礼物。 这是两年前的事儿了。 问题是，我并不知道该怎样打造这个家具。我善于按照计划开展行动，但拙于直接在行动中摸索。这件事情并没有既定规划，我试着思考怎么做，但毫无结果。所以，我就把这事儿搁置了好几个星期，期待着解决之道会在脑海中慢慢浮现出来，然后我就知道应该怎么去做了。 但一两个星期之后，什么都没有改变，事情毫无进展。“女儿的家具”被我搁置了一周又一周、一个月又一个月——因为我被难住了。当我对什么事情束手无策的时候，我的默认做法就是拖延，而不是一鼓作气去解决它。 每次萨拉跟我说话的时候，我都小心翼翼地回避这个话题。我不想让她失望，也不想承认自己的无能。我们从来不聊这事儿，她也不知道究竟是怎么了。我猜想她要么对我很生气，要么对我很失望。但我没有问她，所以也不确定——我想，我其实是不敢去问。 我终于意识到，这样的状态在我们中间形成了一道彼此心照不宣的隔阂。在这个世界上，我的女儿是我最愿意与之聊天的人之一，我希望我们父女之间亲密有爱。但是，我的沉默筑造了一堵无声的墙，两年来，这堵墙越来越高。 当我意识到发生了什么，就马上和女儿说了我的感受，并向她道歉，希望尽我所能去化解自己造成的隔阂。 我说这些的时候，她回答说：“是的，房间里有只大象。” “房间里有头大象”用来形容某些显而易见的事情正在发生，可所有人都避而不谈，而且假装什么都没发生。 我的脑海中浮现出了一个场景：我坐在客厅一端，我的女儿坐在对面的另一端，我们从大象腿之间的缝隙里互望，试着说话。那头大象几乎塞满了整个房间，气味难闻，而且非常聒噪，但是我们都不提它。 一旦我们承认了它，我们就会想：这么一个庞然大物是怎么进入房间的？跟大象比起来，门这么小，根本不可能让它通过！ 听着似曾相识？在你的生命中是否也有人与你分享着“一头大象”——你们对某些事儿心知肚明，却没人愿意提及？没人愿意谈是因为提起来会很不舒服，还会惹得人们心烦意乱。大象待在那儿的时间越长，人们就越难开口。但是它又扎眼又难闻，妨碍着人与人之间的真诚交流。 所以，那个大家伙当初是怎么进门儿的？ 在它还小的时候进来的。 如果这头大象刚刚进来的时候我们就坦诚交流，就能轻轻松松地将它引出门去。但是当我们坐视不管，任由它留下来，日复一日，小象不断长大，再处理起来就麻烦多了。一旦它长成庞然大物，我们可能需要拆房子，请求专业协助才能处理它。 当我最终向女儿承认了“那头大象”，她说：“如果你早点儿告诉我你做不出来，我们可以花上一天的时间好好商量商量，直到我们找到解决办法。”那想必会是我们父女一起度过的非常美好的一天。我们可以去咖啡馆喝杯咖啡，也可以一起去逛五金店或者木材市场。 我爱我的女儿，而且我很开心我们一起解决了问题，她很高兴我做好了那件“家具”。我们家里再也没有“大象”的臭味儿了。 明白了吗？我们一定要提防房间里出现小象，如果你放任它们待在房间里，它们真的会长得很大、很大。]]></content>
+      <categories>
+        <category>与人相处</category>
+      </categories>
+      <tags>
+        <tag>与人相处</tag>
       </tags>
   </entry>
 </search>
