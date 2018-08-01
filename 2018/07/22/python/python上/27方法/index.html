@@ -102,11 +102,11 @@
 <meta name="keywords" content="python基础编程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="方法">
-<meta property="og:url" content="https://zylingx.github.io/2018/07/20/python/python上/25方法/index.html">
+<meta property="og:url" content="https://zylingx.github.io/2018/07/22/python/python上/27方法/index.html">
 <meta property="og:site_name" content="疯疯癫癫">
 <meta property="og:description" content="将介绍面向对象中的方法这一概念">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-20T07:28:30.019Z">
+<meta property="og:updated_time" content="2018-07-31T11:22:56.069Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="方法">
 <meta name="twitter:description" content="将介绍面向对象中的方法这一概念">
@@ -139,7 +139,7 @@
 
 
 
-  <link rel="canonical" href="https://zylingx.github.io/2018/07/20/python/python上/25方法/"/>
+  <link rel="canonical" href="https://zylingx.github.io/2018/07/22/python/python上/27方法/"/>
 
 
 
@@ -324,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zylingx.github.io/2018/07/20/python/python上/25方法/">
+    <link itemprop="mainEntityOfPage" href="https://zylingx.github.io/2018/07/22/python/python上/27方法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zylin">
@@ -353,8 +353,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-20T00:00:00+08:00">
-                2018-07-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-22T00:00:00+08:00">
+                2018-07-22
               </time>
             
 
@@ -394,8 +394,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/07/20/python/python上/25方法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/07/20/python/python上/25方法/" itemprop="commentCount"></span>
+                <a href="/2018/07/22/python/python上/27方法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/07/22/python/python上/27方法/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -417,7 +417,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  3,684 字
+                  909 字
                 </span>
               
 
@@ -433,7 +433,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  13 分钟
+                  3 分钟
                 </span>
               
             </div>
@@ -462,13 +462,14 @@
 <pre><code>都封装了一系列行为动作
 都可以在被调用的之后，执行一系列行为动作
 最主要的区别就是：调用方式的不同
-</code></pre><h1 id="方法的划分"><a href="#方法的划分" class="headerlink" title="方法的划分"></a>方法的划分</h1><p>实例方法：默认第一个参数需要接收到一个实例<br>类方法：默认第一个参数需要接收到一个类<br>静态方法：第一个参数啥也不默认接收  </p>
-<p>注意</p>
+</code></pre><h1 id="方法的划分"><a href="#方法的划分" class="headerlink" title="方法的划分"></a>方法的划分</h1><pre><code>实例方法：默认第一个参数需要接收到一个实例  
+类方法  ：默认第一个参数需要接收到一个类  
+静态方法：第一个参数啥也不默认接收  
+</code></pre><p>注意</p>
 <pre><code>1. 划分的依据是：方法的第一个参数必须要接收的数据类型
 2. 不管是哪一种类型的方法，都是存储在类当中；没有在实例当中的
-3. 不同类型方法的调用方式不同
-    但，不管怎么调，把握一个原则
-    不管是自己传递，还是解释器帮我们处理；最终要保证不同类型的方法第一个参数接收到的数据，是他们想要的类型
+3. 不同类型方法的调用方式不同。但不管怎么调，把握一个原则
+    不管是自己传递，还是解释器帮我们处理，最终要保证不同类型的方法第一个参数接收到的数据，是他们想要的类型
 </code></pre><h1 id="实例方法"><a href="#实例方法" class="headerlink" title="实例方法"></a>实例方法</h1><pre><code>class Person:
     def run(self):
         pass
@@ -498,13 +499,13 @@
            cls.country = country
 
 p = People()
-print p.getCountry()    #可以用过实例对象引用
-print People.getCountry()    #可以通过类对象引用
+print (p.getCountry())    #可以用过实例对象引用
+print (People.getCountry())    #可以通过类对象引用
 
 People.setCountry(&apos;japan&apos;)    #对类属性进行修改
 
-print People.getCountry()    #可以通过类对象引用
-print p.getCountry()    #可以用过实例对象引用
+print (People.getCountry())    #可以通过类对象引用
+print (p.getCountry())    #可以用过实例对象引用
 </code></pre><p>显示</p>
 <pre><code>china
 china
@@ -519,372 +520,16 @@ japan
     def getCountry():
         return People.country
 
-print People.getCountry()
+print (People.getCountry())
 </code></pre><p>补充</p>
 <pre><code>函数和方法的区别
     函数都是独立的个体，函数之间几乎没有共享的数据,方法有宿主
 self代表调用的对象
-</code></pre><p>总结：<br>从类方法和实例方法以及静态方法的定义形式  </p>
+</code></pre><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>从类方法和实例方法以及静态方法的定义形式  </p>
 <pre><code>类方法的第一个参数是类对象cls，那么通过cls引用的必定是类对象的属性和方法；
 而实例方法的第一个参数是实例对象self，那么通过self引用的可能是类属性、也有可能是实例属性
 不过在存在相同名称的类属性和实例属性的情况下，实例属性优先级更高。
 静态方法中不需要额外定义参数，因此在静态方法中引用类属性的话，必须通过类对象来引用
-</code></pre><p>补充<br>    类相关补充<br>        元类<br>            概念<br>                创建类对象的类<br>                    对象怎样产生的?<br>                        由类创建出来的<br>                    类是不是对象?<br>                        是<br>                    所以,类对象是不是由另外一个类创建出来的?<br>                        是<br>                        元类<br>                结构图</p>
-<pre><code>        类对象的创建方式以及创建流程
-            创建方式
-                通过class 定义
-                    当我们这么写这个类描述的时候, 解释器会自动的帮我们创建对应的类对象
-                通过type函数进行创建
-            类的创建流程
-                1. 检测类中是否有明确 __metaclass__属性
-                    有, 则通过指定元类来创建这个类对象
-                2. 检测父类中是否存在__metaclass__属性
-                    有, 则通过指定元类来创建这个类对象
-                3. 检测模块中是否存在__metaclass__属性
-                    有, 则通过指定元类来创建这个类对象
-                4. 通过内置的type这个元类,来创建这个类对象
-        元类的应用场景
-            1)   拦截类的创建
-            2)   修改类
-            3)   返回修改之后的类
-            后面补充
-    类的描述
-        目的
-            方便理清逻辑思路
-            方便多人合作开发时的沟通
-            方便生成项目文档
-            ...
-        描述方式
-            直接在类的下方,使用三个 &quot;双引号&quot;对就可以
-            需要注明类的作用, 以及类属性描述
-            至于方法, 则直接在方法下,使用三个&quot;双引号&quot;对描述即可
-                作用
-                参数
-                返回值
-        生成项目文档(补充)
-            方式1
-                使用内置模块
-                    pydoc
-                具体步骤
-                    查看文档描述
-                        python3 -m pydoc 模块名称
-                    启动本地服务, 浏览文档
-                        python3 -m pydoc -p 1234
-                    生成指定模块html文档
-                        python3 -m pydoc -w 模块名称
-            方式2
-                使用三方模块
-                    Sphinx
-                    epydoc
-                    doxygen
-                具体步骤
-                    目前感兴趣了可以先自行研究
-                    后续讲完&quot;包和模块&quot;之后,会进行补充
-属性相关补充
-    私有化属性
-        概念
-            是指将一些原本公开的属性设置权限, 只能小范围访问, 其他地方访问不了
-        意义
-            保证数据的安全性
-            提高代码的可维护性
-        注意
-            Python并没有真正的私有化支持，但是, 可以使用下划线完成伪私有的效果
-            类属性(方法)和实例属性(方法)遵循相同的规则
-        x
-            公有属性
-                类内部访问
-                子类内部访问
-                模块内其他位置访问
-                    类访问
-                        父类
-                        派生类
-                    实例访问
-                        父类实例
-                        派生类实例
-                跨模块访问
-                    import形式导入
-                    from 模块 import * 形式导入
-        _y
-            受保护属性
-                类内部访问
-                子类内部访问
-                模块内其他位置访问
-                    类访问
-                        父类
-                        派生类
-                    实例访问
-                        父类实例
-                        派生类实例
-                跨模块访问
-                    import形式导入
-                    from module import * 形式导入
-                        有__all__指明对应变量
-                        没有__all__指明对应变量
-        __z
-            私有属性
-                类内部访问
-                子类内部访问
-                模块内其他位置访问
-                    类访问
-                        父类
-                        派生类
-                    实例访问
-                        父类实例
-                        派生类实例
-                跨模块访问
-                    参照单下划线开头变量的访问原则
-            私有属性的实现机制
-                名字重整(Name Mangling)
-                    重改__x为另外一个名称, 如
-                        _类名__x
-                目的
-                    防止外界直接访问
-                    防止被子类同名称属性覆盖
-            应用场景
-                数据保护
-                数据过滤
-        补充
-            xx_
-                &quot;变量名_&quot; 这个格式是为了与系统属性作区分
-            __xx__
-                两端__一般为系统内置属性或方法, 所以以后命名注意避免
-    只读属性
-        概念
-            一个属性(一般指实例属性), 只能读取, 不能写入
-        应用场景
-            有些属性, 只限在内部根据不同场景进行修改, 而对外界来说, 不能修改, 只能读取
-            比如
-                电脑类的网速属性, 网络状态属性
-        方式1
-            方案
-                全部隐藏
-                    私有化
-                        既不能读
-                        也不能写
-                部分公开
-                    公开读的操作
-            具体实现
-                私有化
-                    通过&quot;属性前置双下划线&quot;实现
-                部分公开
-                    通过公开的方法
-                    优化
-                        property
-                            作用
-                                将一些&quot;属性的操作方法&quot;关联到某一个属性中
-                            概念补充
-                                经典类
-                                    没有继承(object)
-                                新式类
-                                    继承(object)
-                                Python2.x版本定义一个类时, 默认不继承(object)
-                                Python3.x版本定义一个类时, 默认继承(object)
-                                建议使用
-                                    新式类
-                            property
-                                在经典类中
-                                    只能管理一个属性的读取操作
-                                在新式类中
-                                    可以管理一个属性的删改查操作
-        方式2
-            方案
-                借助系统内置的方法进行拦截
-            具体实现
-                __setattr__方法
-                    当我们使用 &quot;实例.属性 = 值&quot; 这种格式给一个实例增加或修改属性的时候, 都会调用系统内置的这个方法
-                    在这个方法的内部, 才会真正的把属性以及对应的值给存储到 __dict__当中
-                解决方案
-                    在这个方法中, 进行拦截
-    内置特殊属性
-        类属性
-            __dict__ : 类的属性
-            __bases__ : 类的所有父类构成元组
-            __doc__ :类的文档字符串
-            __name__: 类名
-            __module__: 类定义所在的模块
-        实例属性
-            __dict__ : 实例的属性
-            __class__: 实例对应的类
-方法相关补充
-    私有化方法
-        私有方法
-            def __方法():
-pass
-        注意
-            不要定义 &quot;_类名__方法名&quot; 这种方法
-    内置特殊方法
-        生命周期方法(下一小节单独介绍)
-        其他内置方法
-            信息格式化操作
-                __str__方法
-                    作用
-                        一个对象的描述字符串, 更加方便用户阅读, 对用户更友好
-                    触发方式
-                        print 打印一个对象时
-                        str() 函数时
-                    格式
-                        def __str__(self):
-return &quot;描述信息&quot;
-                __repr__方法
-                    作用
-                        一个对象的描述字符串, 更加方便机器处理, 对机器更友好(开发人员查看)
-                    触发方式
-                        当我们在交互模式下, 直接执行某个变量, 就会输出对应信息
-                        repr() 函数时
-                    格式
-                        def __repr__(self):
-return &quot;描述信息&quot;
-                    注意
-                        一般情况下, 应满足如下等式
-                            obj == eval(repr(obj))
-                        或者描述一个实例详细的信息(类名等等)
-            调用操作
-                __call__方法
-                    作用
-                        使得“对象”具备当做函数，来调用的能力
-                    使用
-                        1. 实现实例方法 __call__
-                        2. 那么创建好的实例, 就可以通过函数的形式来调用
-                            实例(参数)
-                    应用场景
-                        有点类似于之前所讲的&quot;偏函数&quot;的应用场景
-                        可以将&quot;常变参数&quot;和&quot;不常变参数&quot;进行分离
-                    案例
-                        不同类型的笔, 画不同的图形
-            索引操作
-                作用
-                    可以对一个实例对象进行索引操作
-                步骤
-                    1. 实现三个内置方法
-                        设置元素的方法
-                            def __setitem__(self, key, value):
-                        获取元素的方法
-                            def __getitem__(self, item):
-                        删除元素的方法
-                            def __delitem__(self, key):
-                    2. 可以以索引的形式操作对象
-                        增/改
-                            p[1] = 666
-                            p[&quot;name&quot;] = &quot;sz&quot;
-                        查
-                            p[&quot;name&quot;]
-                            p[1]
-                        删
-                            del p[&quot;name&quot;]
-                            del p[1]
-            切片操作
-                作用
-                    可以对一个实例对象进行切片操作
-                步骤
-                    Python2.x
-                        1. 实现三个内置方法
-                            __setspice__
-                                设置某个元素切片时调用
-                            __getspice__
-                                获取某个元素切片时调用
-                            __delspice__
-                                删除某个元素切片时调用
-                        2. 可以直接按照切片的方式操作对象
-                            p[1, 6, 2]
-                        注意: 过期
-                    Python3.x
-                        统一由&quot;索引操作&quot;进行管理
-                            def __setitem__(self, key, value):
-                            def __getitem__(self, item):
-                            def __delitem__(self, key):
-            比较操作
-                作用
-                    可以自定义对象 &quot;比较大小, 相等以及真假&quot; 规则
-                步骤
-                    实现6个方法
-                        相等
-                            __eq__
-                        不相等
-                            __ne__
-                        小于
-                            __lt__
-                        小于或等于
-                            __le__
-                        大于
-                            __gt__
-                        大于或等于
-                            __ge__
-                注意
-                    如果对于反向操作的比较符, 只定义了其中一个方法
-</code></pre><p>但使用的是另外一种比较运算<br>那么, 解释器会采用调换参数的方式进行调用该方法<br>                            例如<br>                                定义了 “小于” 操作<br>                                    x &lt; y<br>                                使用 x &gt; y<br>                                    会被调换参数, 调用上面的 “小于操作”<br>                        但是, 不支持叠加操作<br>                            例如<br>                                定义了 “小于” 和 “等于” 操作<br>                                不能使用 x &lt;= y<br>                    补充<br>                        使用装饰器, 自动生成”反向” “组合”的方法<br>                            步骤</p>
-<pre><code>                1. 使用装饰器装饰类
-                    @functools.total_ordering
-                2. 实现
-                    &gt; 或 &gt;= 或 &lt; 或 &lt;= 其中一个
-                    实现 ==
-        上下文环境中的布尔值
-            __bool__
-遍历操作
-    怎样让我们自己创建的对象可以使用for in 进行遍历?
-        实现__getitem__方法
-            优先级低
-            每次for in 获取数据时, 都会调用这个方法
-        或者
-        实现__iter__方法
-            优先级高
-            这个方法, 必须返回一个&quot;迭代器&quot;; 
-</code></pre><p>即, 具备”<strong>iter</strong>“和”<strong>next</strong>“方法<br>                            当for in 遍历这个对象时, 会调用这个<strong>iter</strong>方法返回的迭代器对象的<strong>next</strong>方法<br>                    怎样让我们自己创建的对象可以使用next函数进行访问?<br>                        实现<strong>next</strong>方法<br>                    补充</p>
-<pre><code>        1. __iter__方法可以恢复迭代器的初始化值, 复用迭代器
-        2. &quot;可迭代&quot; 与 &quot;迭代器&quot;必须实现的方法
-        3. iter方法的使用
-描述器
-    概念
-        可以描述一个属性操作的对象
-            对象
-            属性的操作
-                增/改
-                删
-                查
-            描述
-    作用
-        可以代为管理一个类属性的读写删操作, 在相关方法中, 对数据进行验证处理, 过滤处理等等
-        如果一个类属性被定义为描述器，那么以后对这个类属性的操作(读写删), 都将由这个描述器代理
-    定义
-        定义方式1
-            property
-        定义方式2
-            三个方法
-                __get__
-                __set__
-                __delete__
-    调用细节
-        使用实例进行调用
-            最多三个方法都会被调用
-        使用类进行调用
-            最多会调用get方法
-        不能够顺利转换的场景
-            新式类和经典类
-                描述器仅在新式类中生效
-            方法拦截
-                一个实例属性的正常访问顺序
-                    实例对象自身的__dict__字典
-                    对应类对象的__dict__字典
-                    如果有父类, 会再往上层的__dict__字典中检测
-                    如果没找到, 又定义了__getattr__方法, 就会调用这个方法
-                而在上述的整个过程当中, 是如何将描述器的__get__方法给嵌入到查找机制当中?
-                就是通过这个方法进行实现
-                    __getattribute__
-                    内部实现模拟
-                        如果实现了描述器方法__get__就会直接调用
-                        如果没有, 则按照上面的机制去查找
-    注意
-        &quot;资料描述器&quot;和&quot;非资料描述器&quot;
-            如果实现了
-                _get__
-                判定为&quot;非资料描述器&quot;
-            如果实现了
-                __get__
-                __set__
-                判定为&quot;资料描述器&quot;
-        描述器和实例属性同名时, 操作的优先级问题
-            资料描述器 &gt; 实例字典 &gt; 非资料描述器
-装饰器
-    使用类当做装饰器来使用
 </code></pre>
       
     </div>
@@ -944,7 +589,7 @@ return &quot;描述信息&quot;
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/18/python/python上/24属性/" rel="next" title="属性">
+              <a href="/2018/07/20/python/python上/26属性/" rel="next" title="属性">
                 <i class="fa fa-chevron-left"></i> 属性
               </a>
             
@@ -1036,7 +681,7 @@ return &quot;描述信息&quot;
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1091,7 +736,7 @@ return &quot;描述信息&quot;
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#方法概念"><span class="nav-number">1.</span> <span class="nav-text">方法概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法的划分"><span class="nav-number">2.</span> <span class="nav-text">方法的划分</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实例方法"><span class="nav-number">3.</span> <span class="nav-text">实例方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类方法"><span class="nav-number">4.</span> <span class="nav-text">类方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#静态方法"><span class="nav-number">5.</span> <span class="nav-text">静态方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#方法概念"><span class="nav-number">1.</span> <span class="nav-text">方法概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法的划分"><span class="nav-number">2.</span> <span class="nav-text">方法的划分</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实例方法"><span class="nav-number">3.</span> <span class="nav-text">实例方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类方法"><span class="nav-number">4.</span> <span class="nav-text">类方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#静态方法"><span class="nav-number">5.</span> <span class="nav-text">静态方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">5.1.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
             
 
           </div>
