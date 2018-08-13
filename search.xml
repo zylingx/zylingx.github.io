@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[1002]]></title>
+    <url>%2F2018%2F08%2F03%2F%E7%AE%97%E6%B3%95%2FACM%2F1002%EF%BC%88%E6%9C%AA%E5%AE%8C%E6%88%90%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[内心有种深深的无力感，刚过渡了1001的水题以后，接下来直接面对了一题名叫Fire Net 1002这题。这难度真是，，好像前一秒在刷小学加减，后一秒题目就变成了高中习题。。。抱歉，是我太菜了，研究了一个多小时，唯一的发现就是需要某种搜索方法，大学听过老师讲过这个理念，广度搜索或者深度搜索之类的。。我还是看看算法书吧，，杭电后面几题也是这样的。。暂时就先不更ACM了]]></content>
+      <categories>
+        <category>ACM</category>
+      </categories>
+      <tags>
+        <tag>ACM</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[1001]]></title>
     <url>%2F2018%2F08%2F02%2F%E7%AE%97%E6%B3%95%2FACM%2F1001%2F</url>
     <content type="text"><![CDATA[注：目前所有题目都源于杭电ACM 题目：1001 C++语法#include&lt;iostream&gt; using namespace std; int main() { int a, b; while(cin &gt;&gt; a &gt;&gt; b) cout &lt;&lt; a+b &lt;&lt; endl; } Python2语法方式一while True: try: a, b = map(int, raw_input().strip().split()) print a + b except EOFError: break 方式二while True: try: caption = map(int, raw_input().split()) ans = 0 for i in caption: ans += i print ans except EOFError: break 方式三import sys for line in sys.stdin: a = line.split() print int(a[0]) + int(a[1]) python3语法 while True: try: caption = list(map(int, input().split())) #这里有不同 ans = 0 for i in caption: ans += i print(ans) #这里有不同 except EOFError: break]]></content>
@@ -23,9 +34,42 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[常用的魔法方法]]></title>
+    <url>%2F2018%2F07%2F30%2Fpython%2Fpython%E4%B8%8A%2F32%E5%B8%B8%E8%A7%81%E7%9A%84%E9%AD%94%E6%B3%95%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[str方法#返回一个对象的描述字符串, 更加方便用户阅读, 对用户更友好 触发方式 print 打印一个对象时 str() 函数时 格式 def __str__(self): return &quot;描述信息&quot; 举例 class Cat: &quot;&quot;&quot;定义一个Cat类&quot;&quot;&quot; #初始化对象 def __init__(self,new_name,new_age): self.name = new_name self.name = new_age def __str__(self): return &quot;%s的年龄是:%d&quot;%(self.name,self.age) #方法 def eat(self): print(&quot;%s正在吃东西......&quot;%self.name) def drink(self): print(&quot;%s正在喝饮料......&quot;%self.name) def sleep(self): print(&quot;%s正在睡觉觉......&quot;%self.name) tom = Cat(&quot;汤姆&quot;,40) lanmao = Cat(&quot;蓝猫&quot;,10) print(tom) print(lanmao) 打印 汤姆的年龄是:40 蓝猫的年龄是:10 当我们将str方法注释后,再运行代码对比下输出内容如下: &lt;__main__.Cat object at 0x7fbc0ca62198&gt; &lt;__main__.Cat object at 0x7fbc0ca62240&gt; 打印的是系统默认的表达格式. 总结当我们在调用print(类)时,系统会先查找str或者repr方法,如果有这两种方法的一个,则打印方法返回的值. repr方法#返回一个对象的描述字符串, 更加方便机器处理, 对机器更友好(开发人员查看) 触发方式 当我们在交互模式下, 直接执行某个变量, 就会输出对应信息 repr() 函数时 格式 def __repr__(self): return &quot;描述信息&quot; 注意 一般情况下, 应满足如下等式 obj == eval(repr(obj)) 或者描述一个实例详细的信息(类名等等)]]></content>
+      <categories>
+        <category>python基础编程</category>
+      </categories>
+      <tags>
+        <tag>python基础编程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[常用的魔法属性]]></title>
+    <url>%2F2018%2F07%2F28%2Fpython%2Fpython%E4%B8%8A%2F31%E5%B8%B8%E8%A7%81%E7%9A%84%E9%AD%94%E6%B3%95%E5%B1%9E%E6%80%A7%2F</url>
+    <content type="text"><![CDATA[案例 class Animal(object): &quot;&quot;&quot; 这是一个动物类 &quot;&quot;&quot; age = 19 def __init__(self): self.name = &quot;Dog&quot; def run(self): print(&quot;run&quot;) dict属性#dict属性可以查看类和对象中有哪些属性 print(Animal.__dict__) #查看类属性 animal = Animal() print(animal.__dict__) #查看对象属性 打印 {&apos;__module__&apos;: &apos;__main__&apos;, &apos;age&apos;: 19, &apos;__init__&apos;: &lt;function Animal.__init__ at 0x02ED96F0&gt;, &apos;run&apos;: &lt;function Animal.run at 0x033564B0&gt;, &apos;__dict__&apos;: &lt;attribute &apos;__dict__&apos; of &apos;Animal&apos; objects&gt;, &apos;__weakref__&apos;: &lt;attribute &apos;__weakref__&apos; of &apos;Animal&apos; objects&gt;, &apos;__doc__&apos;: None} {&apos;name&apos;: &apos;Dog&apos;} bases属性#查看类的所有父类 print(&quot;Animal.__bases__&quot;) #只能查看类，不能查看对象 打印 (&lt;class &apos;object&apos;&gt;,) doc属性#查看类的文档 print(Animal__doc__) 打印 &apos;\n\t\t\t这是一个动物类\n\t\t&apos; 注：与help函数有区别，区别在于doc只打印自己写在三引号中的内容 module属性#查看类定义所在的模块 print(Animal.__module__) 打印 __main__ class属性 #查看实例对应的类 print(animal.__class__) 打印 &lt;class &apos;__main__.Animal&apos;&gt;]]></content>
+      <categories>
+        <category>python基础编程</category>
+      </categories>
+      <tags>
+        <tag>python基础编程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[经典类与新式类]]></title>
+    <url>%2F2018%2F07%2F28%2Fpython%2Fpython%E4%B8%8A%2F30%E7%BB%8F%E5%85%B8%E7%B1%BB%E4%B8%8E%E6%96%B0%E5%BC%8F%E7%B1%BB%2F</url>
+    <content type="text"><![CDATA[经典类与新式类的区别经典类没有继承object类，新式类继承了object类 继承搜索的顺序发生了改变，即经典类多继承搜索顺序(深度优先):先深入继承树左侧查找，然后再返回，开始查找右侧 新式类多继承搜索顺序(广度优先):先在水平方向查找，然后再向上查找 “新式类”和“经典类”的区分在Python 3之后就已经不存在，在Python 3.x之后的版本，因为所有的类都派生自内置类型object(即使没有显示的继承object类型)，即所有的类都是“新式类”。 查看方式 类名.__bases__ 如： Animal.__bases__ Python2.x版本定义一个类时, 默认不继承(object) Python3.x版本定义一个类时, 默认继承(object) 无论是python2 还是 Python3，建议使用新式类（尽管Python3没有经典类） 推荐写法: class 类名(object): pass]]></content>
+      <categories>
+        <category>python基础编程</category>
+      </categories>
+      <tags>
+        <tag>python基础编程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[只读属性]]></title>
     <url>%2F2018%2F07%2F26%2Fpython%2Fpython%E4%B8%8A%2F29%E5%8F%AA%E8%AF%BB%E5%B1%9E%E6%80%A7%E4%B8%8Eproperty%2F</url>
-    <content type="text"><![CDATA[只读属性只读的意思是只能读取不能写入 class Animal(Object): def __init__(self): self.__age = 5 animal = Animal() print(animal.__age) #报错 animal.__age = 18 #虽然不会报错，但并没有修改__age的值，而是在对象中新增一个属性,看下面 print(animal.__dict__) 打印 {&apos;_Animal__age : 5&apos;, &apos;__age : 18&apos;} 注意：直接animal.__age = 18不会报错，而是新增一个属性，这会给人一个假象，仿佛修改成功了，要谨慎。有些属性, 只限在内部根据不同场景进行修改, 而对外界来说, 只能读取。要做到只读取私有属性的方法有两种 方式一实现部分公开，部分公开的意思是封闭其他方法，再提供一个对外交流的接口，如在类内增加访问方法 class Animal(Object): def __init__(self): self.__age = 5 def getAge(self): return self.__age animal = Animal() print(animal.getAge()) 这样通过一个公开的方法就可以做到访问私有属性，但是有些麻烦，有没有更简单的办法呢 方式二在实现部分公开的基础上，增加一个装饰器，做到以使用属性的方式来使用这个方法 class Animal(Object): def __init__(self): self.__age = 5 @property def age(self): return self.__age animal = Animal() print(animal.age) #打印 5 如果想给__age赋值呢 animal.age = 18 答案是会直接报错，你不能设置这个属性 方式二的好处：一是可以以属性的方式来访问这个方法，二是避免了上面给人那种修改属性的假象 property的介绍作用：将一些”属性的操作方法”关联到某一个属性中有两种使用方式 方式一使用property对象将属性的操作方法关联到属性上 class Animal(object): def __init__(self): self.__age = 2 def getAge(self): return self.__age def setAge(self, value): self.__age = value def delAge(self): del self.__age age = property(getAge,setAge,delAge) animal = Animal() print(animal.age) animal.age = 5 print(animal.__dict__) del animal.age print(animal.__dict__) 打印 2 {&apos;_Animal__age&apos;: 5} {} 方式二使用property装饰 class Animal(object): def __init__(self): self.__age = 2 @property def age(self): return self.__age @age.setter def age(self, value): self.__age = value @age.deleter def age(self): del self.__age animal = Animal() print(animal.age) animal.age = 5 print(animal.__dict__) del animal.age print(animal.__dict__) 注意：要想使用这种方式进行设置属性、删除属性，这样写的前提要求是，必须在前面写上property进行装饰后，才能写上 方法名.setter 这种进行设置属性]]></content>
+    <content type="text"><![CDATA[只读属性只读的意思是只能读取不能写入 class Animal(Object): def __init__(self): self.__age = 5 animal = Animal() print(animal.__age) #报错 animal.__age = 18 #虽然不会报错，但并没有修改__age的值，而是在对象中新增一个属性,看下面 print(animal.__dict__) 打印 {&apos;_Animal__age : 5&apos;, &apos;__age : 18&apos;} 注意：直接animal.__age = 18不会报错，而是新增一个属性，这会给人一个假象，仿佛修改成功了，要谨慎。有些属性, 只限在内部根据不同场景进行修改, 而对外界来说, 只能读取。要做到只读取私有属性的方法有两种 方式一实现部分公开，部分公开的意思是封闭其他方法，再提供一个对外交流的接口，如在类内增加访问方法 class Animal(Object): def __init__(self): self.__age = 5 def getAge(self): return self.__age animal = Animal() print(animal.getAge()) 这样通过一个公开的方法就可以做到访问私有属性，但是有些麻烦，有没有更简单的办法呢 方式二在实现部分公开的基础上，增加一个装饰器，做到以使用属性的方式来使用这个方法 class Animal(Object): def __init__(self): self.__age = 5 @property def age(self): return self.__age animal = Animal() print(animal.age) #打印 5 如果想给__age赋值呢 animal.age = 18 答案是会直接报错，你不能设置这个属性 方式二的好处：一是可以以属性的方式来访问这个方法，二是避免了上面给人那种修改属性的假象 方式三使用setattr方法，略(详细请百度) property的介绍作用：将一些”属性的操作方法”关联到某一个属性中有两种使用方式 方式一使用property对象将属性的操作方法关联到属性上 class Animal(object): def __init__(self): self.__age = 2 def getAge(self): return self.__age def setAge(self, value): self.__age = value def delAge(self): del self.__age age = property(getAge,setAge,delAge) animal = Animal() print(animal.age) animal.age = 5 print(animal.__dict__) del animal.age print(animal.__dict__) 打印 2 {&apos;_Animal__age&apos;: 5} {} 方式二使用property装饰 class Animal(object): def __init__(self): self.__age = 2 @property def age(self): return self.__age @age.setter def age(self, value): self.__age = value @age.deleter def age(self): del self.__age animal = Animal() print(animal.age) animal.age = 5 print(animal.__dict__) del animal.age print(animal.__dict__) 注意：要想使用这种方式进行设置属性、删除属性，这样写的前提要求是，必须在前面写上property进行装饰后，才能写上 方法名.setter 这种进行设置属性 附： 在经典类中，只能管理一个属性的读取操作 在新式类中可以管理一个属性的删改查操作 后一章会简单的介绍经典类与新式类]]></content>
       <categories>
         <category>python基础编程</category>
       </categories>
@@ -102,7 +146,7 @@
   <entry>
     <title><![CDATA[费曼学习方法]]></title>
     <url>%2F2018%2F07%2F16%2F%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%2F0%E8%B4%B9%E6%9B%BC%E5%AD%A6%E4%B9%A0%2F</url>
-    <content type="text"><![CDATA[[]: 最近学习了很多东西，总是要不停的去回顾，不然很可能过几天就忘记干净了。很苦恼，一定是我方法不对。有什么好的学习方法呢？古人说过:公欲善其事，必先利其器。这句话还是非常有道理的，于是开始上网查找资料，终于有了些许收获。 第一个要介绍的是一个顶尖的学习方法：就是一个标题上的费曼学习法(图：费曼本人) 先看看关于学习的分类有两种：一种是主动学习，一种是被动学习，这涉及到哈佛大学的学习吸收率金字塔 可以看到，主动学习与被动学习的差距。而费曼学习法的原理，就是如何将别人的知识转化为自己的知识的过程,下面附上费曼学习法的流程图： 具体步骤，很简单，就三步： 确定学习目标 模拟教学学习法 简化 确定学习目标在预习、复习的过程中，遇到一个重要的、从没见过的新术语新概念跳出来了。拿出一张白纸，在页顶记下它，这是你想要学习的概念。 教学设想，你面对这个领域的菜鸟，甚至面对十岁的孩童，试图解释清楚这个概念，并让对方完全听懂。 这，一方面加深你的理解，另一方面，找到不明白的节点或卡点。 用你自己的话，一字一句阐释给你面前的那个小白听。卡壳了？不会讲？自己也有不明白的部分？没问题，这是很常见的，不要灰心。 把遇到的问题，解释不顺畅的部分，自己也一知半解的部分记录下来，统统记录下来，随即，逐步把这些部分阐释清楚，梳理清楚。这一步是一个 可循环过程 ：不满意——纠错反馈；满意——尝试运用更简单精炼的语言概括。再用你所学到的知识解决实际问题，加以运用。 简化费曼认为：要是不能把一个科学概念讲得让一个大学新生也能听懂，那就说明我自己对这个概念也是一知半解的。所以在在掌握好这个概念后，自己应该去尝试让这个概念变得更加的通俗易懂。]]></content>
+    <content type="text"><![CDATA[最近学习了很多东西，总是要不停的去回顾，不然很可能过几天就忘记干净了。很苦恼，一定是我方法不对。有什么好的学习方法呢？古人说过:公欲善其事，必先利其器。这句话还是非常有道理的，于是开始上网查找资料，终于有了些许收获。 第一个要介绍的是一个顶尖的学习方法：就是一个标题上的费曼学习法(图：费曼本人) 先看看关于学习的分类有两种：一种是主动学习，一种是被动学习，这涉及到哈佛大学的学习吸收率金字塔 可以看到，主动学习与被动学习的差距。而费曼学习法的原理，就是如何将别人的知识转化为自己的知识的过程,下面附上费曼学习法的流程图： 具体步骤，很简单，就三步： 确定学习目标 模拟教学学习法 简化 确定学习目标在预习、复习的过程中，遇到一个重要的、从没见过的新术语新概念跳出来了。拿出一张白纸，在页顶记下它，这是你想要学习的概念。 教学设想，你面对这个领域的菜鸟，甚至面对十岁的孩童，试图解释清楚这个概念，并让对方完全听懂。 这，一方面加深你的理解，另一方面，找到不明白的节点或卡点。 用你自己的话，一字一句阐释给你面前的那个小白听。卡壳了？不会讲？自己也有不明白的部分？没问题，这是很常见的，不要灰心。 把遇到的问题，解释不顺畅的部分，自己也一知半解的部分记录下来，统统记录下来，随即，逐步把这些部分阐释清楚，梳理清楚。这一步是一个 可循环过程 ：不满意——纠错反馈；满意——尝试运用更简单精炼的语言概括。再用你所学到的知识解决实际问题，加以运用。 简化费曼认为：要是不能把一个科学概念讲得让一个大学新生也能听懂，那就说明我自己对这个概念也是一知半解的。所以在在掌握好这个概念后，自己应该去尝试让这个概念变得更加的通俗易懂。]]></content>
       <categories>
         <category>学习方法</category>
       </categories>
@@ -155,17 +199,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[返回多个值]]></title>
-    <url>%2F2018%2F07%2F10%2Fpython%2Fpython%E4%B8%8A%2F18%E8%BF%94%E5%9B%9E%E5%A4%9A%E4%B8%AA%E5%80%BC%2F</url>
-    <content type="text"><![CDATA[return语句return [表达式] 语句用于退出函数，选择性地向调用方返回一个表达式。不带参数值的return语句返None。之前的例子都没有示范如何返回数值，以下实例演示了 return 语句的用法 比如在游戏中经常需要从一个点移动到另一个点，给出坐标、位移和角度，就可以计算出新的新的坐标： import math def move(x, y, step, angle=0): nx = x + step * math.cos(angle) ny = y - step * math.sin(angle) return nx, ny import math语句表示导入math包，并允许后续代码引用math包里的sin、cos等函数。 然后，我们就可以同时获得返回值： &gt;&gt;&gt; x, y = move(100, 100, 60, math.pi / 6) &gt;&gt;&gt; print(x, y) 151.96152422706632 70.0 但其实这只是一种假象，Python函数返回的仍然是单一值： &gt;&gt;&gt; r = move(100, 100, 60, math.pi / 6) &gt;&gt;&gt; print(r) (151.96152422706632, 70.0) 原来返回值是一个tuple！但是，在语法上，返回一个tuple可以省略括号，而多个变量可以同时接收一个tuple，按位置赋给对应的值，所以，Python的函数返回多值其实就是返回一个tuple，但写起来更方便，当然，你也可以用列表、字典来返回数据。 小结定义函数时，需要确定函数名和参数个数；如果有必要，可以先对参数的数据类型做检查；函数体内部可以用return随时返回函数结果；函数执行完毕也没有return语句时，自动return None。]]></content>
-      <categories>
-        <category>python基础编程</category>
-      </categories>
-      <tags>
-        <tag>python基础编程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[基础知识]]></title>
     <url>%2F2018%2F07%2F10%2Fmysql%E6%95%B0%E6%8D%AE%E5%BA%93%2F01%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
     <content type="text"><![CDATA[为什么要学习数据库在这个信息化的时代，每时每刻都会有大量的数据产生，只有科学地处理和利用这些数据，才能发掘出数据本身的价值。而数据库正是用于科学、高效的使用和利用数据 数据库的4个基本概念数据是数据库中存储的基本对象定义：描述事物的符号种类：文字、数字、声音、图形。。。 数据库(Database，DB)定义：是长期存储在计算机内，有组织的、可共享的、大量数据的集合 数据库系统(DBS)定义：引入数据库技术后的计算机系统 数据库管理系统(DBMS)定义：管理数据库的软件系统是数据库系统的核心。它对数据库进行统一的管理和控制，以保证数据库的安全性和完整性。 数据库管理系统的功能数据库定义：负责定义表格式数据库操纵：负责表操作(增、删、改、查等)数据库控制：设置数据库的访问权限数据库维护：负责数据库的 转储/恢复/重组/性能监测/分析…… 数据库管理技术的产生与发展数据处理定义：对数据进行收集、存储、分类、计算、统计、检索及传输的过程。 发展过程人工管理阶段(20世纪50年代中之前) 文件系统阶段(20世纪50年代未——60年代中) 数据库系统阶段(20世纪60年代至今) 数据模型两类数据模型概念模型它是按用户的观点来对数据和信息建模，用于数据库设计 逻辑模型和物理模型按计算机系统的观点对数据建模，用于DBMS实现逻辑模型用来描述数据之间的联系物理模型用来描述数据在磁盘上的表示方式和存取方式 概念模型实体(Entity)客观存在并且可以相互区别的事物，可以是具体的人、事、物或抽象的概念 属性(Attribute)实体所具有的某一特性称为属性 举例：人的年龄、身高等 码(Key)唯一标识实体的属性称为码 举例：学生的学号，公民的身份证号等 实体型(Entity Type)用实体名与属性名集合来抽象和刻画同类实体称为实体型 实体集(Entity Set)同一类型实体组成的集合 联系(RelationShip)现实世界中事物内部以及事物之间的联系在信息世界中反映为实体内部的联系和实体之间的联系实体内部的联系：指组成实体的各属性之间的联系实体之间的联系：指不同实体间的联系实体之间的联系 一对一(1:1) 举例：身份证号与公民 一对多(1:n) 举例：一个老师教授多名学生 多对多(m:n) 举例：一名学生可以选修多门课程，一门课程可以有多名学生选修 概念模型表示方法实体—联系方法(Entity-RelationShip Approach)，该方法也称为E-R方法或E-R模型 数据模型的组成由三个部分组成 数据结构：描述系统的静态特性 数据操作：描述系统的动态特性 完整性约束 常见的数据模型层次模型(树)、 网状模型(图)、 关系模型(表) 关系模型的常用术语关系(Relation)：一张二维表就是一个关系 元组(Tuple):表中的一行 属性(Attribute)：表中的一列 主码(Key)：表中的某个属性组，可以唯一确定一个元组 域(Domain)：一组具有相同数据类型的值的集合(即属性的取值范围) 分量：元组中的一个属性值 关系模式：对关系的描述 数据库系统的结构数据库系统模式的概念模式(Schema)：是对数据的抽象，即描述数据的结构 视图(View)：是从一个或多个表导出的虚拟表，其内容由查询定义，具有普通表的结构，但不实现数据存储 数据模型：对模式的抽象，即描述模式的结构 三级模式对数据的三个抽象级别 ###外模式(用户模式)：某一用户能看到与处理的数据的结构描述 ###模式（概念模式或全局模式）：数据库中全体数据的逻辑结构和特征的描述 ###内模式（物理模式或存储模式）：是数据物理结构和存储方式的描述 以图书管理系统为例外模式是学生查询显示的借阅记录，全局模式是图书管理员看到的全部数据，内模式是在服务器上储存的数据。 两层映像：E-C Mapping：将外模式映射为模式，从而实现了数据的逻辑独立性 C-I Mapping：将模式映射为内模式，从而实现数据了数据的物理独立性 独立性：逻辑数据独立性：当模式改变时，可以不改变外模式（只改变E-C Mapping），从而无需改变应用程序。 物理数据独立性：当内模式改变时，可以不改变模式（只改变C-I Mapping），从而无需改变外模式。 数据库系统的构成数据库 数据库管理系统 数据库应用 数据库管理员]]></content>
@@ -185,6 +218,17 @@
       </categories>
       <tags>
         <tag>算法基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[返回多个值]]></title>
+    <url>%2F2018%2F07%2F10%2Fpython%2Fpython%E4%B8%8A%2F18%E8%BF%94%E5%9B%9E%E5%A4%9A%E4%B8%AA%E5%80%BC%2F</url>
+    <content type="text"><![CDATA[return语句return [表达式] 语句用于退出函数，选择性地向调用方返回一个表达式。不带参数值的return语句返None。之前的例子都没有示范如何返回数值，以下实例演示了 return 语句的用法 比如在游戏中经常需要从一个点移动到另一个点，给出坐标、位移和角度，就可以计算出新的新的坐标： import math def move(x, y, step, angle=0): nx = x + step * math.cos(angle) ny = y - step * math.sin(angle) return nx, ny import math语句表示导入math包，并允许后续代码引用math包里的sin、cos等函数。 然后，我们就可以同时获得返回值： &gt;&gt;&gt; x, y = move(100, 100, 60, math.pi / 6) &gt;&gt;&gt; print(x, y) 151.96152422706632 70.0 但其实这只是一种假象，Python函数返回的仍然是单一值： &gt;&gt;&gt; r = move(100, 100, 60, math.pi / 6) &gt;&gt;&gt; print(r) (151.96152422706632, 70.0) 原来返回值是一个tuple！但是，在语法上，返回一个tuple可以省略括号，而多个变量可以同时接收一个tuple，按位置赋给对应的值，所以，Python的函数返回多值其实就是返回一个tuple，但写起来更方便，当然，你也可以用列表、字典来返回数据。 小结定义函数时，需要确定函数名和参数个数；如果有必要，可以先对参数的数据类型做检查；函数体内部可以用return随时返回函数结果；函数执行完毕也没有return语句时，自动return None。]]></content>
+      <categories>
+        <category>python基础编程</category>
+      </categories>
+      <tags>
+        <tag>python基础编程</tag>
       </tags>
   </entry>
   <entry>
@@ -408,9 +452,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[我的第一篇博客]]></title>
-    <url>%2F2018%2F05%2F19%2F%E6%97%A5%E8%AE%B0%2F%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%2F</url>
-    <content type="text"><![CDATA[从上大学开始就想着有一个属于自己的个人网站，可以在上面记录下自己的学习历程。到今天，这才实现了我这个想法。 想起了大一时的一腔热血，一头扎进了各种快速建站，结果在服务器的价格与域名备案上退缩了，想起来也是好笑。不管怎样，今天，是一个开心的日子。 每一个不曾起舞的日子都是对生命的辜负 加油，越努力，越幸运！]]></content>
+    <title><![CDATA[迷茫]]></title>
+    <url>%2F2018%2F05%2F25%2F%E6%97%A5%E8%AE%B0%2F001%E8%BF%B7%E8%8C%AB%2F</url>
+    <content type="text"><![CDATA[之前还期待着拿到神功秘籍，一个月就可以神功大成。人总是希望着有朝一日可以顿悟，经过事实证明，想的太美也不是什么好事。 现在这个社会，说是步入了快节奏，知识的获取也应该架设起高速，人的注意力降到3~5分钟，这是某些推送文章的理念，过多的时间就是注意力的转移 试过各种速成大法，21天学会某某某，学这个3个月后月薪过万，最终还是不明觉厉，他们把过多的精华集中在一页，不重要的能减就减，结果学了个大概，道理也能说上一点，一动手就露却了，花了时间，送了金钱，还是啥也不会 当自己迷茫时，觉得自己什么都不会的时候，不妨试着让自己慢下来，一步步的来，所以我想，把自己以前学的内容，慢慢总结归纳，写成博客，更扎实的掌握好自己学的知识。 一篇博客总结下来，至少1个小时，遇到自己还是比较模糊的概念时，或者难以用自己的语言表达时，有时甚至一两天，但我没有更好的选择了，做笔记是方法，写博客也是方法，相比下还是写博客好 饭是一口一口吃的，不能想着一次吃一个星期的饭，后面一个星期就可以不吃了 道理谁都明白，可是都不想去选择]]></content>
       <categories>
         <category>日记</category>
       </categories>
@@ -427,6 +471,17 @@
       </categories>
       <tags>
         <tag>与人相处</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[我的第一篇博客]]></title>
+    <url>%2F2018%2F05%2F19%2F%E6%97%A5%E8%AE%B0%2F000%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[从上大学开始就想着有一个属于自己的个人网站，可以在上面记录下自己的学习历程。到今天，这才实现了我这个想法。 想起了大一时的一腔热血，一头扎进了各种快速建站，结果在服务器的价格与域名备案上退缩了，想起来也是好笑。不管怎样，今天，是一个开心的日子。 每一个不曾起舞的日子都是对生命的辜负 加油，越努力，越幸运！]]></content>
+      <categories>
+        <category>日记</category>
+      </categories>
+      <tags>
+        <tag>日记</tag>
       </tags>
   </entry>
 </search>

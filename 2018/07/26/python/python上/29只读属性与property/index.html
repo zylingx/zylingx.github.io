@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="疯疯癫癫">
 <meta property="og:description" content="将介绍面向对象中的私有属性，如何只能访问不能写入">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-02T08:12:54.084Z">
+<meta property="og:updated_time" content="2018-08-03T07:39:05.291Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="只读属性">
 <meta name="twitter:description" content="将介绍面向对象中的私有属性，如何只能访问不能写入">
@@ -417,7 +417,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  617 字
+                  685 字
                 </span>
               
 
@@ -496,6 +496,7 @@ print(animal.age)    #打印 5
 <pre><code>animal.age = 18
 </code></pre><p>答案是会直接报错，你不能设置这个属性</p>
 <p>方式二的好处：一是可以以属性的方式来访问这个方法，二是避免了上面给人那种修改属性的假象</p>
+<h2 id="方式三"><a href="#方式三" class="headerlink" title="方式三"></a>方式三</h2><p>使用<strong>setattr</strong>方法，略(详细请百度)</p>
 <h1 id="property的介绍"><a href="#property的介绍" class="headerlink" title="property的介绍"></a>property的介绍</h1><p>作用：将一些”属性的操作方法”关联到某一个属性中<br>有两种使用方式</p>
 <h2 id="方式一-1"><a href="#方式一-1" class="headerlink" title="方式一"></a>方式一</h2><p>使用property对象将属性的操作方法关联到属性上</p>
 <pre><code>class Animal(object):
@@ -553,6 +554,10 @@ print(animal.__dict__)
 del animal.age
 print(animal.__dict__)
 </code></pre><p>注意：要想使用这种方式进行设置属性、删除属性，这样写的前提要求是，必须在前面写上property进行装饰后，才能写上 方法名.setter 这种进行设置属性</p>
+<p>附：</p>
+<pre><code>在经典类中，只能管理一个属性的读取操作
+在新式类中可以管理一个属性的删改查操作
+</code></pre><p>后一章会简单的介绍经典类与新式类</p>
 
       
     </div>
@@ -622,8 +627,8 @@ print(animal.__dict__)
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/08/01/算法/ACM/0ACM输入输出/" rel="prev" title="ACM输入输出">
-                ACM输入输出 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/07/28/python/python上/30经典类与新式类/" rel="prev" title="经典类与新式类">
+                经典类与新式类 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -708,7 +713,7 @@ print(animal.__dict__)
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-count">44</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -763,7 +768,7 @@ print(animal.__dict__)
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#只读属性"><span class="nav-number">1.</span> <span class="nav-text">只读属性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方式一"><span class="nav-number">1.1.</span> <span class="nav-text">方式一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方式二"><span class="nav-number">1.2.</span> <span class="nav-text">方式二</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#property的介绍"><span class="nav-number">2.</span> <span class="nav-text">property的介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方式一-1"><span class="nav-number">2.1.</span> <span class="nav-text">方式一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方式二-1"><span class="nav-number">2.2.</span> <span class="nav-text">方式二</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#只读属性"><span class="nav-number">1.</span> <span class="nav-text">只读属性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方式一"><span class="nav-number">1.1.</span> <span class="nav-text">方式一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方式二"><span class="nav-number">1.2.</span> <span class="nav-text">方式二</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方式三"><span class="nav-number">1.3.</span> <span class="nav-text">方式三</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#property的介绍"><span class="nav-number">2.</span> <span class="nav-text">property的介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方式一-1"><span class="nav-number">2.1.</span> <span class="nav-text">方式一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方式二-1"><span class="nav-number">2.2.</span> <span class="nav-text">方式二</span></a></li></ol></li></ol></div>
             
 
           </div>
