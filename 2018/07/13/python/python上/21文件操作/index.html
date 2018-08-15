@@ -107,7 +107,7 @@
 <meta property="og:description" content="一直以来的学习中，在程序运行结束后，程序执行的数据都会消失。现在将学习如何解决这一个问题">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://images-1256759652.cos.ap-guangzhou.myqcloud.com/python/python_one/21%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/1%E6%A8%A1%E5%BC%8F.PNG">
-<meta property="og:updated_time" content="2018-07-18T01:41:10.913Z">
+<meta property="og:updated_time" content="2018-08-14T01:04:07.875Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="文件操作">
 <meta name="twitter:description" content="一直以来的学习中，在程序运行结束后，程序执行的数据都会消失。现在将学习如何解决这一个问题">
@@ -419,7 +419,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,411 字
+                  1,418 字
                 </span>
               
 
@@ -488,7 +488,7 @@ f.write(&quot;hello world&quot;)
 
 # 关闭这个文件
 f.close()
-</code></pre><h2 id="读数据"><a href="#读数据" class="headerlink" title="读数据"></a>读数据</h2><p>###read方法<br>格式</p>
+</code></pre><h2 id="读数据"><a href="#读数据" class="headerlink" title="读数据"></a>读数据</h2><h3 id="read方法"><a href="#read方法" class="headerlink" title="read方法"></a>read方法</h3><p>格式</p>
 <pre><code>文件对象.read(字节数)  
 </code></pre><p>功能：<br>==字节数表示要从文件中读取的数据的长度，如果没有传入num，那么就表示读取文件中所有的数据。<br>==文件指针会向右移动 字节数</p>
 <pre><code>test.txt中的内容：hello  world , i&apos;m here.
@@ -505,20 +505,20 @@ f.close()
 </code></pre><p>输出</p>
 <pre><code>hello
   world, i&apos;m here.
-</code></pre><h2 id="注"><a href="#注" class="headerlink" title="注"></a>注</h2><p>==如果open是打开一个文件，那么可以不用谢打开的模式，即只写 open(‘test.txt’)<br>==如果使用读了多次，那么后面读取的数据是从上次读完后的位置开始的  </p>
-<p>###readline方法<br>格式</p>
+</code></pre><h2 id="注"><a href="#注" class="headerlink" title="注"></a>注</h2><p>==如果open是打开一个文件，那么可以不用写打开的模式，即只写 open(‘test.txt’)，默认模式’r’<br>==如果使用读了多次，那么后面读取的数据是从上次读完后的位置开始的  </p>
+<h3 id="readline方法"><a href="#readline方法" class="headerlink" title="readline方法"></a>readline方法</h3><p>格式</p>
 <pre><code>文件对象.readline([limit])
 </code></pre><p>功能：<br>==读取一行<br>==limit是限制一行最大字符数</p>
 <pre><code>f = open(&apos;test.txt&apos;, &apos;r&apos;)
 
-string = f.readline()
+string = f.readline(5)
 
 while string:
     print(string)
-    string = f.readline()
+    string = f.readline(5)
 
 f.close()
-</code></pre><p>###readlines方法<br>格式</p>
+</code></pre><h3 id="readlines方法"><a href="#readlines方法" class="headerlink" title="readlines方法"></a>readlines方法</h3><p>格式</p>
 <pre><code>文件对象.readlines()
 </code></pre><p>功能:自动按换行符处理，将处理好的每行组成一个列表，返回这个列表</p>
 <pre><code>f = open(&apos;test.txt&apos;, &apos;r&apos;)
@@ -764,7 +764,7 @@ if os.access(&quot;/file/path/foo.txt&quot;, os.F_OK):
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-count">46</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -775,7 +775,7 @@ if os.access(&quot;/file/path/foo.txt&quot;, os.F_OK):
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -786,7 +786,7 @@ if os.access(&quot;/file/path/foo.txt&quot;, os.F_OK):
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -819,7 +819,7 @@ if os.access(&quot;/file/path/foo.txt&quot;, os.F_OK):
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用文件的目的"><span class="nav-number">1.</span> <span class="nav-text">使用文件的目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作文件过程"><span class="nav-number">2.</span> <span class="nav-text">操作文件过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相对路径与绝对路径"><span class="nav-number">3.</span> <span class="nav-text">相对路径与绝对路径</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件的打开"><span class="nav-number"></span> <span class="nav-text">文件的打开</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#注：模式"><span class="nav-number">1.</span> <span class="nav-text">注：模式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关闭文件"><span class="nav-number"></span> <span class="nav-text">关闭文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件的读写"><span class="nav-number"></span> <span class="nav-text">文件的读写</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#写数据"><span class="nav-number">1.</span> <span class="nav-text">写数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#读数据"><span class="nav-number">2.</span> <span class="nav-text">读数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注"><span class="nav-number">3.</span> <span class="nav-text">注</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件的定位读写"><span class="nav-number"></span> <span class="nav-text">文件的定位读写</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取当前读写的位置"><span class="nav-number">1.</span> <span class="nav-text">获取当前读写的位置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定位到某个位置"><span class="nav-number">2.</span> <span class="nav-text">定位到某个位置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件的相关操作"><span class="nav-number"></span> <span class="nav-text">文件的相关操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#文件重命名"><span class="nav-number">1.</span> <span class="nav-text">文件重命名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建文件夹"><span class="nav-number">2.</span> <span class="nav-text">创建文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除文件"><span class="nav-number">3.</span> <span class="nav-text">删除文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除目录"><span class="nav-number">4.</span> <span class="nav-text">删除目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取当前目录"><span class="nav-number">5.</span> <span class="nav-text">获取当前目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#改变默认目录"><span class="nav-number">6.</span> <span class="nav-text">改变默认目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取目录内容列表"><span class="nav-number">7.</span> <span class="nav-text">获取目录内容列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断文件-文件夹是否存在"><span class="nav-number">8.</span> <span class="nav-text">判断文件/文件夹是否存在</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#只检查文件是否存在"><span class="nav-number">9.</span> <span class="nav-text">只检查文件是否存在</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断文件是否可做读写操作"><span class="nav-number">10.</span> <span class="nav-text">判断文件是否可做读写操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断是文件夹"><span class="nav-number">11.</span> <span class="nav-text">判断是文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断是文件"><span class="nav-number">12.</span> <span class="nav-text">判断是文件</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用文件的目的"><span class="nav-number">1.</span> <span class="nav-text">使用文件的目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作文件过程"><span class="nav-number">2.</span> <span class="nav-text">操作文件过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相对路径与绝对路径"><span class="nav-number">3.</span> <span class="nav-text">相对路径与绝对路径</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件的打开"><span class="nav-number"></span> <span class="nav-text">文件的打开</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#注：模式"><span class="nav-number">1.</span> <span class="nav-text">注：模式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关闭文件"><span class="nav-number"></span> <span class="nav-text">关闭文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件的读写"><span class="nav-number"></span> <span class="nav-text">文件的读写</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#写数据"><span class="nav-number">1.</span> <span class="nav-text">写数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#读数据"><span class="nav-number">2.</span> <span class="nav-text">读数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#read方法"><span class="nav-number">2.1.</span> <span class="nav-text">read方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注"><span class="nav-number">3.</span> <span class="nav-text">注</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#readline方法"><span class="nav-number">3.1.</span> <span class="nav-text">readline方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#readlines方法"><span class="nav-number">3.2.</span> <span class="nav-text">readlines方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件的定位读写"><span class="nav-number"></span> <span class="nav-text">文件的定位读写</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取当前读写的位置"><span class="nav-number">1.</span> <span class="nav-text">获取当前读写的位置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定位到某个位置"><span class="nav-number">2.</span> <span class="nav-text">定位到某个位置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件的相关操作"><span class="nav-number"></span> <span class="nav-text">文件的相关操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#文件重命名"><span class="nav-number">1.</span> <span class="nav-text">文件重命名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建文件夹"><span class="nav-number">2.</span> <span class="nav-text">创建文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除文件"><span class="nav-number">3.</span> <span class="nav-text">删除文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除目录"><span class="nav-number">4.</span> <span class="nav-text">删除目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取当前目录"><span class="nav-number">5.</span> <span class="nav-text">获取当前目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#改变默认目录"><span class="nav-number">6.</span> <span class="nav-text">改变默认目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取目录内容列表"><span class="nav-number">7.</span> <span class="nav-text">获取目录内容列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断文件-文件夹是否存在"><span class="nav-number">8.</span> <span class="nav-text">判断文件/文件夹是否存在</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#只检查文件是否存在"><span class="nav-number">9.</span> <span class="nav-text">只检查文件是否存在</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断文件是否可做读写操作"><span class="nav-number">10.</span> <span class="nav-text">判断文件是否可做读写操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断是文件夹"><span class="nav-number">11.</span> <span class="nav-text">判断是文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断是文件"><span class="nav-number">12.</span> <span class="nav-text">判断是文件</span></a></li></ol></div>
             
 
           </div>

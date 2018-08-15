@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="疯疯癫癫">
 <meta property="og:description" content="将介绍面向对象中的两边带有两个下划线的方法">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-07T11:15:17.995Z">
+<meta property="og:updated_time" content="2018-08-15T04:39:12.808Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常用的魔法方法">
 <meta name="twitter:description" content="将介绍面向对象中的两边带有两个下划线的方法">
@@ -417,7 +417,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  365 字
+                  1,234 字
                 </span>
               
 
@@ -433,7 +433,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  5 分钟
                 </span>
               
             </div>
@@ -458,7 +458,7 @@
       
 
       
-        <h1 id="str方法"><a href="#str方法" class="headerlink" title="str方法"></a>str方法</h1><pre><code>#返回一个对象的描述字符串, 更加方便用户阅读, 对用户更友好
+        <h1 id="返回一个对象的描述字符串"><a href="#返回一个对象的描述字符串" class="headerlink" title="返回一个对象的描述字符串"></a>返回一个对象的描述字符串</h1><h2 id="str方法"><a href="#str方法" class="headerlink" title="str方法"></a>str方法</h2><pre><code>#返回一个对象的描述字符串, 更加方便用户阅读, 对用户更友好
 触发方式
     print 打印一个对象时
     str() 函数时
@@ -472,18 +472,11 @@
     #初始化对象
     def __init__(self,new_name,new_age):
         self.name = new_name
-        self.name = new_age
+        self.age = new_age
 
     def __str__(self):
         return &quot;%s的年龄是:%d&quot;%(self.name,self.age)
 
-    #方法
-    def eat(self):
-        print(&quot;%s正在吃东西......&quot;%self.name)
-    def drink(self):
-        print(&quot;%s正在喝饮料......&quot;%self.name)
-    def sleep(self):
-        print(&quot;%s正在睡觉觉......&quot;%self.name)
 tom = Cat(&quot;汤姆&quot;,40)
 lanmao = Cat(&quot;蓝猫&quot;,10)
 
@@ -496,19 +489,187 @@ print(lanmao)
 <pre><code>&lt;__main__.Cat object at 0x7fbc0ca62198&gt;
 &lt;__main__.Cat object at 0x7fbc0ca62240&gt;
 </code></pre><p>打印的是系统默认的表达格式.</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>当我们在调用print(类)时,系统会先查找<strong>str</strong>或者<strong>repr</strong>方法,如果有这两种方法的一个,则打印方法返回的值.</p>
-<h1 id="repr方法"><a href="#repr方法" class="headerlink" title="repr方法"></a>repr方法</h1><pre><code>#返回一个对象的描述字符串, 更加方便机器处理, 对机器更友好(开发人员查看)
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>当我们在调用print(类)时,系统会先查找<strong>str</strong>或者<strong>repr</strong>方法,如果有这两种方法的一个,则打印方法返回的值.</p>
+<h2 id="repr方法"><a href="#repr方法" class="headerlink" title="repr方法"></a>repr方法</h2><pre><code>#返回一个对象的描述字符串, 更加方便机器处理, 对机器更友好(开发人员查看)
 触发方式
-    当我们在交互模式下, 直接执行某个变量, 就会输出对应信息
-    repr() 函数时
+    当我们在交互模式下, 直接执行对象名回车, 就会输出对应信息
+    通过调用repr()函数时
+
 格式
     def __repr__(self):
         return &quot;描述信息&quot;
 
 注意
      一般情况下, 应满足如下等式
-        obj == eval(repr(obj))
+        obj == eval(repr(obj)) 如：
     或者描述一个实例详细的信息(类名等等)
+</code></pre><p><strong>例一</strong></p>
+<pre><code>class Cat:
+    &quot;&quot;&quot;定义一个Cat类&quot;&quot;&quot;
+    #初始化对象
+    def __init__(self,new_name,new_age):
+        self.name = new_name
+        self.age = new_age
+
+    def __repr__(self):
+        return &quot;%s的年龄是:%d&quot;%(self.name,self.age)
+
+tom = Cat(&quot;汤姆&quot;,40)
+lanmao = Cat(&quot;蓝猫&quot;,10)
+
+print(tom)
+print(lanmao) 
+</code></pre><p>打印</p>
+<pre><code>汤姆的年龄是:40
+蓝猫的年龄是:10
+</code></pre><p><strong>例二</strong></p>
+<pre><code>import datetime
+
+temp = datetime.datetime.now()
+print(temp)
+print(repr(temp))
+
+result = repr(temp)
+print(eval(result))
+</code></pre><p>打印</p>
+<pre><code>2018-08-14 17:18:39.073666
+datetime.datetime(2018, 8, 14, 17, 18, 39, 73666)
+2018-08-14 17:18:39.073666
+</code></pre><h2 id="str-与-repr方法的区别"><a href="#str-与-repr方法的区别" class="headerlink" title="str 与 repr方法的区别"></a>str 与 repr方法的区别</h2><p>案例</p>
+<pre><code>class Person:
+    def __str__(self):
+        return &quot;str&quot;
+
+    def __repr__(self):
+        return &quot;repr&quot;
+
+p = Person()
+
+print(p)
+print(repr(p))
+</code></pre><h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><pre><code>当一个类同时拥有str 和 repr方法时，print（类）打印的是__str__方法，可以利用repr()函数打印__repr__方法
+
+__str__方法和__repr__方法都是返回一个对象的描述字符串, 但__str__更加方便用户阅读, 对用户更友好，__repr__更加方便机器处理, 对机器更友好
+
+更多是利用repr方法返回的值，通过eval函数再次重新转换为一个具体的对象
+</code></pre><h1 id="使对象像函数一样可以被调用"><a href="#使对象像函数一样可以被调用" class="headerlink" title="使对象像函数一样可以被调用"></a>使对象像函数一样可以被调用</h1><h2 id="call方法"><a href="#call方法" class="headerlink" title="call方法"></a>call方法</h2><pre><code>作用
+    使得“对象”具备当做函数，来调用的能力
+
+使用
+    1. 实现实例方法 __call__
+    2. 那么创建好的实例, 就可以通过函数的形式来调用
+        实例(参数)
+
+应用场景
+    有点类似于之前所讲的&quot;偏函数&quot;的应用场景
+    可以将&quot;常变参数&quot;和&quot;不常变参数&quot;进行分离
+</code></pre><p>案例</p>
+<pre><code>不同类型的笔, 画不同的图形
+class PenFactory(object):
+    def __init__(self, p_type):
+        self.type = p_type
+
+    def __call__(self, p_color):
+        print(&quot;创建了一个%s类型的画笔，画笔颜色是%s&quot; % (self.type, p_color))
+
+pen = PenFactory(&quot;钢笔&quot;)
+pen(&quot;红色&quot;)
+pen(&quot;黄色&quot;)
+pen(&quot;绿色&quot;)
+</code></pre><p>打印</p>
+<pre><code>创建了一个钢笔类型的画笔，画笔颜色是红色
+创建了一个钢笔类型的画笔，画笔颜色是黄色
+创建了一个钢笔类型的画笔，画笔颜色是绿色
+</code></pre><h1 id="使对象可以像字典一样操作"><a href="#使对象可以像字典一样操作" class="headerlink" title="使对象可以像字典一样操作"></a>使对象可以像字典一样操作</h1><pre><code>设置元素的方法
+    def __setitem__(self, key, value):
+获取元素的方法
+    def __getitem__(self, item):
+删除元素的方法
+    def __delitem__(self, key):
+</code></pre><p>案例</p>
+<pre><code>class Person(object):
+    &quot;&quot;&quot;docstring for Person&quot;&quot;&quot;
+    def __init__(self):
+        self.dict = {}
+
+    def __setitem__(self, key, value):
+        self.dict[key] =value
+
+    def __getitem__(self, item):
+        return self.dict[item]
+
+    def __delitem__(self, key):
+        del self.dict[key]
+
+people = Person()
+
+people[&quot;name&quot;] = &quot;zylin&quot;
+
+print(people[&quot;name&quot;])
+del people[&quot;name&quot;]
+
+print(people.dict)
+</code></pre><p>打印</p>
+<pre><code>zylin
+{}
+</code></pre><h1 id="自定义对象比较规则"><a href="#自定义对象比较规则" class="headerlink" title="自定义对象比较规则"></a>自定义对象比较规则</h1><pre><code>相等
+    __eq__
+不相等
+    __ne__
+小于
+    __lt__
+小于或等于
+    __le__
+大于
+    __gt__
+大于或等于
+    __ge__
+</code></pre><p>案例：</p>
+<pre><code>class Person(object):
+    &quot;&quot;&quot;docstring for Person&quot;&quot;&quot;
+    def __init__(self, age):
+        self.age = age
+
+    def __eq__(self, other):
+        return self.age == other.age
+
+    def __ne__(self, other):
+        return self.age != other.age
+
+    def __lt__(self, other):
+        return self.age &lt; other.age
+
+    def __le__(self, other):
+        return self.age &lt;= other.age
+
+    def __gt__(self, other):
+        return self.age &gt; other.age
+
+    def __ge__(self, other):
+        return self.age &gt;= other.age
+
+xiao = Person(18)
+zylin = Person(22)
+
+print(&quot;==&quot;, xiao == zylin)
+print(&quot;!=&quot;, xiao != zylin)
+print(&quot;&lt; &quot;, xiao &lt; zylin)
+print(&quot;&gt; &quot;, xiao &gt; zylin)
+print(&quot;&lt;=&quot;, xiao &lt;= zylin)
+print(&quot;&gt;=&quot;, xiao &gt;= zylin)
+</code></pre><h2 id="注"><a href="#注" class="headerlink" title="注"></a>注</h2><p>如果对于反向操作的比较符, 只定义了其中一个方法但使用的是另外一种比较运算那么, 解释器会采用调换参数的方式进行调用该方法</p>
+<pre><code>例如
+    定义了 &quot;小于&quot; 操作x &lt; y，使用 x &gt; y会被调换参数, 调用上面的 &quot;小于操作&quot;
+但是, 不支持叠加操作
+    例如定义了 &quot;小于&quot; 和 &quot;等于&quot; 操作，不能使用 x &lt;= y
+</code></pre><p>补充<br>    使用装饰器, 自动生成”反向” “组合”的方法<br>        步骤</p>
+<pre><code>        1. 使用装饰器装饰类
+            @functools.total_ordering
+        2. 实现
+            &gt; 或 &gt;= 或 &lt; 或 &lt;= 其中一个
+            实现 ==
+上下文环境中的布尔值
+    __bool__
 </code></pre>
       
     </div>
@@ -568,8 +729,8 @@ print(lanmao)
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/28/python/python上/31常见的魔法属性/" rel="next" title="常用的魔法属性">
-                <i class="fa fa-chevron-left"></i> 常用的魔法属性
+              <a href="/2018/07/28/python/python上/30经典类与新式类/" rel="next" title="经典类与新式类">
+                <i class="fa fa-chevron-left"></i> 经典类与新式类
               </a>
             
           </div>
@@ -664,7 +825,7 @@ print(lanmao)
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-count">46</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -675,7 +836,7 @@ print(lanmao)
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -686,7 +847,7 @@ print(lanmao)
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -719,7 +880,7 @@ print(lanmao)
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#str方法"><span class="nav-number">1.</span> <span class="nav-text">str方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.1.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#repr方法"><span class="nav-number">2.</span> <span class="nav-text">repr方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#返回一个对象的描述字符串"><span class="nav-number">1.</span> <span class="nav-text">返回一个对象的描述字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#str方法"><span class="nav-number">1.1.</span> <span class="nav-text">str方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">1.1.1.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#repr方法"><span class="nav-number">1.2.</span> <span class="nav-text">repr方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#str-与-repr方法的区别"><span class="nav-number">1.3.</span> <span class="nav-text">str 与 repr方法的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#总结-1"><span class="nav-number">1.3.1.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使对象像函数一样可以被调用"><span class="nav-number">2.</span> <span class="nav-text">使对象像函数一样可以被调用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#call方法"><span class="nav-number">2.1.</span> <span class="nav-text">call方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使对象可以像字典一样操作"><span class="nav-number">3.</span> <span class="nav-text">使对象可以像字典一样操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自定义对象比较规则"><span class="nav-number">4.</span> <span class="nav-text">自定义对象比较规则</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#注"><span class="nav-number">4.1.</span> <span class="nav-text">注</span></a></li></ol></li></ol></div>
             
 
           </div>
