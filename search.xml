@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[html 元素与属性]]></title>
-    <url>%2F2018%2F09%2F06%2FHTML5%2F03html%E5%85%83%E7%B4%A0%2F</url>
-    <content type="text"><![CDATA[HTML 元素HTML 元素语法HTML 元素以开始标签起始，以结束标签终止元素的内容是开始标签与结束标签之间的内容某些 HTML 元素具有空内容，空元素在开始标签中进行关闭（以开始标签的结束而结束）大多数 HTML 元素可拥有属性 &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;body&gt; &lt;p&gt;这是第一个段落。&lt;/p&gt; &lt;/body&gt; &lt;/html&gt; ##&lt;p&gt; 元素: &lt;p&gt;这是第一个段落。&lt;/p&gt; 这个 &lt;p&gt; 元素定义了 HTML 文档中的一个段落。 这个元素拥有一个开始标签 &lt;p&gt; 以及一个结束标签 &lt;/p&gt;. 元素内容是: 这是第一个段落。 &lt;body&gt; 元素:&lt;body&gt; &lt;p&gt;这是第一个段落。&lt;/p&gt; &lt;/body&gt; &lt;body&gt; 元素定义了 HTML 文档的主体。 这个元素拥有一个开始标签 &lt;body&gt; 以及一个结束标签 &lt;/body&gt;。 元素内容是另一个 HTML 元素（p 元素）。 &lt;html&gt; 元素：&lt;html&gt; &lt;body&gt; &lt;p&gt;这是第一个段落。&lt;/p&gt; &lt;/body&gt; &lt;/html&gt; &lt;html&gt; 元素定义了整个 HTML 文档。 这个元素拥有一个开始标签 &lt;html&gt; ，以及一个结束标签 &lt;/html&gt;. 元素内容是另一个 HTML 元素（body 元素）。 不要忘记结束标签忘记使用结束标签会产生不可预料的结果或错误。 HTML 空元素没有内容的 HTML 元素被称为空元素。空元素是在开始标签中关闭的。 在开始标签中添加斜杠，比如&lt;br /&gt;，是关闭空元素的正确方法 HTML 提示：使用小写标签HTML 标签对大小写不敏感：&lt;P&gt; 等同于 &lt;p&gt;。但万维网联盟（W3C）在 HTML 4 中推荐使用小写，而在未来 (X)HTML 版本中强制使用小写。 ##注意 一些标签的使用，切记所有标签都需要闭合，不管是单体标签还是成对标签。（尽管目前浏览器是识别有些标签不闭合的情况，但是取的最好的保证兼容性，使用闭合） 标签写法要用小写字母（有些版本对大小写可认为相同，而xhtml中强制使用小写） 属性HTML 属性HTML 元素可以设置属性，属性一般描述于开始标签，属性总是以名称/值对的形式出现，比如：name=”value”。 HTML 属性与引号属性值应该始终被包括在引号内。 双引号是最常用的，不过使用单引号也没有问题。 提示: 在某些个别的情况下，比如属性值本身就含有双引号，那么您必须使用单引号，例如：name=’John “ShotGun” Nelson’ HTML使用小写属性属性和属性值对大小写不敏感。但最好使用小写属性。]]></content>
+    <title><![CDATA[html 标题]]></title>
+    <url>%2F2018%2F09%2F06%2FHTML5%2F04html%E6%A0%87%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[HTML 标题标题（Heading）是通过 &lt;h1&gt; - &lt;h6&gt; 标签进行定义的.&lt;h1&gt; 定义最大的标题。 &lt;h6&gt; 定义最小的标题。实例 &lt;h1&gt;这是一个标题。&lt;/h1&gt; &lt;h2&gt;这是一个标题。&lt;/h2&gt; &lt;h3&gt;这是一个标题。&lt;/h3&gt; 注: 浏览器会自动地在标题的前后添加空行。 请确保将 HTML 标题 标签只用于标题。不要仅仅是为了生成粗体或大号的文本而使用标题。 搜索引擎使用标题为您的网页的结构和内容编制索引。用标题来呈现文档结构。 应该将 h1 用作主标题（最重要的），其后是 h2（次重要的），再其次是 h3，以此类推。 HTML 水平线&lt;hr /&gt; 标签在 HTML 页面中创建水平线。hr 元素可用于分隔内容。 &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;meta charset=&quot;utf-8&quot;&gt; &lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;p&gt;hr 标签定义水平线：&lt;/p&gt; &lt;hr /&gt; &lt;p&gt;这是段落。&lt;/p&gt; &lt;hr /&gt; &lt;p&gt;这是段落。&lt;/p&gt; &lt;/body&gt; &lt;/html&gt; HTML 注释可以将注释插入 HTML 代码中，这样可以提高其可读性，使代码更易被人理解。浏览器会忽略注释，也不会显示它们。写法如下: &lt;!-- 这是一个注释 --&gt;]]></content>
       <categories>
         <category>HTML5</category>
       </categories>
@@ -23,9 +23,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[html 标题]]></title>
-    <url>%2F2018%2F09%2F06%2FHTML5%2F04html%E6%A0%87%E9%A2%98%2F</url>
-    <content type="text"><![CDATA[HTML 标题标题（Heading）是通过 &lt;h1&gt; - &lt;h6&gt; 标签进行定义的.&lt;h1&gt; 定义最大的标题。 &lt;h6&gt; 定义最小的标题。实例 &lt;h1&gt;这是一个标题。&lt;/h1&gt; &lt;h2&gt;这是一个标题。&lt;/h2&gt; &lt;h3&gt;这是一个标题。&lt;/h3&gt; 注: 浏览器会自动地在标题的前后添加空行。 请确保将 HTML 标题 标签只用于标题。不要仅仅是为了生成粗体或大号的文本而使用标题。 搜索引擎使用标题为您的网页的结构和内容编制索引。用标题来呈现文档结构。 应该将 h1 用作主标题（最重要的），其后是 h2（次重要的），再其次是 h3，以此类推。 HTML 水平线&lt;hr /&gt; 标签在 HTML 页面中创建水平线。hr 元素可用于分隔内容。 &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;meta charset=&quot;utf-8&quot;&gt; &lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;p&gt;hr 标签定义水平线：&lt;/p&gt; &lt;hr /&gt; &lt;p&gt;这是段落。&lt;/p&gt; &lt;hr /&gt; &lt;p&gt;这是段落。&lt;/p&gt; &lt;/body&gt; &lt;/html&gt; HTML 注释可以将注释插入 HTML 代码中，这样可以提高其可读性，使代码更易被人理解。浏览器会忽略注释，也不会显示它们。写法如下: &lt;!-- 这是一个注释 --&gt;]]></content>
+    <title><![CDATA[html 元素与属性]]></title>
+    <url>%2F2018%2F09%2F06%2FHTML5%2F03html%E5%85%83%E7%B4%A0%2F</url>
+    <content type="text"><![CDATA[HTML 元素HTML 元素语法HTML 元素以开始标签起始，以结束标签终止元素的内容是开始标签与结束标签之间的内容某些 HTML 元素具有空内容，空元素在开始标签中进行关闭（以开始标签的结束而结束）大多数 HTML 元素可拥有属性 &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;body&gt; &lt;p&gt;这是第一个段落。&lt;/p&gt; &lt;/body&gt; &lt;/html&gt; ##&lt;p&gt; 元素: &lt;p&gt;这是第一个段落。&lt;/p&gt; 这个 &lt;p&gt; 元素定义了 HTML 文档中的一个段落。 这个元素拥有一个开始标签 &lt;p&gt; 以及一个结束标签 &lt;/p&gt;. 元素内容是: 这是第一个段落。 &lt;body&gt; 元素:&lt;body&gt; &lt;p&gt;这是第一个段落。&lt;/p&gt; &lt;/body&gt; &lt;body&gt; 元素定义了 HTML 文档的主体。 这个元素拥有一个开始标签 &lt;body&gt; 以及一个结束标签 &lt;/body&gt;。 元素内容是另一个 HTML 元素（p 元素）。 &lt;html&gt; 元素：&lt;html&gt; &lt;body&gt; &lt;p&gt;这是第一个段落。&lt;/p&gt; &lt;/body&gt; &lt;/html&gt; &lt;html&gt; 元素定义了整个 HTML 文档。 这个元素拥有一个开始标签 &lt;html&gt; ，以及一个结束标签 &lt;/html&gt;. 元素内容是另一个 HTML 元素（body 元素）。 不要忘记结束标签忘记使用结束标签会产生不可预料的结果或错误。 HTML 空元素没有内容的 HTML 元素被称为空元素。空元素是在开始标签中关闭的。 在开始标签中添加斜杠，比如&lt;br /&gt;，是关闭空元素的正确方法 HTML 提示：使用小写标签HTML 标签对大小写不敏感：&lt;P&gt; 等同于 &lt;p&gt;。但万维网联盟（W3C）在 HTML 4 中推荐使用小写，而在未来 (X)HTML 版本中强制使用小写。 ##注意 一些标签的使用，切记所有标签都需要闭合，不管是单体标签还是成对标签。（尽管目前浏览器是识别有些标签不闭合的情况，但是取的最好的保证兼容性，使用闭合） 标签写法要用小写字母（有些版本对大小写可认为相同，而xhtml中强制使用小写） 属性HTML 属性HTML 元素可以设置属性，属性一般描述于开始标签，属性总是以名称/值对的形式出现，比如：name=”value”。 HTML 属性与引号属性值应该始终被包括在引号内。 双引号是最常用的，不过使用单引号也没有问题。 提示: 在某些个别的情况下，比如属性值本身就含有双引号，那么您必须使用单引号，例如：name=’John “ShotGun” Nelson’ HTML使用小写属性属性和属性值对大小写不敏感。但最好使用小写属性。]]></content>
       <categories>
         <category>HTML5</category>
       </categories>
@@ -56,6 +56,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[西蒙学习方法]]></title>
+    <url>%2F2018%2F09%2F02%2F%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%2F2%E8%A5%BF%E8%92%99%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[又名 “ 锥形学习法 ”，此法来源于诺贝尔经济学奖获得者西蒙教授提出的一个理论：“对于一个有一定基础的人来说，只要真正肯下功夫，在6个月内就可以掌握任何一门学问。”为了形象地说明，可以将西蒙学习法比做一把锥子。就像居里夫人所说，“知识的专一性像锥尖，精力的集中好比是锥子的作用力，时间的连续性好比是不停顿地使锥子往前钻进。” 西蒙学习法之所以高效的原理是在于，连续的长时间学习本身包涵对之前学习内容的应用，这样就省去了大量的复习时间。 小编就拿最简单的用烧开水这件事来做比喻，西蒙学习法就是连续的加热，所以热量散失的少;普通的间断学习是烧一会儿就停止加热，一段时间以后再继续加热，这样许多热量就白白散失了。持续烧水和间隙烧水，那当然是持续加热的效果要好了。 西蒙学习法的核心是：持续(连续性的时间投入)、专注(精神集中)、目标单一(以某一技能提升为目标)，烧水、外语学习可以作为西蒙学习法的经典例子，持续加热一下子把水烧开，一天学习10h，集中单一课程，短期内突破。比刻意练习亦少了学习区的概念和即时反馈原则。]]></content>
+      <categories>
+        <category>学习方法</category>
+      </categories>
+      <tags>
+        <tag>学习方法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[思维导图学习方法]]></title>
     <url>%2F2018%2F09%2F02%2F%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%2F1%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E5%AD%A6%E4%B9%A0%2F</url>
     <content type="text"><![CDATA[思维导图的运用，有助于我们进一步的认识大脑，并对储藏的信息进行提炼和重组。我们生活在一个互联网时代，每天接收着庞大的信息量，这样的思维方式无疑是学半功倍的一种方法。 思维导图学习法重点要素是：中心点、分支线、关键词以及个性标。这种方法对于学习者的逻辑性和全局性思维有很好的培养功能。 工具推荐:手机app，思维导图，电脑端用Xmind或百度脑图。]]></content>
@@ -70,17 +81,6 @@
     <title><![CDATA[SQ3R阅读方法]]></title>
     <url>%2F2018%2F09%2F02%2F%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%2F3SQ3R%E9%98%85%E8%AF%BB%E6%B3%95%2F</url>
     <content type="text"><![CDATA[SQ3R 阅读法的步骤通常是这样的： 第1步，Survey浏览，浏览并不是简单的翻翻看看，在浏览的过程中是要注意书籍/文章的重要信息，包括书名，前言，目录，标题、图表，概要等等。 第2步，Question提问，浏览的过程中不仅仅是看，更要提出问题，从书名、标题上就可以开始提问题，包括各章节承上启下的内容，一边浏览一边提问是有利于激发学习兴趣。 第3步，Read阅读，这一次就是要精读细读，要对重要的、难解的部分反复阅读，并且自己要深刻理解，这一步一定是要仔细认真。 第4步，Recite复述，当你阅读完了之后，把书本/文章合上，回忆内容，并且用自己的语言复述内容/知识。这一步可以结合第二个步骤提问一起来进行，看看自己开始的提问有没有得到正确的回答，来检验自己是否读懂了。 第5步，Review 复习，任何知识都是需要复习的。SQ3R 阅读法建议复习一般在复述的后一两天进行。这样做的好处是，可以重温已有的知识，也可以温故知新，从旧的知识里生出新的感悟。]]></content>
-      <categories>
-        <category>学习方法</category>
-      </categories>
-      <tags>
-        <tag>学习方法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[西蒙学习方法]]></title>
-    <url>%2F2018%2F09%2F02%2F%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%2F2%E8%A5%BF%E8%92%99%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[又名 “ 锥形学习法 ”，此法来源于诺贝尔经济学奖获得者西蒙教授提出的一个理论：“对于一个有一定基础的人来说，只要真正肯下功夫，在6个月内就可以掌握任何一门学问。”为了形象地说明，可以将西蒙学习法比做一把锥子。就像居里夫人所说，“知识的专一性像锥尖，精力的集中好比是锥子的作用力，时间的连续性好比是不停顿地使锥子往前钻进。” 西蒙学习法之所以高效的原理是在于，连续的长时间学习本身包涵对之前学习内容的应用，这样就省去了大量的复习时间。 小编就拿最简单的用烧开水这件事来做比喻，西蒙学习法就是连续的加热，所以热量散失的少;普通的间断学习是烧一会儿就停止加热，一段时间以后再继续加热，这样许多热量就白白散失了。持续烧水和间隙烧水，那当然是持续加热的效果要好了。 西蒙学习法的核心是：持续(连续性的时间投入)、专注(精神集中)、目标单一(以某一技能提升为目标)，烧水、外语学习可以作为西蒙学习法的经典例子，持续加热一下子把水烧开，一天学习10h，集中单一课程，短期内突破。比刻意练习亦少了学习区的概念和即时反馈原则。]]></content>
       <categories>
         <category>学习方法</category>
       </categories>
@@ -133,17 +133,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Python数据分析的学习引导]]></title>
-    <url>%2F2018%2F08%2F26%2F%E5%A4%A7%E6%95%B0%E6%8D%AE%2FPython%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%2F00Anaconda%E7%9A%84%E5%AE%89%E8%A3%85%2F</url>
-    <content type="text"><![CDATA[什么是Anaconda拥有超过600万用户，开源Anaconda Distribution是在Linux，Windows和Mac OS X上进行Python和R数据科学和机器学习的最快和最简单的方法。它是开发，测试和培训的行业标准。单机。 轻松安装1,400多个Python / R数据科学包并管理您的包，依赖项和环境 - 只需单击一下按钮即可。免费和开源。 安装数据分析工具Anaconda官网地址Windows上的安装教程注：如果对英文阅读有困难，建议安装谷歌浏览器，通过右击选择中文翻译 Linux上的安装教程学习资料推荐博客园 CSDN 等等]]></content>
-      <categories>
-        <category>Python数据分析</category>
-      </categories>
-      <tags>
-        <tag>Python数据分析</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[基础知识]]></title>
     <url>%2F2018%2F08%2F26%2F%E5%BA%9F%E5%BC%83%E5%8D%9A%E6%96%87%2F01%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
     <content type="text"><![CDATA[赋值：将定义好的数据，传递给变量 变量：本义指其值可以改变的量，这里说的是数据赋值的对象，我们通过变量名来操作数据 举例 x = 10 y = x-7 z = &apos;string&apos; t = True 变量的命名规则变量名可以由字母、数字、下划线组成，但不能以数字开头 区分字母的大小写 不能与系统关键字重名 如： 有效标识符名称的例子有i、__my_name、name_23和a1b2_c3。 无效标识符名称的例子有2things、this is spaced out和my-name。 许多系统变量以下划线开头，所以最好不用下划线开头命名变量 数据类型逻辑型又叫布尔型，用于只有两种取值（真 or 假， 0 or 1， 开 or 关等）的场合 值 注释 True 真 False 假 运算规则运算符 注释 运算规则 &amp; 按位与 两个逻辑型数据中，有一个逻辑型数据为假，结果为假 | 按位或 两个逻辑型数据中，有一个逻辑型数据为真，结果为真 not 取反 取相反的值，真为假，假为真 关于数字间的逻辑比较请看python基础里面的运算符一章 数值型运算规则运算符 注释 运算规则 + 加 - 减 * 乘 / 除 % 求余 // 整除 只保留整数部分 ** 乘方 指数幂运算 注意a = 4.2 b = 2.1 print(a+b) 打印 6.300000000000001 小数的运算是浮点数的运算，精度会有一点点的偏差，每种编程语言都有这个问题，在Python中的解决方法 from decimal import Decimal a = Decimal(&apos;4.2&apos;) b = Decimal(&apos;2.1&apos;) print(a+b) 打印 6.3 字符型字符型数据代表了所有可定义的字符 定义方式：使用 ‘’ 或 “” 或 “”””””将其包含起来 &apos;hello world&apos; &quot;&quot;&quot; 床前明月光 疑是地上霜 &quot;&quot;&quot; 注意： &apos;&apos; 和 &quot;&quot;之间没有区别,&apos;&apos;&apos; &apos;&apos;&apos; 和 &quot;&quot;&quot; &quot;&quot;&quot;之间没有区别 &apos;&apos;表示单行字符串，&apos;&apos;&apos; &apos;&apos;&apos;可以表示多行字符串 转义字符使用反斜杠（\）+ 字符 可以表示特殊字符 如 \n、 \t等，具体有哪些特殊字符可以在前面的Python基础里的数据类型中或网上可以查到 print(&quot;hello \t world!&quot;) 原始字符如果不想使用反斜杠转义，可以在字符串前面加上一个 (r) 表示原始字符串 path = r&apos;C:\windows\python #注意末尾不能有反斜杠，否则会报错 续行符反斜杠还可以当做续行符，表示下一行是上一行的延续 s = &apos;abcdefg \ higklmn&apos; 多行符分号表示前面的语句是一个完整的语句，多个命令可以写在同一行 a = 4;b = 5; c = a+b; 当然，我不建议这样写 加号与乘号加号可以将两个字符串连接在一起，乘号可将字符串重复 s = &apos;abc&apos;+&apos;def&apos; st = &apos;abc&apos; * 3 print(s,st) 打印 &apos;abcdef&apos; &apos;abcabcabc&apos; ###字符串的索引Python中的索引方式有两种：一种是从左到右，从0开始依次增加；一种是从右到左，从-1开始依次减少 word = &apos;Python&apos; print(word[0], word[5]) print(word[-1], word[-6]) ###字符串的切片对字符串进行切片可以得到一段子串，截取的范围是左闭右开区间 s = &apos;helloworld&apos; print(s[1:5]) print(s[:]) print(s[5:]) print(s[:-1]) print(s[1:5:2]) 打印 ello helloworld world helloworl el 详细内容看Python基础里的切片知识 注：不能改变字符串里的内容 s = &apos;helloworld&apos; s[2] = &apos;a&apos; #error 检测开头和结尾S.endswith(suffix[, start[, end]]) -&gt; bool S.startswith(prefix[, start[, end]]) -&gt; bool 案例 Web = &apos;https://www.zylin.xyz&apos; Web.endswith(&apos;.xyz&apos;) #检测结尾，如果符合返回True Web.startswith(&apos;http:&apos;) #检测开头，如果符合返回True choices = (&apos;http:&apos;,&apos;https:&apos;) 注意，这仅能接受一个字符元组，不支持列表 Web.startswith(choices) #只要开头符合两者之一就返回True 查找字符串S.find(sub[, start[, end]]) -&gt; int 案例 Web = &apos;花木成畦手自栽 https://www.zylin.xyz https:开朗大方&apos; result = Web.find(&apos;https:&apos;) #从左至右查找字符，查找到返回字符的当前位置，查找不到返回-1 print(result) #打印 8 ，汉字算一个字符 result = Web.rfind(&apos;https:&apos;) #从右至左查找字符，和上面一样 print(result) #打印30 忽略大小写查找字符串findall(pattern, string, flags=0) -&gt; list 案例 import re #需要导入re包 Web = &apos;UPPER PYTHON, lower python, Mixed Python&apos; re.findall(&apos;python&apos;,Web, flags = re.IGNORECASE) #IGNORECASE是一个标志 打印 [&apos;PYTHON&apos;, &apos;python&apos;, &apos;Python&apos;] 想要详细了解需要学习Python的 正则表达式 替换字符串S.replace(old, new[, count]) -&gt; str #不写count参数则默认替换所有字符 案例 text = &apos;hello world,hello python, hello anaconda&apos; text.replace(&apos;hello&apos;,&apos;hi&apos;) 打印 &apos;hi world,hi python, hi anaconda&apos; 忽略大小写替换字符串sub(pattern, repl, string, count=0, flags=0) -&gt; str 案例 import re #需要导入re包 Web = &apos;UPPER PYTHON, lower python, Mixed Python&apos; re.sub(&apos;python&apos;, &apos;text&apos;,Web, flags = re.IGNORECASE) 打印 &apos;UPPER text, lower text, Mixed text&apos; 合并拼接字符串S.join(iterable) -&gt; str 案例 parts = [&apos;My&apos;, &apos;name&apos;, &apos;is&apos;, &apos;Zylin&apos;, &apos;and&apos;,&apos;I&apos;, &apos;am&apos;, &apos;a&apos;, &apos;student&apos;] &apos;&apos;.join(parts) &apos; &apos;.join(parts) &apos;,&apos;.join(parts) 打印 &apos;MynameisZylinandIamastudent&apos; &apos;My name is Zylin and I am a student&apos; &apos;My,name,is,Zylin,and,I,am,a,student&apos; 注数据结构请找到前面的元组、列表、字典、集合进行学习]]></content>
@@ -152,6 +141,17 @@
       </categories>
       <tags>
         <tag>废弃博文</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Python数据分析的学习引导]]></title>
+    <url>%2F2018%2F08%2F26%2F%E5%A4%A7%E6%95%B0%E6%8D%AE%2FPython%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%2F00Anaconda%E7%9A%84%E5%AE%89%E8%A3%85%2F</url>
+    <content type="text"><![CDATA[什么是Anaconda拥有超过600万用户，开源Anaconda Distribution是在Linux，Windows和Mac OS X上进行Python和R数据科学和机器学习的最快和最简单的方法。它是开发，测试和培训的行业标准。单机。 轻松安装1,400多个Python / R数据科学包并管理您的包，依赖项和环境 - 只需单击一下按钮即可。免费和开源。 安装数据分析工具Anaconda官网地址Windows上的安装教程注：如果对英文阅读有困难，建议安装谷歌浏览器，通过右击选择中文翻译 Linux上的安装教程学习资料推荐博客园 CSDN 等等]]></content>
+      <categories>
+        <category>Python数据分析</category>
+      </categories>
+      <tags>
+        <tag>Python数据分析</tag>
       </tags>
   </entry>
   <entry>
@@ -353,14 +353,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[返回多个值]]></title>
-    <url>%2F2018%2F07%2F10%2Fpython%2Fpython%E4%B8%8A%2F18%E8%BF%94%E5%9B%9E%E5%A4%9A%E4%B8%AA%E5%80%BC%2F</url>
-    <content type="text"><![CDATA[return语句return [表达式] 语句用于退出函数，选择性地向调用方返回一个表达式。不带参数值的return语句返None。之前的例子都没有示范如何返回数值，以下实例演示了 return 语句的用法 比如在游戏中经常需要从一个点移动到另一个点，给出坐标、位移和角度，就可以计算出新的新的坐标： import math def move(x, y, step, angle=0): nx = x + step * math.cos(angle) ny = y - step * math.sin(angle) return nx, ny import math语句表示导入math包，并允许后续代码引用math包里的sin、cos等函数。 然后，我们就可以同时获得返回值： &gt;&gt;&gt; x, y = move(100, 100, 60, math.pi / 6) &gt;&gt;&gt; print(x, y) 151.96152422706632 70.0 但其实这只是一种假象，Python函数返回的仍然是单一值： &gt;&gt;&gt; r = move(100, 100, 60, math.pi / 6) &gt;&gt;&gt; print(r) (151.96152422706632, 70.0) 原来返回值是一个tuple！但是，在语法上，返回一个tuple可以省略括号，而多个变量可以同时接收一个tuple，按位置赋给对应的值，所以，Python的函数返回多值其实就是返回一个tuple，但写起来更方便，当然，你也可以用列表、字典来返回数据。 小结定义函数时，需要确定函数名和参数个数；如果有必要，可以先对参数的数据类型做检查；函数体内部可以用return随时返回函数结果；函数执行完毕也没有return语句时，自动return None。]]></content>
+    <title><![CDATA[基础知识]]></title>
+    <url>%2F2018%2F07%2F10%2F%E7%AE%97%E6%B3%95%2F%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%2F0%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
+    <content type="text"><![CDATA[什么是算法？解决特定问题的方法 为何要学习算法？&emsp;&emsp;从上面知道了算法就是解决特定问题的方法，而我们用的编程语言是用来解决问题的工具，工具有了，如何去使用工具才是我们应该要去学习的。如果说编程语言是利器，那么算法就是灵魂。算法很难，但也需要我们去学习。 什么是数据结构？数据结构是计算机存储、组织数据的方式。通常情况下，精心选择的数据结构可以带来更高的运行或者存储效率。 算法与数据结构的区别程序 = 数据结构 + 算法总结：算法是为了解决实际问题而设计的，数据结构是算法需要处理的问题载体 算法的特性：* 有限的 * 每一步是明确的(不能有歧义) * 至少有一个输出 什么是好的算法？分析指标： * 空间复杂度S(n)：程序执行时占用存储单元的长度 * 时间复杂度T(n)：程序执行时耗费时间的长度 注：这两个指标与要处理的数据规模是相关的。 分析算法关注两种复杂度 * 最坏情况复杂度Tworst(n) * 平均情况复杂度Tavg(n) 不同复杂度的函数，在不同的数据规模下的增长趋势。 算法时间复杂度的计算点击链接学习 ：算法时间复杂度的计算 时间复杂度的几条基本计算规则基本操作，即只有常数项，认为其时间复杂度为O(1) 顺序结构，时间复杂度按加法进行计算 循环结构，时间复杂度按乘法进行计算 分支结构，时间复杂度取最大值 判断一个算法的效率时，只需要关注操作数量的最高次项，其它次要项和常数项可以忽略 在没有特殊说明时，我们所分析的算法的时间复杂度都是指最坏时间复杂度 若两段算法分别有复杂度T1(n) = O(f1(n)) 和 T2(n) = O(f2(n))，则: 两个算法拼在一起时，等于两段的和 T1(n) + T2(n) 两个算法嵌套时，等于两段的积 T1(n) * T2(n) 抽象数据类型(ADT)抽象数据类型(Abstract Data Type)的含义是指一个数学模型以及定义在此数学模型上的一组操作。即把数据类型和数据类型上的运算捆在一起，进行封装。引入抽象数据类型的目的是把数据类型的表示和数据类型上运算的实现与这些数据类型和运算在程序中的引用隔开，使它们相互独立。 最常用的数据运算有五种插入 修改 删除 查找 排序 案例一：写程序,计算给定多项式在定点x处的值 算法一上面写法不推荐 算法二&emsp;&emsp;秦九韶算法是中国南宋时期的数学家秦九韶提出的一种多项式简化算法。在西方被称作霍纳算法。是一种将一元n次多项式的求值问题转化为n个一次式的算法。其大大简化了计算过程，即使在现代，利用计算机解决多项式的求值问题时，霍纳规则依然是最优的算法规则。具体计算过程自行百度。 f(x) = A0 + X (A1 + X( … ( An - 1 + X( An ) ) ) ) 自行验证第一种与第二种时间复杂度，运行效率自行测试 案例二：给定N个整数的序列{A1,A2,……,An}，求下面函数的最大值。 算法一 算法二 算法三：分治思想 注：代码比较复杂，这里不展示，过程就是利用分治思想解决这个问题(分治思想后面会说) 算法四：在线处理“在线”指每输入一个数据进行即时处理，在任何一个地方终止，算法都能给出正解。]]></content>
       <categories>
-        <category>python基础编程</category>
+        <category>算法基础</category>
       </categories>
       <tags>
-        <tag>python基础编程</tag>
+        <tag>算法基础</tag>
       </tags>
   </entry>
   <entry>
@@ -375,14 +375,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[基础知识]]></title>
-    <url>%2F2018%2F07%2F10%2F%E7%AE%97%E6%B3%95%2F%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%2F0%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
-    <content type="text"><![CDATA[什么是算法？解决特定问题的方法 为何要学习算法？&emsp;&emsp;从上面知道了算法就是解决特定问题的方法，而我们用的编程语言是用来解决问题的工具，工具有了，如何去使用工具才是我们应该要去学习的。如果说编程语言是利器，那么算法就是灵魂。算法很难，但也需要我们去学习。 什么是数据结构？数据结构是计算机存储、组织数据的方式。通常情况下，精心选择的数据结构可以带来更高的运行或者存储效率。 算法与数据结构的区别程序 = 数据结构 + 算法总结：算法是为了解决实际问题而设计的，数据结构是算法需要处理的问题载体 算法的特性：* 有限的 * 每一步是明确的(不能有歧义) * 至少有一个输出 什么是好的算法？分析指标： * 空间复杂度S(n)：程序执行时占用存储单元的长度 * 时间复杂度T(n)：程序执行时耗费时间的长度 注：这两个指标与要处理的数据规模是相关的。 分析算法关注两种复杂度 * 最坏情况复杂度Tworst(n) * 平均情况复杂度Tavg(n) 不同复杂度的函数，在不同的数据规模下的增长趋势。 算法时间复杂度的计算点击链接学习 ：算法时间复杂度的计算 时间复杂度的几条基本计算规则基本操作，即只有常数项，认为其时间复杂度为O(1) 顺序结构，时间复杂度按加法进行计算 循环结构，时间复杂度按乘法进行计算 分支结构，时间复杂度取最大值 判断一个算法的效率时，只需要关注操作数量的最高次项，其它次要项和常数项可以忽略 在没有特殊说明时，我们所分析的算法的时间复杂度都是指最坏时间复杂度 若两段算法分别有复杂度T1(n) = O(f1(n)) 和 T2(n) = O(f2(n))，则: 两个算法拼在一起时，等于两段的和 T1(n) + T2(n) 两个算法嵌套时，等于两段的积 T1(n) * T2(n) 抽象数据类型(ADT)抽象数据类型(Abstract Data Type)的含义是指一个数学模型以及定义在此数学模型上的一组操作。即把数据类型和数据类型上的运算捆在一起，进行封装。引入抽象数据类型的目的是把数据类型的表示和数据类型上运算的实现与这些数据类型和运算在程序中的引用隔开，使它们相互独立。 最常用的数据运算有五种插入 修改 删除 查找 排序 案例一：写程序,计算给定多项式在定点x处的值 算法一上面写法不推荐 算法二&emsp;&emsp;秦九韶算法是中国南宋时期的数学家秦九韶提出的一种多项式简化算法。在西方被称作霍纳算法。是一种将一元n次多项式的求值问题转化为n个一次式的算法。其大大简化了计算过程，即使在现代，利用计算机解决多项式的求值问题时，霍纳规则依然是最优的算法规则。具体计算过程自行百度。 f(x) = A0 + X (A1 + X( … ( An - 1 + X( An ) ) ) ) 自行验证第一种与第二种时间复杂度，运行效率自行测试 案例二：给定N个整数的序列{A1,A2,……,An}，求下面函数的最大值。 算法一 算法二 算法三：分治思想 注：代码比较复杂，这里不展示，过程就是利用分治思想解决这个问题(分治思想后面会说) 算法四：在线处理“在线”指每输入一个数据进行即时处理，在任何一个地方终止，算法都能给出正解。]]></content>
+    <title><![CDATA[返回多个值]]></title>
+    <url>%2F2018%2F07%2F10%2Fpython%2Fpython%E4%B8%8A%2F18%E8%BF%94%E5%9B%9E%E5%A4%9A%E4%B8%AA%E5%80%BC%2F</url>
+    <content type="text"><![CDATA[return语句return [表达式] 语句用于退出函数，选择性地向调用方返回一个表达式。不带参数值的return语句返None。之前的例子都没有示范如何返回数值，以下实例演示了 return 语句的用法 比如在游戏中经常需要从一个点移动到另一个点，给出坐标、位移和角度，就可以计算出新的新的坐标： import math def move(x, y, step, angle=0): nx = x + step * math.cos(angle) ny = y - step * math.sin(angle) return nx, ny import math语句表示导入math包，并允许后续代码引用math包里的sin、cos等函数。 然后，我们就可以同时获得返回值： &gt;&gt;&gt; x, y = move(100, 100, 60, math.pi / 6) &gt;&gt;&gt; print(x, y) 151.96152422706632 70.0 但其实这只是一种假象，Python函数返回的仍然是单一值： &gt;&gt;&gt; r = move(100, 100, 60, math.pi / 6) &gt;&gt;&gt; print(r) (151.96152422706632, 70.0) 原来返回值是一个tuple！但是，在语法上，返回一个tuple可以省略括号，而多个变量可以同时接收一个tuple，按位置赋给对应的值，所以，Python的函数返回多值其实就是返回一个tuple，但写起来更方便，当然，你也可以用列表、字典来返回数据。 小结定义函数时，需要确定函数名和参数个数；如果有必要，可以先对参数的数据类型做检查；函数体内部可以用return随时返回函数结果；函数执行完毕也没有return语句时，自动return None。]]></content>
       <categories>
-        <category>算法基础</category>
+        <category>python基础编程</category>
       </categories>
       <tags>
-        <tag>算法基础</tag>
+        <tag>python基础编程</tag>
       </tags>
   </entry>
   <entry>
