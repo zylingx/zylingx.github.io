@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next mist" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "a4e017eb"
+    });
+  daovoice('update');
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Python数据分析," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="前面笔记做的相当的差，我自己看着都累，直接把博文划掉了。重新在网上找资源学习，视频指引方向，内容取决看书，这篇将记录我学习numpy的笔记，看的是博客园Little_Rookie女神的博客和博客园蓝夜大神的转载，文章开头附上链接">
+<meta name="keywords" content="Python数据分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NumPy模块(未完成)">
+<meta property="og:url" content="https://zylingx.github.io/2018/09/07/大数据/Python数据分析/01NumPy模块学习/index.html">
+<meta property="og:site_name" content="朝阳旅行者">
+<meta property="og:description" content="前面笔记做的相当的差，我自己看着都累，直接把博文划掉了。重新在网上找资源学习，视频指引方向，内容取决看书，这篇将记录我学习numpy的笔记，看的是博客园Little_Rookie女神的博客和博客园蓝夜大神的转载，文章开头附上链接">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-09-10T00:23:30.448Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NumPy模块(未完成)">
+<meta name="twitter:description" content="前面笔记做的相当的差，我自己看着都累，直接把博文划掉了。重新在网上找资源学习，视频指引方向，内容取决看书，这篇将记录我学习numpy的笔记，看的是博客园Little_Rookie女神的博客和博客园蓝夜大神的转载，文章开头附上链接">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://zylingx.github.io/2018/09/07/大数据/Python数据分析/01NumPy模块学习/"/>
+
+
+
+
+
+  <title>NumPy模块(未完成) | 朝阳旅行者</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+  <script type="text/javascript" src="/js/src/fireworks.js"></script>
+
+
+
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">朝阳旅行者</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">只求不悔</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zylingx.github.io/2018/09/07/大数据/Python数据分析/01NumPy模块学习/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zylin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="朝阳旅行者">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">NumPy模块(未完成)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-07T00:00:00+08:00">
+                2018-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python数据分析/" itemprop="url" rel="index">
+                    <span itemprop="name">Python数据分析</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/09/07/大数据/Python数据分析/01NumPy模块学习/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/07/大数据/Python数据分析/01NumPy模块学习/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  前面笔记做的相当的差，我自己看着都累，直接把博文划掉了。重新在网上找资源学习，视频指引方向，内容取决看书，这篇将记录我学习numpy的笔记，看的是博客园Little_Rookie女神的博客和博客园蓝夜大神的转载，文章开头附上链接
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="学习来源"><a href="#学习来源" class="headerlink" title="学习来源"></a>学习来源</h1><p><a href="https://www.cnblogs.com/nxld/p/6058572.html" target="_blank" rel="noopener">博客园 Little_Rookie  ：https://www.cnblogs.com/nxld/p/6058572.html</a><br><a href="https://www.cnblogs.com/lanye/p/5420203.html" target="_blank" rel="noopener">博客园 蓝夜的转载 ： https://www.cnblogs.com/lanye/p/5420203.html</a></p>
+<p>将从这5个方面来介绍numpy模块的内容：</p>
+<pre><code>1）基本概念
+
+2）数组
+
+3）数组元素的获取--普通索引、切片、布尔索引和花式索引
+
+4）统计函数与线性代数运算
+
+5）随机数的生成
+</code></pre><h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><h2 id="为什么需要numpy"><a href="#为什么需要numpy" class="headerlink" title="为什么需要numpy"></a>为什么需要numpy</h2><p>Python中提供了list容器，可以当作数组使用。但列表中的元素可以是任何对象，因此列表中保存的是对象的指针，这样一来，为了保存一个简单的列表[1,2,3]。就需要三个指针和三个整数对象。对于数值运算来说，这种结构显然不够高效。<br>Python虽然也提供了array模块，但其只支持一维数组，不支持多维数组，也没有各种运算函数。因而不适合数值运算。<br>而NumPy的出现弥补了这些不足。（——摘自张若愚的《Python科学计算》）</p>
+<p>事实上只有一句话，numpy消耗资源少，并且运算采用的是矩阵运算，比 python 自带的字典或者列表快好多</p>
+<h2 id="NumPy数组"><a href="#NumPy数组" class="headerlink" title="NumPy数组"></a>NumPy数组</h2><p>NumPy数组是一个多维数组对象，称为ndarray。其由两部分组成：</p>
+<pre><code>实际的数据
+描述这些数据的元数据
+</code></pre><p>大部分操作仅针对于元数据，而不改变底层实际的数据。</p>
+<p>关于NumPy数组有几点必需了解的：</p>
+<pre><code>NumPy数组的下标从0开始。
+同一个NumPy数组中所有元素的类型必须是相同的。
+</code></pre><h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><p>数组这节细分为下面  个方面来介绍</p>
+<pre><code>1）数组的属性
+2）数组的创建
+3) 数组的类型
+</code></pre><h2 id="数组的属性"><a href="#数组的属性" class="headerlink" title="数组的属性"></a>数组的属性</h2><pre><code>ndarray.ndim：查看数组的维数(最简单的方法是看&apos;array(&apos;后面紧跟着有几个括号[或者中括号]，代表有几维)
+    eg:np.array(`[`1,...表示一维     np.array(`((`1,...表示二维    np.array(`[[[`0,...表示三维
+
+ndarray.shape：数组的维度 例如二维数组中，表示数组的“行数”和“列数”。
+    eg:np.array(((1,1,2,3),(5,8,13,21),(34,55,89,144)))    np.shape =&gt;&gt;&gt; (3, 4)
+    eg:np.array([[[0, 1 ,2], [0, 1, 2]], [[0, 1, 2],[0, 1, 2]]]) =&gt;&gt;&gt; (2, 2, 3)
+
+ndarray.size：数组元素的总个数
+    eg:np.array(((1,1,2,3),(5,8,13,21),(34,55,89,144)))    np.size =&gt;&gt;&gt; 12
+
+ndarray.dtype：查看数组的数据类型(在定义数组时，可以有dtype指定数据类型)
+    eg:print(arr1.dtype)    查看数据类型
+    eg:arr = np.ones((2,3,4), dtype=int16)  指定数据类型
+</code></pre><h2 id="数组的创建"><a href="#数组的创建" class="headerlink" title="数组的创建"></a>数组的创建</h2><p>numpy中使用array()函数创建数组,array的首个参数一定是一个序列，可以是元组也可以是列表。</p>
+<h3 id="一维数组的创建"><a href="#一维数组的创建" class="headerlink" title="一维数组的创建"></a>一维数组的创建</h3><h4 id="通过arange-函数生成数组"><a href="#通过arange-函数生成数组" class="headerlink" title="通过arange()函数生成数组"></a>通过arange()函数生成数组</h4><pre><code>import numpy as np        #大多数人习惯把numpy简写为np，今后不再做解释
+
+arr1 = np.arange(10)    #arange的使用相当于Python的range，但arange生成的是一个数组
+
+print(type(arr1))        #系统自带的type只能测出arr1是一个&lt;class &apos;numpy.ndarray&apos;&gt;
+print(arr1.dtype)        #通过numpy生成的数组的方法，才能看出它的数据类型,该例类型为int32
+</code></pre><p>注：arange和range一样的方式使用，同样有开始值，结束值，步长等参数</p>
+<h4 id="生成无序元素数组"><a href="#生成无序元素数组" class="headerlink" title="生成无序元素数组"></a>生成无序元素数组</h4><p>如果一维数组不是一个规律的有序元素，而是人为的输入，就需要array()函数创建了。  </p>
+<pre><code>import numpy as np
+
+arr1 = np.array([1,1,2,3,5,8,13,21]) #array中的数据可以是元组类型也可以是列表类型
+
+a.ndim –&gt; 1
+a.shape –&gt; (8,)
+</code></pre><h4 id="等距产生n个数"><a href="#等距产生n个数" class="headerlink" title="等距产生n个数"></a>等距产生n个数</h4><p>当arange使用浮点数参数时，由于浮点数精度有限，通常无法预测获得的元素个数。这时我们就需要linspace方法<br>格式</p>
+<pre><code>np.linspace(start, stop, num=50, endpoint=True, retstep=False, dtype=None) 
+</code></pre><p>语法</p>
+<pre><code>指定start和stop，默认等距产生等差数列个数为 50
+指定num，可以指定产生等差数列的个数
+</code></pre><p>如果数列的元素个数指定</p>
+<pre><code>endpoint :如果为True，则stop是最后一个样本。 否则，它不包括在内。 默认为True。
+
+retstep :如果为True，则返回（samples，step），其中step是样本之间的间距。
+
+dtype    :指定元素的数据类型
+</code></pre><p>案例</p>
+<pre><code>&gt;&gt;&gt; np.linspace(2.0, 3.0, num=5)
+    array([ 2.  ,  2.25,  2.5 ,  2.75,  3.  ])
+&gt;&gt;&gt; np.linspace(2.0, 3.0, num=5, endpoint=False)
+    array([ 2. ,  2.2,  2.4,  2.6,  2.8])
+&gt;&gt;&gt; np.linspace(2.0, 3.0, num=5, retstep=True)
+    (array([ 2.  ,  2.25,  2.5 ,  2.75,  3.  ]), 0.25)
+</code></pre><h3 id="多维数组的创建"><a href="#多维数组的创建" class="headerlink" title="多维数组的创建"></a>多维数组的创建</h3><p>多维数组的创建实际上和python中的列表、元组使用一样，多维都是嵌套</p>
+<h4 id="二维数组的创建"><a href="#二维数组的创建" class="headerlink" title="二维数组的创建"></a>二维数组的创建</h4><pre><code>import numpy as np
+
+arr1 = np.array(((1,1,2,3),(5,8,13,21),(34,55,89,144))) #数据可以是元组也可以是列表
+
+print(arr1)
+
+a.ndim –&gt; 2
+a.shape –&gt; (3, 4)
+</code></pre><p>打印    </p>
+<pre><code>[[  1   1   2   3]
+ [  5   8  13  21]
+ [ 34  55  89 144]]
+</code></pre><h4 id="三维数组的创建"><a href="#三维数组的创建" class="headerlink" title="三维数组的创建"></a>三维数组的创建</h4><pre><code>import numpy as np
+
+arr1 = np.array([[[0, 1 ,2], [0, 1, 2]], [[0, 1, 2],[0, 1, 2]]])
+
+a.ndim –&gt; 3
+a.shape –&gt; (2, 2， 3)
+</code></pre><p>注：对于高维数组在将来的数据分析中用的比较少，这里关于高维数组的创建就不赘述了，构建方法仍然是嵌套的方式。</p>
+<h3 id="特殊数组"><a href="#特殊数组" class="headerlink" title="特殊数组"></a>特殊数组</h3><p>通常，刚开始时数组的元素未知，而数组的大小已知。因此，NumPy提供了一些使用占位符创建数组的函数。这些函数有助于满足除了数组扩展的需要，同时降低了高昂的运算开销。</p>
+<p>用函数zeros可创建一个全是0的数组，用函数ones可创建一个全为1的数组，函数empty创建一个内容随机并且依赖与内存状态的数组。默认创建的数组类型(dtype)都是float64。</p>
+<h4 id="元素全为1的数组"><a href="#元素全为1的数组" class="headerlink" title="元素全为1的数组"></a>元素全为1的数组</h4><pre><code>import numpy as np
+
+one_arr = np.ones([3,4])  #这里只用指出行列的多少就行了
+print(one_arr)
+</code></pre><p>打印</p>
+<pre><code>[[1. 1. 1. 1.]
+ [1. 1. 1. 1.]
+ [1. 1. 1. 1.]]
+</code></pre><h4 id="元素全为0的数组"><a href="#元素全为0的数组" class="headerlink" title="元素全为0的数组"></a>元素全为0的数组</h4><pre><code>import numpy as np
+
+zero_arr = np.zeros([3,4])  #这里只用指出行列的多少就行了
+print(zero_arr)
+</code></pre><p>打印</p>
+<pre><code>[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+</code></pre><h4 id="空数组"><a href="#空数组" class="headerlink" title="空数组"></a>空数组</h4><pre><code>import numpy as np
+
+empty_arr = np.empty([3,4])
+
+print(empty_arr)
+</code></pre><p>打印</p>
+<pre><code>[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+</code></pre><h4 id="单位矩阵"><a href="#单位矩阵" class="headerlink" title="单位矩阵"></a>单位矩阵</h4><p>格式</p>
+<pre><code>np.eye(N, M=None, k=0, dtype=&lt;class &apos;float&apos;&gt;)
+</code></pre><p>语法</p>
+<pre><code>N    行数
+M     列数,默认无
+k     对角线的位置，0的时候是正对角线，+1就是对角线向上移，-1就是对角线向下移
+</code></pre><p>案例</p>
+<pre><code>import numpy as np
+
+eye_arr = np.eye(3)
+</code></pre><p>打印</p>
+<pre><code>[[1. 0. 0.]
+ [0. 1. 0.]
+ [0. 0. 1.]]
+</code></pre><p>案例</p>
+<pre><code>import numpy as np
+
+eye_arr = np.eye(5，k=1)
+</code></pre><p>打印</p>
+<pre><code>[[0. 1. 0. 0. 0.]
+ [0. 0. 1. 0. 0.]
+ [0. 0. 0. 1. 0.]
+ [0. 0. 0. 0. 1.]
+ [0. 0. 0. 0. 0.]]
+</code></pre><h4 id="对角矩阵"><a href="#对角矩阵" class="headerlink" title="对角矩阵"></a>对角矩阵</h4><p>格式</p>
+<pre><code>np.diag(v, k=0)
+</code></pre><p>语法</p>
+<pre><code>提取对角线或构造对角线阵列。
+
+v:
+    如果`v`是二维数组，则返回其第对角线。
+    如果`v`是一维数组,则返回其对角矩阵
+k:
+    对角线的位置，0的时候是正对角线，+1就是对角线向上移，-1就是对角线向下移
+</code></pre><p>案例</p>
+<pre><code>import numpy as np
+
+arr1 = np.array([1,1,2,3,5,8,13,21])
+diag_arr = np.diag(arr1)
+print(diag_arr)
+</code></pre><p>打印<br>    [[ 0  1  0  0  0  0  0  0  0]<br>     [ 0  0  1  0  0  0  0  0  0]<br>     [ 0  0  0  2  0  0  0  0  0]<br>     [ 0  0  0  0  3  0  0  0  0]<br>     [ 0  0  0  0  0  5  0  0  0]<br>     [ 0  0  0  0  0  0  8  0  0]<br>     [ 0  0  0  0  0  0  0 13  0]<br>     [ 0  0  0  0  0  0  0  0 21]<br>     [ 0  0  0  0  0  0  0  0  0]]<br>案例</p>
+<pre><code>import numpy as np
+
+arr2 = np.array(((1,1,2,3),(5,8,13,21),(34,55,89,144)))
+diag_arr = np.diag(arr2)
+print(diag_arr)
+</code></pre><p>打印</p>
+<pre><code>[ 1  8 89]
+</code></pre><h2 id="数组的类型"><a href="#数组的类型" class="headerlink" title="数组的类型"></a>数组的类型</h2><pre><code>名称                描述
+bool            用一个字节存储的布尔类型（True或False）
+inti            由所在平台决定其大小的整数（一般为int32或int64）
+int8            一个字节大小，-128 至 127
+int16            整数，-32768 至 32767
+int32            整数，-2 ** 31 至 2 ** 32 -1
+int64            整数，-2 ** 63 至 2 ** 63 - 1
+uint8            无符号整数，0 至 255
+uint16            无符号整数，0 至 65535
+uint32            无符号整数，0 至 2 ** 32 - 1
+uint64            无符号整数，0 至 2 ** 64 - 1
+float16            半精度浮点数：16位，正负号1位，指数5位，精度10位
+float32            单精度浮点数：32位，正负号1位，指数8位，精度23位
+float64或float    双精度浮点数：64位，正负号1位，指数11位，精度52位
+complex64        复数，分别用两个32位浮点数表示实部和虚部
+complex128或complex    复数，分别用两个64位浮点数表示实部和虚部
+</code></pre>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>你的支持是我不竭的动力！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="zylin 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="zylin 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python数据分析/" rel="tag"># Python数据分析</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/06/HTML5/04html标题/" rel="next" title="html 标题">
+                <i class="fa fa-chevron-left"></i> html 标题
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/08/学习方法/5谷歌搜索引擎/" rel="prev" title="谷歌搜索引擎">
+                谷歌搜索引擎 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="zylin" />
+            
+              <p class="site-author-name" itemprop="name">zylin</p>
+              <p class="site-description motion-element" itemprop="description">每一个不曾轻舞的日子，都是对生命的辜负</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">64</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#学习来源"><span class="nav-number">1.</span> <span class="nav-text">学习来源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基本概念"><span class="nav-number">2.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么需要numpy"><span class="nav-number">2.1.</span> <span class="nav-text">为什么需要numpy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NumPy数组"><span class="nav-number">2.2.</span> <span class="nav-text">NumPy数组</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数组"><span class="nav-number">3.</span> <span class="nav-text">数组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组的属性"><span class="nav-number">3.1.</span> <span class="nav-text">数组的属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组的创建"><span class="nav-number">3.2.</span> <span class="nav-text">数组的创建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一维数组的创建"><span class="nav-number">3.2.1.</span> <span class="nav-text">一维数组的创建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#通过arange-函数生成数组"><span class="nav-number">3.2.1.1.</span> <span class="nav-text">通过arange()函数生成数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#生成无序元素数组"><span class="nav-number">3.2.1.2.</span> <span class="nav-text">生成无序元素数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#等距产生n个数"><span class="nav-number">3.2.1.3.</span> <span class="nav-text">等距产生n个数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多维数组的创建"><span class="nav-number">3.2.2.</span> <span class="nav-text">多维数组的创建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#二维数组的创建"><span class="nav-number">3.2.2.1.</span> <span class="nav-text">二维数组的创建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三维数组的创建"><span class="nav-number">3.2.2.2.</span> <span class="nav-text">三维数组的创建</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特殊数组"><span class="nav-number">3.2.3.</span> <span class="nav-text">特殊数组</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#元素全为1的数组"><span class="nav-number">3.2.3.1.</span> <span class="nav-text">元素全为1的数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#元素全为0的数组"><span class="nav-number">3.2.3.2.</span> <span class="nav-text">元素全为0的数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#空数组"><span class="nav-number">3.2.3.3.</span> <span class="nav-text">空数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#单位矩阵"><span class="nav-number">3.2.3.4.</span> <span class="nav-text">单位矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对角矩阵"><span class="nav-number">3.2.3.5.</span> <span class="nav-text">对角矩阵</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组的类型"><span class="nav-number">3.3.</span> <span class="nav-text">数组的类型</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+
+
+  
+</div>
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+
+<span id="busuanzi_container_site_uv">
+  本站访客数<span id="busuanzi_value_site_uv"></span>人次
+</span>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'yC98PsfPHDP6fuzW5o3asXpw-gzGzoHsz',
+        appKey: '93JQsVsNvSim9DYbPsbn83CQ',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
