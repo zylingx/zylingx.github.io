@@ -87,7 +87,7 @@
 
 
 
-  <meta name="keywords" content="python基础编程," />
+  <meta name="keywords" content="Python数据分析," />
 
 
 
@@ -98,18 +98,18 @@
 
 
 
-<meta name="description" content="函数可以返回多个值吗？答案是肯定的。">
-<meta name="keywords" content="python基础编程">
+<meta name="description" content="Pandas中的面板是一个三维数据结构，这里暂时不学，以后如果需要学习的话，我会补上的。这篇将记录下系列和数据框的属性、方法的使用">
+<meta name="keywords" content="Python数据分析">
 <meta property="og:type" content="article">
-<meta property="og:title" content="返回多个值">
-<meta property="og:url" content="https://zylingx.github.io/2018/07/10/python/python上/18返回多个值/index.html">
+<meta property="og:title" content="系列和数据框的属性、方法">
+<meta property="og:url" content="https://zylingx.github.io/2018/09/10/大数据/Python数据分析/04系列和数据框的属性、方法/index.html">
 <meta property="og:site_name" content="朝阳旅行者">
-<meta property="og:description" content="函数可以返回多个值吗？答案是肯定的。">
+<meta property="og:description" content="Pandas中的面板是一个三维数据结构，这里暂时不学，以后如果需要学习的话，我会补上的。这篇将记录下系列和数据框的属性、方法的使用">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-16T00:51:03.632Z">
+<meta property="og:updated_time" content="2018-09-11T03:06:33.857Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="返回多个值">
-<meta name="twitter:description" content="函数可以返回多个值吗？答案是肯定的。">
+<meta name="twitter:title" content="系列和数据框的属性、方法">
+<meta name="twitter:description" content="Pandas中的面板是一个三维数据结构，这里暂时不学，以后如果需要学习的话，我会补上的。这篇将记录下系列和数据框的属性、方法的使用">
 
 
 
@@ -139,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="https://zylingx.github.io/2018/07/10/python/python上/18返回多个值/"/>
+  <link rel="canonical" href="https://zylingx.github.io/2018/09/10/大数据/Python数据分析/04系列和数据框的属性、方法/"/>
 
 
 
 
 
-  <title>返回多个值 | 朝阳旅行者</title>
+  <title>系列和数据框的属性、方法 | 朝阳旅行者</title>
   
 
 
@@ -324,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zylingx.github.io/2018/07/10/python/python上/18返回多个值/">
+    <link itemprop="mainEntityOfPage" href="https://zylingx.github.io/2018/09/10/大数据/Python数据分析/04系列和数据框的属性、方法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zylin">
@@ -341,7 +341,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">返回多个值</h1>
+          <h1 class="post-title" itemprop="name headline">系列和数据框的属性、方法</h1>
         
 
         <div class="post-meta">
@@ -353,8 +353,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-10T00:00:00+08:00">
-                2018-07-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-10T00:00:00+08:00">
+                2018-09-10
               </time>
             
 
@@ -376,8 +376,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python基础编程/" itemprop="url" rel="index">
-                    <span itemprop="name">python基础编程</span>
+                  <a href="/categories/Python数据分析/" itemprop="url" rel="index">
+                    <span itemprop="name">Python数据分析</span>
                   </a>
                 </span>
 
@@ -394,8 +394,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/07/10/python/python上/18返回多个值/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/07/10/python/python上/18返回多个值/" itemprop="commentCount"></span>
+                <a href="/2018/09/10/大数据/Python数据分析/04系列和数据框的属性、方法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/10/大数据/Python数据分析/04系列和数据框的属性、方法/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -410,7 +410,7 @@
 
           
               <div class="post-description">
-                  函数可以返回多个值吗？答案是肯定的。
+                  Pandas中的面板是一个三维数据结构，这里暂时不学，以后如果需要学习的话，我会补上的。这篇将记录下系列和数据框的属性、方法的使用
               </div>
           
 
@@ -427,25 +427,168 @@
       
 
       
-        <h1 id="return语句"><a href="#return语句" class="headerlink" title="return语句"></a>return语句</h1><p>return [表达式] 语句用于退出函数，选择性地向调用方返回一个表达式。不带参数值的return语句返None。之前的例子都没有示范如何返回数值，以下实例演示了 return 语句的用法</p>
-<p>比如在游戏中经常需要从一个点移动到另一个点，给出坐标、位移和角度，就可以计算出新的新的坐标：</p>
-<pre><code>import math
-def move(x, y, step, angle=0):
-    nx = x + step * math.cos(angle)
-    ny = y - step * math.sin(angle)
-    return nx, ny
-</code></pre><p>import math语句表示导入math包，并允许后续代码引用math包里的sin、cos等函数。</p>
-<p>然后，我们就可以同时获得返回值：</p>
-<pre><code>&gt;&gt;&gt; x, y = move(100, 100, 60, math.pi / 6)
-&gt;&gt;&gt; print(x, y)
-    151.96152422706632    70.0
-</code></pre><p>但其实这只是一种假象，Python函数返回的仍然是单一值：</p>
-<pre><code>&gt;&gt;&gt; r = move(100, 100, 60, math.pi / 6)
-&gt;&gt;&gt; print(r)
-(151.96152422706632, 70.0)
-</code></pre><p>原来返回值是一个tuple！但是，在语法上，返回一个tuple可以省略括号，而多个变量可以同时接收一个tuple，按位置赋给对应的值，所以，Python的函数返回多值其实就是返回一个tuple，但写起来更方便，当然，你也可以用列表、字典来返回数据。</p>
-<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>定义函数时，需要确定函数名和参数个数；<br>如果有必要，可以先对参数的数据类型做检查；<br>函数体内部可以用return随时返回函数结果；<br>函数执行完毕也没有return语句时，自动return None。  </p>
+        <h1 id="学习来源"><a href="#学习来源" class="headerlink" title="学习来源"></a>学习来源</h1><p><a href="https://www.yiibai.com/pandas/" target="_blank" rel="noopener">易百教程https://www.yiibai.com/pandas/</a><br>可前往易百教程学习，这边只是记录我学习的笔记</p>
+<h1 id="系列的属性和方法"><a href="#系列的属性和方法" class="headerlink" title="系列的属性和方法"></a>系列的属性和方法</h1><pre><code>    属性或方法    描述
+1    axes        返回由行的索引构成的列表。
+2    dtype        返回对象的数据类型（dtype）。
+3    empty        如果系列为空，则返回True。
+4    ndim        返回对象的维数。系列是一个1D数据结构
+5    size        返回系列的长度
+6    values        返回系列中的值
+7    head(num)    查看前n行，默认数量为5，可以自定义显示的行数。
+8    tail(num)    查看后n行，默认数量为5，可以自定义显示的行数。
+</code></pre><h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><pre><code>import numpy as np
+import pandas as pd
 
+# 系列
+df = pd.Series(np.random.randn(10))
+
+print(&quot;axes:\n&quot;, df.axes)        
+    axes:
+    [RangeIndex(start=0, stop=10, step=1)]
+
+print(&quot;dtype:\n&quot;, df.dtype)        
+    dtype:
+    float64
+
+print(&quot;empty:\n&quot;, df.empty)        
+    empty: 
+    False
+
+print(&quot;ndim:\n&quot;, df.ndim)        
+    ndim: 
+    1
+
+print(&quot;size:\n&quot;, df.size)        
+    size: 
+    10
+
+print(&quot;values:\n&quot;, df.values)    
+    values:
+    [ 0.48917638  0.03055365  0.62873303 -0.64996325 -0.18307531  0.20838626
+     -1.92778815 -0.57171211 -0.84953731 -1.37837361]
+
+print(&quot;head 5:\n&quot;, df.head())
+    head 5:
+     0    0.489176
+    1    0.030554
+    2    0.628733
+    3   -0.649963
+    4   -0.183075
+    dtype: float64
+
+print(&quot;head 2:\n&quot;, df.head(2))
+    head 2:
+     0    0.489176
+    1    0.030554
+    dtype: float64
+
+print(&quot;tail 5:\n&quot;, df.tail())
+    tail 5:
+    5    0.208386
+    6   -1.927788
+    7   -0.571712
+    8   -0.849537
+    9   -1.378374
+    dtype: float64
+
+print(&quot;tail 2:\n&quot;, df.tail(2))
+    tail 2:
+     8   -0.849537
+    9   -1.378374
+    dtype: float64
+</code></pre><h1 id="数据框的属性和方法"><a href="#数据框的属性和方法" class="headerlink" title="数据框的属性和方法"></a>数据框的属性和方法</h1><pre><code>属性或方法    描述
+T            转置行和列。
+axes        返回行、列索引构成的列表
+dtypes        返回每列的数据类型
+empty        返回True表示对象为空。
+ndim        返回对象的维数，数据框是一个2D的数据结构(2D的意思是二维的意思)
+shape        返回一个元组(a，b)，其中a表示行数，b表示列数。
+size        返回组成这个数据框的元素个数
+values        返回数据框中的值
+head()        返回开头前n行。
+tail()        返回最后n行。
+</code></pre><h2 id="案例-1"><a href="#案例-1" class="headerlink" title="案例"></a>案例</h2><pre><code>import pandas as pd
+import numpy as np
+
+d = {&apos;Name&apos;:pd.Series([&apos;Tom&apos;,&apos;James&apos;,&apos;Ricky&apos;,&apos;Vin&apos;,&apos;Steve&apos;,&apos;Minsu&apos;,&apos;Jack&apos;]),
+   &apos;Age&apos;:pd.Series([25,26,25,23,30,29,23]),
+   &apos;Rating&apos;:pd.Series([4.23,3.24,3.98,2.56,3.20,4.6,3.8])}
+
+df2 = pd.DataFrame(d)
+
+print(df2)
+        Name  Age  Rating
+    0    Tom   25    4.23
+    1  James   26    3.24
+    2  Ricky   25    3.98
+    3    Vin   23    2.56
+    4  Steve   30    3.20
+    5  Minsu   29    4.60
+    6   Jack   23    3.80
+
+print(df2.T)
+               0      1      2     3      4      5     6
+    Name     Tom  James  Ricky   Vin  Steve  Minsu  Jack
+    Age       25     26     25    23     30     29    23
+    Rating  4.23   3.24   3.98  2.56    3.2    4.6   3.8
+
+print(&quot;axes:\n&quot;, df2.axes)
+    axes:
+     [RangeIndex(start=0, stop=7, step=1), Index([&apos;Name&apos;, &apos;Age&apos;, &apos;Rating&apos;], dtype=&apos;object&apos;)]
+
+print(&quot;dtypes:\n&quot;, df2.dtypes)
+    dtypes:                
+    Name       object
+    Age         int64
+    Rating    float64
+    dtype: object
+    #注：Series可以用dtype，也可以用dtypes，但DataFrame只能用dtypes
+
+print(&quot;empty:\n&quot;, df2.empty)
+    empty:
+     False
+
+print(&quot;ndim:\n&quot;, df2.ndim)
+    ndim:
+     2
+
+print(&quot;shape:\n&quot;, df2.shape)
+    shape:
+     (7, 3)
+
+print(&quot;size:\n&quot;, df2.size)
+    size:
+     21
+
+print(&quot;values:\n&quot;, df2.values)
+    values:
+     [[&apos;Tom&apos; 25 4.23]
+     [&apos;James&apos; 26 3.24]
+     [&apos;Ricky&apos; 25 3.98]
+     [&apos;Vin&apos; 23 2.56]    
+     [&apos;Steve&apos; 30 3.2]
+     [&apos;Minsu&apos; 29 4.6]
+     [&apos;Jack&apos; 23 3.8]]
+
+print(&quot;head 5:\n&quot;, df2.head())
+    head 5:
+         Name  Age  Rating
+    0    Tom   25    4.23
+    1  James   26    3.24
+    2  Ricky   25    3.98
+    3    Vin   23    2.56
+    4  Steve   30    3.20
+
+print(&quot;tail 5:\n&quot;, df2.tail())
+    tail 5:
+         Name  Age  Rating
+    2  Ricky   25    3.98
+    3    Vin   23    2.56
+    4  Steve   30    3.20
+    5  Minsu   29    4.60
+    6   Jack   23    3.80
+</code></pre>
       
     </div>
     
@@ -491,7 +634,7 @@ def move(x, y, step, angle=0):
       
         <div class="post-tags">
           
-            <a href="/tags/python基础编程/" rel="tag"># python基础编程</a>
+            <a href="/tags/Python数据分析/" rel="tag"># Python数据分析</a>
           
         </div>
       
@@ -504,8 +647,8 @@ def move(x, y, step, angle=0):
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/10/算法/算法基础/0基础知识/" rel="next" title="基础知识">
-                <i class="fa fa-chevron-left"></i> 基础知识
+              <a href="/2018/09/10/大数据/Python数据分析/03数据框DataFrame/" rel="next" title="数据框DataFrame">
+                <i class="fa fa-chevron-left"></i> 数据框DataFrame
               </a>
             
           </div>
@@ -514,8 +657,8 @@ def move(x, y, step, angle=0):
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/10/算法/算法基础/1顺序表/" rel="prev" title="顺序表">
-                顺序表 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/09/10/日记/002关于博文上有未完成的说明/" rel="prev" title="关于博文上有未完成的说明">
+                关于博文上有未完成的说明 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -655,7 +798,7 @@ def move(x, y, step, angle=0):
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#return语句"><span class="nav-number">1.</span> <span class="nav-text">return语句</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小结"><span class="nav-number">2.</span> <span class="nav-text">小结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#学习来源"><span class="nav-number">1.</span> <span class="nav-text">学习来源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#系列的属性和方法"><span class="nav-number">2.</span> <span class="nav-text">系列的属性和方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#案例"><span class="nav-number">2.1.</span> <span class="nav-text">案例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据框的属性和方法"><span class="nav-number">3.</span> <span class="nav-text">数据框的属性和方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#案例-1"><span class="nav-number">3.1.</span> <span class="nav-text">案例</span></a></li></ol></li></ol></div>
             
 
           </div>
