@@ -23,6 +23,28 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[表格]]></title>
+    <url>%2F2018%2F09%2F13%2FHTML5%2F08%E8%A1%A8%E6%A0%BC%2F</url>
+    <content type="text"><![CDATA[常用标签1、table标签：声明一个表格容器 2、tr标签：定义表格中的一行 3、td和th标签：定义一行中的一个单元格，td代表普通单元格，th表示表头单元格(也就是表的字段名) 常用属性：1、border 定义表格的边框 2、cellpadding 定义单元格内内容与边框的距离 3、cellspacing 定义单元格与单元格之间的距离 4、align 设置单元格中内容的水平对齐方式,设置值有：left | center | right 5、valign 设置单元格中内容的垂直对齐方式 top | middle | bottom 6、colspan 设置单元格水平合并 7、rowspan 设置单元格垂直合并 8、border-collapse:collapse 设置边框合并，制作一像素宽的边线的表格 传统布局传统的布局方式就是使用table来做整体页面的布局，布局的技巧归纳为如下几点： 1、定义表格宽高，将border、cellpadding、cellspacing全部设置为0 2、单元格里面嵌套表格 3、单元格中的元素和嵌套的表格用align和valign设置对齐方式 4、通过属性或者css样式设置单元格中元素的样式 传统布局目前应用： 1、快速制作用于演示的html页面 2、商业推广EDM制作(广告邮件)]]></content>
+      <categories>
+        <category>HTML5</category>
+      </categories>
+      <tags>
+        <tag>HTML5</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[列表]]></title>
+    <url>%2F2018%2F09%2F11%2FHTML5%2F07%E5%88%97%E8%A1%A8%2F</url>
+    <content type="text"><![CDATA[有序列表在网页上定义一个有编号的内容列表可以用&lt;ol&gt;、&lt;li&gt;配合使用来实现，代码如下： &lt;ol&gt; &lt;li&gt;列表文字一&lt;/li&gt; &lt;li&gt;列表文字二&lt;/li&gt; &lt;li&gt;列表文字三&lt;/li&gt; &lt;/ol&gt; 在网页上生成的列表，每条项目上会按1、2、3编号，有序列表在实际开发中较少使用。 无序列表在网页上定义一个无编号的内容列表可以用&lt;ul&gt;、&lt;li&gt;配合使用来实现，代码如下： &lt;ul&gt; &lt;li&gt;列表文字一&lt;/li&gt; &lt;li&gt;列表文字二&lt;/li&gt; &lt;li&gt;列表文字三&lt;/li&gt; &lt;/ul&gt; 在网页上生成的列表，每条项目上会有一个小图标，这个小图标在不同浏览器上显示效果不同，所以一般会用样式去掉默认的小图标，如果需要图标，可以用样式自定义图标，从而达到在不同浏览器上显示的效果相同,实际开发中一般用这种列表。 定义列表定义列表通常用于术语的定义。标签表示列表的整体。标签定义术语的题目。标签是术语的解释。一个中可以有多个题目和解释，代码如下： &lt;h3&gt;前端三大块&lt;/h3&gt; &lt;dl&gt; &lt;dt&gt;html&lt;/dt&gt; &lt;dd&gt;负责页面的结构&lt;/dd&gt; &lt;dt&gt;css&lt;/dt&gt; &lt;dd&gt;负责页面的表现&lt;/dd&gt; &lt;dt&gt;javascript&lt;/dt&gt; &lt;dd&gt;负责页面的行为&lt;/dd&gt; &lt;/dl&gt; sublime中的快捷键快速生成在写标签时，sublime有快捷键可以帮助我们快速输入 ul&gt;li*5 这个命令的意思是，ul与li是要快速生成的标签名，”&gt;”指的是li是ul的子标签，”*5”表示生成5行 ul&gt;(li&gt;a)*3 这个命令的意思是，ul标签只生成一次，li标签与a标签同时生成三次 dl&gt;(dt+dd)*3 这个命令的意思是同级标签之间用加号连接，需要生成多次的就用括号括起 同时编辑将光标定位到需要编辑的位置，按住ctrl键不放，点击需要编辑的位置，然后再松开，这样可以同时编辑多处]]></content>
+      <categories>
+        <category>HTML5</category>
+      </categories>
+      <tags>
+        <tag>HTML5</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于博文上有未完成的说明]]></title>
     <url>%2F2018%2F09%2F10%2F%E6%97%A5%E8%AE%B0%2F002%E5%85%B3%E4%BA%8E%E5%8D%9A%E6%96%87%E4%B8%8A%E6%9C%89%E6%9C%AA%E5%AE%8C%E6%88%90%E7%9A%84%E8%AF%B4%E6%98%8E%2F</url>
     <content type="text"><![CDATA[这里先说明一下，如果你在某篇博文标题上看到了有个括号引起的后缀（未完成），说明博文没有写完，不是不写了，而是想说后面会补上。可能是因为更重要的事情而暂时停止学习。比如我10月13号有个大数据比赛要参加，所以目前我会暂停我正在学习的内容，利用西蒙学习法，专心的学习数据分析这方面的知识，等这个阶段过去后，会继续以前的学习，那时才会补上之前没有更新完的内容，嗯，就是这样]]></content>
@@ -56,6 +78,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[图像与链接]]></title>
+    <url>%2F2018%2F09%2F10%2FHTML5%2F06%E5%9B%BE%E5%83%8F%E4%B8%8E%E9%93%BE%E6%8E%A5%2F</url>
+    <content type="text"><![CDATA[图像&lt;img&gt;标签可以在网页上插入一张图片，通过“src”属性定义图片的地址，通过“alt”属性定义图片加载失败时显示的文字，以及对搜索引擎和盲人读屏软件的支持。 &lt;img src=&quot;images/pic.jpg&quot; alt=&quot;小女孩&quot; /&gt; &lt;img标签还有width 和 height两个属性，在插入图片时，这两个属性可以指定显示图片的大小，不指定则按图片的大小来显示。 绝对路径和相对路径像网页上插入图片这种外部文件，需要定义文件的引用地址，引用外部文件还包括引用外部样式表，javascript等等，引用地址分为绝对地址和相对地址。 绝对地址：相对于磁盘的位置去定位文件的地址 相对地址：相对于引用文件本身去定位被引用的文件地址 绝对地址在整体文件迁移时会因为磁盘和顶层目录的改变而找不到文件，相对路径就没有这个问题。相对路径的定义技巧： “ ./ ” 表示当前文件所在目录下，比如：“./pic.jpg” 表示当前目录下的pic.jpg的图片，这个使用时可以省略。 “ ../ ” 表示当前文件所在目录下的上一级目录，比如：“../images/pic.jpg” 表示当前目录下的上一级目录下的images文件夹中的pic.jpg的图片。 如果图片来源于网络，那么写网络的url地址： &lt;img src=&quot;http://img.zcool.cn/community/0117e2571b8b246ac72538120dd8a4.jpg@1280w_1l_2o_100sh.jpg&quot; width=&quot;300&quot; height=&quot;120&quot;/&gt; 链接&lt;a&gt;标签可以在网页上定义一个链接地址，通过src属性定义跳转的地址，通过title属性定义鼠标悬停时弹出的提示文字框。 &lt;a href=&quot;#&quot;&gt;&lt;/a&gt; &lt;!-- # 表示链接到页面顶部 --&gt; &lt;a href=&quot;http://www.zylin.xyz/&quot; title=&quot;链接到某某博客网站&quot;&gt;朝阳旅行者 &lt;/a&gt; 给图片添加跳转链接给图片添加跳转链接很简单，只需要在&lt;img&gt;标签外包裹一个&lt;a&gt;标签就好了 &lt;a href=&quot;http://www.zylin.xyz/&quot; title=&quot;无&quot;&gt; &lt;img src=&quot;http://img.zcool.cn/a.jpg /&gt; &lt;/a&gt; 定义页面内滚动跳转页面内定义了“id”或者“name”的元素，可以通过a标签链接到它的页面滚动位置，前提是页面要足够高，有滚动条，且元素不能在页面顶部，否则页面不会滚动。 &lt;a href=&quot;#&quot;&gt;链接到页面顶部&lt;/a&gt; &lt;a href=&quot;#mao1&quot;&gt;标题一&lt;/a&gt; ...... ...... &lt;h3 id=&quot;mao1&quot;&gt;跳转到的标题&lt;/h3&gt; target属性我们通过链接默认是会覆盖原网页，可以通过修改target属性修改 默认是_self,该网址会覆盖原网页打开 &lt;a href=&quot;http://www.zylin.xyz/&quot; target=&quot;_self&quot;&gt;朝阳旅行者&lt;/a&gt; 修改为_blank，会打开一个新网页标签 &lt;a href=&quot;http://www.zylin.xyz/&quot; target=&quot;_blank&quot;&gt;朝阳旅行者 &lt;/a&gt;]]></content>
+      <categories>
+        <category>HTML5</category>
+      </categories>
+      <tags>
+        <tag>HTML5</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[系列Series]]></title>
     <url>%2F2018%2F09%2F09%2F%E5%A4%A7%E6%95%B0%E6%8D%AE%2FPython%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%2F02%E7%B3%BB%E5%88%97Series%2F</url>
     <content type="text"><![CDATA[Pandas处理以下三个数据结构 系列(Series) 数据框(DataFrame) 面板(Panel) 这些数据结构构建在Numpy数组之上，这意味着它们很快。 系列系列(Series)是能够保存任何类型的数据(整数，字符串，浮点数，Python对象等)的一维标记数组。轴标签统称为索引。 1》系列的格式 2》系列的创建 3》系列的检索 格式pandas.Series( data, index, dtype, copy) 参数 data 数据采取各种形式，如：ndarray，list，constants index 索引值必须是唯一的和散列的，与数据的长度相同。 如果没有索引默认np.arange(n)被传递。 dtype dtype用于数据类型。如果没有，将推断数据类型 copy 复制数据，默认为false。 创建创建一个空系列import pandas as pd s = pd.Series() print(s) #-----输出结果----- Series([], dtype: float64) 从ndarray创建一个系列import pandas as pd import numpy as np data = np.array([&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;]) s = pd.Series(data) print(s) #-----输出结果----- 0 a 1 b 2 c 3 d dtype: object 注：这里没有传递任何索引，所以默认分配了从0到len(data)-1的索引，即：0到3。 import pandas as pd import numpy as np data = np.array([&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;]) s = pd.Series(data,index=[100,101,102,103]) print(s) #-----输出结果----- 100 a 101 b 102 c 103 d dtype: object 在这里传递了索引值。现在可以在输出中看到自定义的索引值。 从字典创建一个系列字典(dict)可以作为输入传递，如果没有指定索引，则按排序顺序取得字典键以构造索引。 如果传递了索引，索引中与标签对应的数据中的值将被拉出。 import pandas as pd import numpy as np data = {&apos;a&apos; : 0., &apos;b&apos; : 1., &apos;c&apos; : 2.} s = pd.Series(data) print(s) #-----输出结果----- a 0.0 b 1.0 c 2.0 dtype: float64 从标量创建一个系列如果数据是标量值，则必须提供索引。将重复该值以匹配索引的长度。 import pandas as pd import numpy as np s = pd.Series(5, index=[0, 1, 2, 3]) print(s) #-----输出结果----- 0 5 1 5 2 5 3 5 dtype: int64 检索数据切片方式检索数据例1：检索第一个元素。比如已经知道数组从零开始计数，第一个元素存储在零位置等等。 import pandas as pd s = pd.Series([1,2,3,4,5],index = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;,&apos;e&apos;]) print(s[0]) #-----输出结果----- 1 例2：检索系列中的前三个元素。 import pandas as pd s = pd.Series([1,2,3,4,5],index = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;,&apos;e&apos;]) print(s[:3]) #-----输出结果----- a 1 b 2 c 3 dtype: int64 例3:检索最后三个元素 import pandas as pd s = pd.Series([1,2,3,4,5],index = [‘a’,’b’,’c’,’d’,’e’]) print(s[-3:]) #-----输出结果----- c 3 d 4 e 5 dtype: int64 使用索引检索数据import pandas as pd s = pd.Series([1,2,3,4,5],index = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;,&apos;e&apos;]) print(s[[&apos;a&apos;,&apos;c&apos;,&apos;d&apos;]]) #-----输出结果----- a 1 c 3 d 4 dtype: int64 注：如果不包含索引，则会出现异常。]]></content>
@@ -64,6 +97,28 @@
       </categories>
       <tags>
         <tag>Python数据分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[块与语义标签]]></title>
+    <url>%2F2018%2F09%2F09%2FHTML5%2F05%E5%9D%97%E4%B8%8E%E8%AF%AD%E4%B9%89%E6%A0%87%E7%AD%BE%2F</url>
+    <content type="text"><![CDATA[块div标签表示一块内容，没有具体的语义。&lt;div&gt; 标签定义 HTML 文档中的一个分隔区块或者一个区域部分。常用于组合块级元素，以便通过 CSS 来对这些元素进行格式化。 &lt;div style=&quot;color:#0000FF&quot;&gt; &lt;h3&gt;这是一个在 div 元素中的标题。&lt;/h3&gt; &lt;p&gt;这是一个在 div 元素中的文本。&lt;/p&gt; &lt;/div&gt; span标签表示一行中的一小段内容，没有具体的语义。&lt;span&gt; 用于对文档中的行内元素进行组合。 标签没有固定的格式表现。当对它应用样式时，它才会产生视觉上的变化。它提供了一种将文本的一部分或者文档的一部分独立出来的方式。 &lt;p&gt;我的母亲有 &lt;span style=&quot;color:blue&quot;&gt;蓝色&lt;/span&gt; 的眼睛。&lt;/p&gt; 语义标签1、em标签 行内元素，表示语气中的强调词 2、i标签 行内元素，原本没有语义，w3c强加了语义，表示专业词汇 3、b标签 行内元素，原本没有语义，w3c强加了语义，表示文档中的关键字或者产品名 4、strong标签 行内元素，表示非常重要的内容 在布局的时候多使用语义化的标签，搜索引擎在爬网的时候能认识这些标签，理解文档的结构，方便网站的收录。]]></content>
+      <categories>
+        <category>HTML5</category>
+      </categories>
+      <tags>
+        <tag>HTML5</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[html 段落]]></title>
+    <url>%2F2018%2F09%2F08%2FHTML5%2F04%E6%AE%B5%E8%90%BD%2F</url>
+    <content type="text"><![CDATA[HTML 段落段落是通过 &lt;p&gt; 标签定义的。实例 &lt;p&gt;这是一个段落 &lt;/p&gt; &lt;p&gt;这是另一个段落&lt;/p&gt; HTML换行如果您希望在不产生一个新段落的情况下进行换行，请使用 &lt;br /&gt; 标签：实例 &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;meta charset=&quot;utf-8&quot;&gt; &lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;p&gt;这个&lt;br /&gt;段落&lt;br /&gt;演示了分行的效果&lt;/p&gt; &lt;/body&gt; &lt;/html&gt; HTML 输出无法通过在 HTML 代码中添加额外的空格或换行来改变输出的效果.当显示页面时，浏览器会移除源代码中多余的空格和空行。所有连续的空格或空行都会被算作一个空格。需要注意的是，HTML 代码中的所有连续的空行（换行）也被显示为一个空格。实例 &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;meta charset=&quot;utf-8&quot;&gt; &lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;h1&gt;春晓&lt;/h1&gt; &lt;p&gt; 春眠不觉晓， 处处闻啼鸟。 夜来风雨声， 花落知多少。 &lt;/p&gt; &lt;p&gt;注意，浏览器忽略了源代码中的排版（省略了多余的空格和换行）。&lt;/p&gt; &lt;/body&gt; &lt;/html&gt; HTML 空格代码中成段的文字，如果文字间想空多个空格，在代码中空多个空格，在渲染成网页时只会显示一个空格，如果想显示多个空格，可以使用空格的字符实体 &lt;!-- 在段落前想缩进两个文字的空格，使用空格的字符实体：&amp;nbsp; --&gt; &lt;p&gt; &amp;nbsp;&amp;nbsp;一个html文件就是一个网页，html文件用编辑器打开显示的是文本，可以用&lt;br /&gt; 文本的方式编辑它，如果用浏览器打开，浏览器会按照标签描述内容将文件&lt;br /&gt; 渲染成网页，显示的网页可以从一个网页链接跳转到另外一个网页。&lt;/p&gt; HTML的大于、小于号如果想在网页中显示大于号或小于号，最好使用字符实体，因为在网页上显示 “&lt;” 和 “&gt;” 会误认为是标签 &lt;!-- “&lt;” 和 “&gt;” 的字符实体为 &amp;lt; 和 &amp;gt; --&gt; &lt;p&gt; 3 &amp;lt; 5 &lt;br /&gt; 10 &amp;gt; 5 &lt;/p&gt;]]></content>
+      <categories>
+        <category>HTML5</category>
+      </categories>
+      <tags>
+        <tag>HTML5</tag>
       </tags>
   </entry>
   <entry>
@@ -89,30 +144,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[html 段落]]></title>
-    <url>%2F2018%2F09%2F06%2FHTML5%2F05%E6%AE%B5%E8%90%BD%2F</url>
-    <content type="text"><![CDATA[HTML 段落段落是通过 &lt;p&gt; 标签定义的。实例 &lt;p&gt;这是一个段落 &lt;/p&gt; &lt;p&gt;这是另一个段落&lt;/p&gt; HTML换行如果您希望在不产生一个新段落的情况下进行换行，请使用 &lt;br /&gt; 标签：实例 &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;meta charset=&quot;utf-8&quot;&gt; &lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;p&gt;这个&lt;br /&gt;段落&lt;br /&gt;演示了分行的效果&lt;/p&gt; &lt;/body&gt; &lt;/html&gt; HTML 输出无法通过在 HTML 代码中添加额外的空格或换行来改变输出的效果.当显示页面时，浏览器会移除源代码中多余的空格和空行。所有连续的空格或空行都会被算作一个空格。需要注意的是，HTML 代码中的所有连续的空行（换行）也被显示为一个空格。实例 &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;meta charset=&quot;utf-8&quot;&gt; &lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;h1&gt;春晓&lt;/h1&gt; &lt;p&gt; 春眠不觉晓， 处处闻啼鸟。 夜来风雨声， 花落知多少。 &lt;/p&gt; &lt;p&gt;注意，浏览器忽略了源代码中的排版（省略了多余的空格和换行）。&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;]]></content>
-      <categories>
-        <category>HTML5</category>
-      </categories>
-      <tags>
-        <tag>HTML5</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[html 元素与属性]]></title>
-    <url>%2F2018%2F09%2F06%2FHTML5%2F03html%E5%85%83%E7%B4%A0%2F</url>
-    <content type="text"><![CDATA[HTML 元素HTML 元素语法HTML 元素以开始标签起始，以结束标签终止元素的内容是开始标签与结束标签之间的内容某些 HTML 元素具有空内容，空元素在开始标签中进行关闭（以开始标签的结束而结束）大多数 HTML 元素可拥有属性 &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;body&gt; &lt;p&gt;这是第一个段落。&lt;/p&gt; &lt;/body&gt; &lt;/html&gt; ##&lt;p&gt; 元素: &lt;p&gt;这是第一个段落。&lt;/p&gt; 这个 &lt;p&gt; 元素定义了 HTML 文档中的一个段落。 这个元素拥有一个开始标签 &lt;p&gt; 以及一个结束标签 &lt;/p&gt;. 元素内容是: 这是第一个段落。 &lt;body&gt; 元素:&lt;body&gt; &lt;p&gt;这是第一个段落。&lt;/p&gt; &lt;/body&gt; &lt;body&gt; 元素定义了 HTML 文档的主体。 这个元素拥有一个开始标签 &lt;body&gt; 以及一个结束标签 &lt;/body&gt;。 元素内容是另一个 HTML 元素（p 元素）。 &lt;html&gt; 元素：&lt;html&gt; &lt;body&gt; &lt;p&gt;这是第一个段落。&lt;/p&gt; &lt;/body&gt; &lt;/html&gt; &lt;html&gt; 元素定义了整个 HTML 文档。 这个元素拥有一个开始标签 &lt;html&gt; ，以及一个结束标签 &lt;/html&gt;. 元素内容是另一个 HTML 元素（body 元素）。 不要忘记结束标签忘记使用结束标签会产生不可预料的结果或错误。 HTML 空元素没有内容的 HTML 元素被称为空元素。空元素是在开始标签中关闭的。 在开始标签中添加斜杠，比如&lt;br /&gt;，是关闭空元素的正确方法 HTML 提示：使用小写标签HTML 标签对大小写不敏感：&lt;P&gt; 等同于 &lt;p&gt;。但万维网联盟（W3C）在 HTML 4 中推荐使用小写，而在未来 (X)HTML 版本中强制使用小写。 ##注意 一些标签的使用，切记所有标签都需要闭合，不管是单体标签还是成对标签。（尽管目前浏览器是识别有些标签不闭合的情况，但是取的最好的保证兼容性，使用闭合） 标签写法要用小写字母（有些版本对大小写可认为相同，而xhtml中强制使用小写） 属性HTML 属性HTML 元素可以设置属性，属性一般描述于开始标签，属性总是以名称/值对的形式出现，比如：name=”value”。 HTML 属性与引号属性值应该始终被包括在引号内。 双引号是最常用的，不过使用单引号也没有问题。 提示: 在某些个别的情况下，比如属性值本身就含有双引号，那么您必须使用单引号，例如：name=’John “ShotGun” Nelson’ HTML使用小写属性属性和属性值对大小写不敏感。但最好使用小写属性。]]></content>
-      <categories>
-        <category>HTML5</category>
-      </categories>
-      <tags>
-        <tag>HTML5</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[html 标题]]></title>
-    <url>%2F2018%2F09%2F06%2FHTML5%2F04html%E6%A0%87%E9%A2%98%2F</url>
+    <url>%2F2018%2F09%2F07%2FHTML5%2F03%E6%A0%87%E9%A2%98%2F</url>
     <content type="text"><![CDATA[HTML 标题标题（Heading）是通过 &lt;h1&gt; - &lt;h6&gt; 标签进行定义的.&lt;h1&gt; 定义最大的标题。 &lt;h6&gt; 定义最小的标题。实例 &lt;h1&gt;这是一个标题。&lt;/h1&gt; &lt;h2&gt;这是一个标题。&lt;/h2&gt; &lt;h3&gt;这是一个标题。&lt;/h3&gt; 注: 浏览器会自动地在标题的前后添加空行。 请确保将 HTML 标题 标签只用于标题。不要仅仅是为了生成粗体或大号的文本而使用标题。 搜索引擎使用标题为您的网页的结构和内容编制索引。用标题来呈现文档结构。 应该将 h1 用作主标题（最重要的），其后是 h2（次重要的），再其次是 h3，以此类推。 HTML 水平线&lt;hr /&gt; 标签在 HTML 页面中创建水平线。hr 元素可用于分隔内容。 &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;meta charset=&quot;utf-8&quot;&gt; &lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;p&gt;hr 标签定义水平线：&lt;/p&gt; &lt;hr /&gt; &lt;p&gt;这是段落。&lt;/p&gt; &lt;hr /&gt; &lt;p&gt;这是段落。&lt;/p&gt; &lt;/body&gt; &lt;/html&gt; HTML 注释可以将注释插入 HTML 代码中，这样可以提高其可读性，使代码更易被人理解。浏览器会忽略注释，也不会显示它们。写法如下: &lt;!-- 这是一个注释 --&gt;]]></content>
       <categories>
         <category>HTML5</category>
@@ -122,36 +155,30 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[预备知识]]></title>
-    <url>%2F2018%2F09%2F05%2FHTML5%2F02%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
-    <content type="text"><![CDATA[HTML 标题HTML 标题（Heading）是通过&lt;h1&gt; - &lt;h6&gt; 标签来定义的.实例 &lt;h1&gt;这是一个标题&lt;/h1&gt; &lt;h2&gt;这是一个标题&lt;/h2&gt; &lt;h3&gt;这是一个标题&lt;/h3&gt; HTML 段落HTML 段落是通过标签 &lt;p&gt; 来定义的.实例 &lt;p&gt;这是一个段落。&lt;/p&gt; &lt;p&gt;这是另外一个段落。&lt;/p&gt; HTML 链接HTML 链接是通过标签&lt;a&gt;来定义的.实例 &lt;a href=&quot;http://www.runoob.com&quot;&gt;这是一个链接&lt;/a&gt; 提示:在 href 属性中指定链接的地址。(您将在本教程稍后的章节中学习更多有关属性的知识). HTML 图像HTML 图像是通过标签 &lt;img&gt; 来定义的.实例 &lt;img src=&quot;/images/logo.png&quot; width=&quot;258&quot; height=&quot;39&quot; /&gt; 注意： 图像的名称和尺寸是以属性的形式提供的。 图片与html文档在不同位置下的引用方式(了解)注：所有写了解的地方都是想说不用背的，当需要用到的时候，可以再回来查询，以后不再解释1、.html 文件跟 .jpg 文件(f盘)在不同目录下： &lt;img src=&quot;file:///f:/*.jpg&quot; width=&quot;300&quot; height=&quot;120&quot;/&gt; 2、.html 文件跟 .jpg 图片在相同目录下： &lt;img src=&quot;*.jpg&quot; width=&quot;300&quot; height=&quot;120&quot;/&gt; 3、*.html 文件跟 *.jpg 图片在不同目录下： a、图片 .jpg 在 image 文件夹中，.html 跟 image 在同一目录下： &lt;img src=&quot;image/*.jpg/&quot;width=&quot;300&quot; height=&quot;120&quot;/&gt; b、图片 .jpg 在 image 文件夹中，.html 在 connage 文件夹中，image 跟 connage 在同一目录下： &lt;img src=&quot;../image/*.jpg/&quot;width=&quot;300&quot; height=&quot;120&quot;/&gt; 4、如果图片来源于网络，那么写绝对路径： &lt;img src=&quot;http://static.runoob.com/images/runoob-logo.png&quot; width=&quot;300&quot; height=&quot;120&quot;/&gt;]]></content>
+    <title><![CDATA[html 元素与属性]]></title>
+    <url>%2F2018%2F09%2F06%2FHTML5%2F02%E5%85%83%E7%B4%A0%E4%B8%8E%E5%B1%9E%E6%80%A7%2F</url>
+    <content type="text"><![CDATA[HTML 元素HTML 元素语法HTML 元素以开始标签起始，以结束标签终止，元素的内容是开始标签与结束标签之间的内容 ，大多数 HTML 元素可拥有属性 不要忘记结束标签忘记使用结束标签会产生不可预料的结果或错误。 HTML 空元素没有内容的 HTML 元素被称为空元素。空元素是在开始标签中关闭的。 在开始标签中添加斜杠，比如&lt;br /&gt;，是关闭空元素的正确方法 HTML 提示：使用小写标签HTML 标签对大小写不敏感：&lt;P&gt; 等同于 &lt;p&gt;。但万维网联盟（W3C）在 HTML 4 中推荐使用小写，而在未来 (X)HTML 版本中强制使用小写。 ##注意 一些标签的使用，切记所有标签都需要闭合，不管是单体标签还是成对标签。（尽管目前浏览器是识别有些标签不闭合的情况，但是取的最好的保证兼容性，使用闭合） 标签写法要用小写字母（有些版本对大小写可认为相同，而xhtml中强制使用小写） 属性HTML 属性HTML 元素可以设置属性，属性一般描述于开始标签，属性总是以名称/值对的形式出现，比如：name=”value”。 HTML 属性与引号属性值应该始终被包括在引号内。 双引号是最常用的，不过使用单引号也没有问题。 提示: 在某些个别的情况下，比如属性值本身就含有双引号，那么您必须使用单引号，例如：name=’John “ShotGun” Nelson’ HTML使用小写属性属性和属性值对大小写不敏感。但最好使用小写属性。]]></content>
       <categories>
         <category>HTML5</category>
       </categories>
       <tags>
         <tag>HTML5</tag>
       </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[预备知识]]></title>
+    <url>%2F2018%2F09%2F05%2F%E5%BA%9F%E5%BC%83%E5%8D%9A%E6%96%87%2F02%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
+    <content type="text"><![CDATA[HTML 标题HTML 标题（Heading）是通过&lt;h1&gt; - &lt;h6&gt; 标签来定义的.实例 &lt;h1&gt;这是一个标题&lt;/h1&gt; &lt;h2&gt;这是一个标题&lt;/h2&gt; &lt;h3&gt;这是一个标题&lt;/h3&gt; HTML 段落HTML 段落是通过标签 &lt;p&gt; 来定义的.实例 &lt;p&gt;这是一个段落。&lt;/p&gt; &lt;p&gt;这是另外一个段落。&lt;/p&gt; HTML 链接HTML 链接是通过标签&lt;a&gt;来定义的.实例 &lt;a href=&quot;http://www.runoob.com&quot;&gt;这是一个链接&lt;/a&gt; 提示:在 href 属性中指定链接的地址。(您将在本教程稍后的章节中学习更多有关属性的知识). HTML 图像HTML 图像是通过标签 &lt;img&gt; 来定义的.实例 &lt;img src=&quot;/images/logo.png&quot; width=&quot;258&quot; height=&quot;39&quot; /&gt; 注意： 图像的名称和尺寸是以属性的形式提供的。]]></content>
   </entry>
   <entry>
     <title><![CDATA[基础概念]]></title>
     <url>%2F2018%2F09%2F04%2FHTML5%2F01%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%2F</url>
-    <content type="text"><![CDATA[学习平台菜鸟教程http://www.runoob.com本博文的内容多数来自书本和菜鸟教程，大家可前程该教程进行学习 什么是HTML?HTML 是用来描述网页的一种语言，又叫超文本标记语言，超文本指的是超链接，标记指的是标签 Html这种语言由一个个的标签组成，用这种语言制作的文件保存的是一个文本文件，文件的扩展名为html或者htm html文件用编辑器打开显示的是文本，可以用文本的方式编辑它，如果用浏览器打开，浏览器会按照标签描述内容将文件渲染成网页 Web 浏览器Web浏览器（如谷歌浏览器，Internet Explorer，Firefox，Safari）是用于读取HTML文件，并将其作为网页显示。 HTML 网页结构下面是一个可视化的HTML页面结构：只有 区域 (白色部分) 才会在浏览器中显示。 html基本结构一个html的基本结构如下： &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt; &lt;meta charset=&quot;UTF-8&quot;&gt; &lt;title&gt;网页标题&lt;/title&gt; &lt;/head&gt; &lt;body&gt; 网页显示内容 &lt;/body&gt; &lt;/html&gt; &lt;!DOCTYPE&gt; 声明网络上有很多不同的文件，如果能够正确声明HTML的版本，浏览器就能正确显示网页内容。&lt;!DOCTYPE&gt;声明有助于浏览器中正确显示网页。doctype 声明是不区分大小写的，以上方式是声明为HTML5 html 标签&lt;html&gt;标签和最后一行&lt;/html&gt;定义html文档的整体 &lt;html&gt;标签中的lang=“en”定义网页的语言为英文，定义成中文是lang=&quot;zh-CN&quot;,不定义也没什么影响，它一般作为分析统计用。 head 标签&lt;head&gt;标签里面负责对网页进行一些设置以及定义标题，设置包括定义网页的编码格式，外链css样式文件和javascript文件等，设置的内容不会显示在网页上，标题的内容会显示在标题栏 中文编码目前在大部分浏览器中，直接输出中文会出现中文乱码的情况，这时候我们就需要在头部将字符声明为 UTF-8。 body 标签 &lt;body&gt; 标签内编写网页上显示的内容。 html文档规范xhtml制定了文档的编写规范，html5可部分遵守，也可全部遵守，看开发要求。 1、所有的标签必须小写 2、所有的属性必须用双引号括起来 3、所有标签必须闭合 4、img必须要加alt属性(对图片的描述) html注释html文档代码中可以插入注释，注释是对代码的说明和解释，注释的内容不会显示在页面上，html代码中插入注释的方法是： &lt;!-- 这是一段注释 --&gt; html标签特点html的标签大部分是成对出现的,少量是单个出现的，特定标签之间可以相互嵌套，嵌套就是指一个标签里面可以包含一个或多个其他的标签，包含的标签和父标签可以是同类型的，也可以是不同类型的： &lt;!-- 成对出现的标签 --&gt; &lt;body&gt;......&lt;/body&gt; &lt;p&gt;......&lt;/p&gt; &lt;div&gt;......&lt;/div&gt; &lt;b&gt;......&lt;/b&gt; &lt;!-- 单个出现的标签 --&gt; &lt;br /&gt; &lt;img src=&quot;...&quot; /&gt; &lt;input type=&quot;...&quot; /&gt; &lt;!-- 标签之间的嵌套 --&gt; &lt;p&gt; &lt;span&gt;...&lt;/span&gt; &lt;a href=&quot;...&quot;&gt;...&lt;/a&gt; &lt;/p&gt; &lt;div&gt; &lt;h3&gt;...&lt;/h3&gt; &lt;div&gt; &lt;span&gt;...&lt;/span&gt; &lt;p&gt;...&lt;/p&gt; &lt;/div&gt; &lt;/div&gt;]]></content>
+    <content type="text"><![CDATA[学习平台菜鸟教程http://www.runoob.com本博文的内容多数来自书本和菜鸟教程，大家可前程该教程进行学习 什么是HTML?HTML 是用来描述网页的一种语言，又叫超文本标记语言，超文本指的是超链接，标记指的是标签 Html这种语言由一个个的标签组成，用这种语言制作的文件保存的是一个文本文件，文件的扩展名为html或者htm html文件用编辑器打开显示的是文本，可以用文本的方式编辑它，如果用浏览器打开，浏览器会按照标签描述内容将文件渲染成网页 Web 浏览器Web浏览器（如谷歌浏览器，Internet Explorer，Firefox，Safari）是用于读取HTML文件，并将其作为网页显示。 HTML 网页结构下面是一个可视化的HTML页面结构：只有 区域 (白色部分) 才会在浏览器中显示。 html基本结构一个html的基本结构如下： &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt; &lt;meta charset=&quot;UTF-8&quot;&gt; &lt;title&gt;网页标题&lt;/title&gt; &lt;/head&gt; &lt;body&gt; 网页显示内容 &lt;/body&gt; &lt;/html&gt; &lt;!DOCTYPE&gt; 声明网络上有很多不同的文件，如果能够正确声明HTML的版本，浏览器就能正确显示网页内容。&lt;!DOCTYPE&gt;声明有助于浏览器中正确显示网页。doctype 声明是不区分大小写的，以上方式是声明为HTML5 html 标签&lt;html&gt;标签和最后一行&lt;/html&gt;定义html文档的整体 &lt;html&gt;标签中的lang=“en”定义网页的语言为英文，定义成中文是lang=&quot;zh-CN&quot;,不定义也没什么影响，它一般作为分析统计用。 head 标签&lt;head&gt;标签里面负责对网页进行一些设置以及定义标题，设置包括定义网页的编码格式，外链css样式文件和javascript文件等，设置的内容不会显示在网页上，标题的内容会显示在标题栏 中文编码目前在大部分浏览器中，直接输出中文会出现中文乱码的情况，这时候我们就需要在头部将字符声明为 UTF-8。 body 标签 &lt;body&gt; 标签内编写网页上显示的内容。平时上网看到的网页中的内容绝大部分都是在这个标签中编写的 html文档规范xhtml制定了文档的编写规范，html5可部分遵守，也可全部遵守，看开发要求。 1、所有的标签必须小写 2、所有的属性必须用双引号括起来 3、所有标签必须闭合 4、img必须要加alt属性(对图片的描述) html标签特点html的标签大部分是成对出现的,少量是单个出现的，特定标签之间可以相互嵌套，嵌套就是指一个标签里面可以包含一个或多个其他的标签，包含的标签和父标签可以是同类型的，也可以是不同类型的： &lt;!-- 成对出现的标签 --&gt; &lt;body&gt;......&lt;/body&gt; &lt;p&gt;......&lt;/p&gt; &lt;div&gt;......&lt;/div&gt; &lt;b&gt;......&lt;/b&gt; &lt;!-- 单个出现的标签 --&gt; &lt;br /&gt; &lt;img src=&quot;...&quot; /&gt; &lt;input type=&quot;...&quot; /&gt; &lt;!-- 标签之间的嵌套 --&gt; &lt;p&gt; &lt;span&gt;...&lt;/span&gt; &lt;a href=&quot;...&quot;&gt;...&lt;/a&gt; &lt;/p&gt; &lt;div&gt; &lt;h3&gt;...&lt;/h3&gt; &lt;div&gt; &lt;span&gt;...&lt;/span&gt; &lt;p&gt;...&lt;/p&gt; &lt;/div&gt; &lt;/div&gt;]]></content>
       <categories>
         <category>HTML5</category>
       </categories>
       <tags>
         <tag>HTML5</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[西蒙学习方法]]></title>
-    <url>%2F2018%2F09%2F02%2F%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%2F2%E8%A5%BF%E8%92%99%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[又名 “ 锥形学习法 ”，此法来源于诺贝尔经济学奖获得者西蒙教授提出的一个理论：“对于一个有一定基础的人来说，只要真正肯下功夫，在6个月内就可以掌握任何一门学问。”为了形象地说明，可以将西蒙学习法比做一把锥子。就像居里夫人所说，“知识的专一性像锥尖，精力的集中好比是锥子的作用力，时间的连续性好比是不停顿地使锥子往前钻进。” 西蒙学习法之所以高效的原理是在于，连续的长时间学习本身包涵对之前学习内容的应用，这样就省去了大量的复习时间。 小编就拿最简单的用烧开水这件事来做比喻，西蒙学习法就是连续的加热，所以热量散失的少;普通的间断学习是烧一会儿就停止加热，一段时间以后再继续加热，这样许多热量就白白散失了。持续烧水和间隙烧水，那当然是持续加热的效果要好了。 西蒙学习法的核心是：持续(连续性的时间投入)、专注(精神集中)、目标单一(以某一技能提升为目标)，烧水、外语学习可以作为西蒙学习法的经典例子，持续加热一下子把水烧开，一天学习10h，集中单一课程，短期内突破。比刻意练习亦少了学习区的概念和即时反馈原则。]]></content>
-      <categories>
-        <category>学习方法</category>
-      </categories>
-      <tags>
-        <tag>学习方法</tag>
       </tags>
   </entry>
   <entry>
@@ -177,6 +204,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[西蒙学习方法]]></title>
+    <url>%2F2018%2F09%2F02%2F%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%2F2%E8%A5%BF%E8%92%99%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[又名 “ 锥形学习法 ”，此法来源于诺贝尔经济学奖获得者西蒙教授提出的一个理论：“对于一个有一定基础的人来说，只要真正肯下功夫，在6个月内就可以掌握任何一门学问。”为了形象地说明，可以将西蒙学习法比做一把锥子。就像居里夫人所说，“知识的专一性像锥尖，精力的集中好比是锥子的作用力，时间的连续性好比是不停顿地使锥子往前钻进。” 西蒙学习法之所以高效的原理是在于，连续的长时间学习本身包涵对之前学习内容的应用，这样就省去了大量的复习时间。 小编就拿最简单的用烧开水这件事来做比喻，西蒙学习法就是连续的加热，所以热量散失的少;普通的间断学习是烧一会儿就停止加热，一段时间以后再继续加热，这样许多热量就白白散失了。持续烧水和间隙烧水，那当然是持续加热的效果要好了。 西蒙学习法的核心是：持续(连续性的时间投入)、专注(精神集中)、目标单一(以某一技能提升为目标)，烧水、外语学习可以作为西蒙学习法的经典例子，持续加热一下子把水烧开，一天学习10h，集中单一课程，短期内突破。比刻意练习亦少了学习区的概念和即时反馈原则。]]></content>
+      <categories>
+        <category>学习方法</category>
+      </categories>
+      <tags>
+        <tag>学习方法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[3W2H法]]></title>
     <url>%2F2018%2F09%2F02%2F%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%2F43W2H%E6%B3%95%2F</url>
     <content type="text"><![CDATA[What ：什么是XXX Who ：谁XXX Why ：为什么XXX How ：如何XXX How Continue：如何持续地XXX 举例：学习Python这门语言 What ：什么是Python Who ：谁在使用Python Why ：为什么使用Python How ：如何学习Python How Continue：如何持续地去提高Python]]></content>
@@ -191,34 +229,21 @@
     <title><![CDATA[向量化计算]]></title>
     <url>%2F2018%2F08%2F31%2F%E5%BA%9F%E5%BC%83%E5%8D%9A%E6%96%87%2F04%E5%90%91%E9%87%8F%E5%8C%96%E8%AE%A1%E7%AE%97%2F</url>
     <content type="text"><![CDATA[向量化计算是一种特殊的并行计算的方式，可以在同一时间执行多次操作，对不同的数据执行同样的一批指令 生成等差数列numpy.arange(start, end, step) start : 开始值 end : 结束值 step: 步长 四则运算规则：相同位置的数据进行运算，结果保留在相同的位置语法：s1 op s2注意：如果两个向量长度不一样，就会使用rep方法，将短的变量不断重复，直到和长的变量长度一致 向量计算的原则1：代码中尽可能避免显式的for循环2：过早的优化是魔鬼 生成一个小数的等差数列import numpy r = numpy.arange(0.1, 0.5, 0.01) print(r) 打印 [0.1 0.11 0.12 0.13 0.14 0.15 0.16 0.17 0.18 0.19 0.2 0.21 0.22 0.23 0.24 0.25 0.26 0.27 0.28 0.29 0.3 0.31 0.32 0.33 0.34 0.35 0.36 0.37 0.38 0.39 0.4 0.41 0.42 0.43 0.44 0.45 0.46 0.47 0.48 0.49] 四则运算import numpy r = numpy.arange(0.1, 0.5, 0.01) r + r r - r r * r r / r r ** 5 r // r 其实算术运算都可以 数据长短不一import numpy r = numpy.arange(0.1, 0.5, 0.01) r = r+1 所谓的长短不一是因为，r里面有很多数，它会把1重复很多次，与r中的每一个数分别相加 比较运算import numpy r = numpy.arange(0.1, 0.5, 0.01) r &gt; 0.3 打印 array([False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]) 多数时用来过滤数据 r[r&gt;0.3] 打印 array([0.31, 0.32, 0.33, 0.34, 0.35, 0.36, 0.37, 0.38, 0.39, 0.4 , 0.41, 0.42, 0.43, 0.44, 0.45, 0.46, 0.47, 0.48, 0.49]) 矩阵运算import numpy r = numpy.arange(0.1, 0.5, 0.01) numpy.dot(r, r.T) #等价于sum(r*r) 打印 4.013999999999998]]></content>
-      <categories>
-        <category>废弃博文</category>
-      </categories>
-      <tags>
-        <tag>废弃博文</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[DataFrame数据框]]></title>
     <url>%2F2018%2F08%2F29%2F%E5%BA%9F%E5%BC%83%E5%8D%9A%E6%96%87%2F03DataFrame%2F</url>
     <content type="text"><![CDATA[数据框是用来存储多行与多列的数据集合。数据框和office中的Excel表格很像 定义不自己定义索引from pandas import DataFrame df = DataFrame({&apos;age&apos;:[21, 22, 23], &apos;name&apos;:[&apos;KEN&apos;, &apos;John&apos;, &apos;Jimi&apos;]}) 内部显示 index age name 0 21 KEN 1 22 John 2 23 Jimi 自己定义索引from pandas import DataFrame df = DataFrame( data = {&apos;age&apos;:[21, 22, 23], &apos;name&apos;:[&apos;KEN&apos;, &apos;John&apos;, &apos;Jimi&apos;]}, index = [&apos;frist&apos;, &apos;second&apos;, &apos;third&apos;] ) 内部显示 index age name frist 21 KEN second 22 John third 23 Jimi 访问from pandas import DataFrame df = DataFrame( data = {&apos;age&apos;:[21, 22, 23], &apos;name&apos;:[&apos;KEN&apos;, &apos;John&apos;, &apos;Jimi&apos;]}, index = [&apos;frist&apos;, &apos;second&apos;, &apos;third&apos;] ) 按行访问df[1:2] 打印 age name second 22 John 按列访问df[&apos;age&apos;] 打印 frist 21 second 22 third 23 Name: age, dtype: int64 按行列号访问df.iloc[1, 1] 打印 &apos;John&apos; 增加from pandas import DataFrame df = DataFrame( data = {&apos;age&apos;:[21, 22, 23], &apos;name&apos;:[&apos;KEN&apos;, &apos;John&apos;, &apos;Jimi&apos;]}, index = [&apos;frist&apos;, &apos;second&apos;, &apos;third&apos;] ) 增加行df.loc[len(df)] = [24, &apos;Lili&apos;] 内部显示 index age name frist 21 KEN second 22 John third 23 Jimi 3 24 Lili 增加列df[&apos;grade&apos;] = [81, 55, 43, 77] 内部显示 index age name grade frist 21 KEN 81 second 22 John 55 third 23 Jimi 43 3 24 Lili 77 修改from pandas import DataFrame df = DataFrame( data = {&apos;age&apos;:[21, 22, 23], &apos;name&apos;:[&apos;KEN&apos;, &apos;John&apos;, &apos;Jimi&apos;]}, index = [&apos;frist&apos;, &apos;second&apos;, &apos;third&apos;] ) 修改行索引df.index = range(1, 4) 打印 age name 1 21 KEN 2 22 John 3 23 Jimi 注意:索引的个数一定要和元素的个数相等 修改列名df.columns = [&apos;age2&apos;, &apos;name2&apos;] 打印 age2 name2 1 21 KEN 2 22 John 3 23 Jimi 删除from pandas import DataFrame df = DataFrame( data = {&apos;age&apos;:[21, 22, 23], &apos;name&apos;:[&apos;KEN&apos;, &apos;John&apos;, &apos;Jimi&apos;]}, index = [&apos;frist&apos;, &apos;second&apos;, &apos;third&apos;] ) 根据索引删除一行df.drop(&apos;frist&apos;) 打印 age name second 22 John third 23 Jimi 根据列名删除一列df.drop(&apos;age&apos;, axis = 1) 打印 name frist KEN second John third Jimi 注意：用drop方法删除的数据需要接收 axis属性可以判断是删除行还是删除列，0删除行，1删除列，默认是0 del函数del dfp[&apos;age&apos;] 内部显示 index name frist KEN second John third Jimi 注意：del函数删除是列是不需要重新接收的，直接删除 遍历from pandas import DataFrame df = DataFrame( data = {&apos;age&apos;:[21, 22, 23], &apos;name&apos;:[&apos;KEN&apos;, &apos;John&apos;, &apos;Jimi&apos;]}, index = [&apos;frist&apos;, &apos;second&apos;, &apos;third&apos;] ) 遍历列名for column in df: print(column) 打印 age name 遍历列for column in df: print(&quot;列名：&quot;, column) print(&quot;值：\n&quot;, df[column]) 打印 列名： age 值： frist 21 second 22 third 23 Name: age, dtype: int64 列名： name 值： frist KEN second John third Jimi Name: name, dtype: object 遍历行for index, row in df.iterrows(): print(&quot;第&quot;, index, &quot;行&quot;) print(row) 打印 第 frist 行 age 21 name KEN Name: frist, dtype: object 第 second 行 age 22 name John Name: second, dtype: object 第 third 行 age 23 name Jimi Name: third, dtype: object]]></content>
-      <categories>
-        <category>废弃博文</category>
-      </categories>
-      <tags>
-        <tag>废弃博文</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[Series系列]]></title>
     <url>%2F2018%2F08%2F27%2F%E5%BA%9F%E5%BC%83%E5%8D%9A%E6%96%87%2F02Series%2F</url>
     <content type="text"><![CDATA[Pandas中有两种常用的数据结构 Series：系列 DataFrame：数据框 Series系列系列是用于存储一列或一行的数据，以及与之相关的索引的集合。系列与列表非常相像，只是多了一个索引的概念 定义1：自己不定义索引的系列 x = Series([&apos;a&apos;, &apos;True&apos;, 1]) #自己不定义索引的系列,索引默认从0开始 内部显示 index 0 0 a 1 True 2 1 2：自己定义索引的系列 x = Series([&apos;a&apos;, &apos;True&apos;, 1], index = [&apos;frist&apos;, &apos;second&apos;, &apos;third&apos;]) #索引从自己定义的开始 内部显示 index 0 frist a second True third 1 注：索引元素要一致，否则会报： ValueError: Length of passed values is 4, index implies 3 ValueError: Length of passed values is 3, index implies 4 追加系列不能直接追加元素 x = Series([&apos;a&apos;, &apos;True&apos;, 1], index = [&apos;frist&apos;, &apos;second&apos;, &apos;third&apos;]) x.append(&apos;2&apos;) 打印 TypeError: cannot concatenate object of type &quot;&lt;class &apos;str&apos;&gt;&quot;; only pd.Series, pd.DataFrame, and pd.Panel (deprecated) objs are valid 正确的追加方式 n = Series([&apos;n&apos;]) x = x.append(n) #新添加的系列要重新接收 z = Series([&apos;z&apos;]) x = x.append(z) 内部显示 index 0 frist a second True third 1 0 n 0 z #似乎自己不定义索引的话，默认追加后的索引是0 判断值是否存在1 in x # False 这是错误的做法 正确做法 1 in x.values #True 切片x[1:3] 删除x = x.drop(0) x = x.drop(&apos;frist&apos;) x = x.drop(&apos;2&apos; != x.values) x = x.drop(x.index[3]) 遍历x = Series([&apos;a&apos;, &apos;True&apos;, 1], index = [&apos;frist&apos;, &apos;second&apos;, &apos;third&apos;]) for index in x.index: print(&quot;索引：&quot;, index) print(&quot;值：&quot;, x[index]) 打印 索引： frist 值： a 索引： second 值： True 索引： third 值： 1]]></content>
-      <categories>
-        <category>废弃博文</category>
-      </categories>
-      <tags>
-        <tag>废弃博文</tag>
-      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[基础知识]]></title>
+    <url>%2F2018%2F08%2F26%2F%E5%BA%9F%E5%BC%83%E5%8D%9A%E6%96%87%2F01%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
+    <content type="text"><![CDATA[赋值：将定义好的数据，传递给变量 变量：本义指其值可以改变的量，这里说的是数据赋值的对象，我们通过变量名来操作数据 举例 x = 10 y = x-7 z = &apos;string&apos; t = True 变量的命名规则变量名可以由字母、数字、下划线组成，但不能以数字开头 区分字母的大小写 不能与系统关键字重名 如： 有效标识符名称的例子有i、__my_name、name_23和a1b2_c3。 无效标识符名称的例子有2things、this is spaced out和my-name。 许多系统变量以下划线开头，所以最好不用下划线开头命名变量 数据类型逻辑型又叫布尔型，用于只有两种取值（真 or 假， 0 or 1， 开 or 关等）的场合 值 注释 True 真 False 假 运算规则运算符 注释 运算规则 &amp; 按位与 两个逻辑型数据中，有一个逻辑型数据为假，结果为假 | 按位或 两个逻辑型数据中，有一个逻辑型数据为真，结果为真 not 取反 取相反的值，真为假，假为真 关于数字间的逻辑比较请看python基础里面的运算符一章 数值型运算规则运算符 注释 运算规则 + 加 - 减 * 乘 / 除 % 求余 // 整除 只保留整数部分 ** 乘方 指数幂运算 注意a = 4.2 b = 2.1 print(a+b) 打印 6.300000000000001 小数的运算是浮点数的运算，精度会有一点点的偏差，每种编程语言都有这个问题，在Python中的解决方法 from decimal import Decimal a = Decimal(&apos;4.2&apos;) b = Decimal(&apos;2.1&apos;) print(a+b) 打印 6.3 字符型字符型数据代表了所有可定义的字符 定义方式：使用 ‘’ 或 “” 或 “”””””将其包含起来 &apos;hello world&apos; &quot;&quot;&quot; 床前明月光 疑是地上霜 &quot;&quot;&quot; 注意： &apos;&apos; 和 &quot;&quot;之间没有区别,&apos;&apos;&apos; &apos;&apos;&apos; 和 &quot;&quot;&quot; &quot;&quot;&quot;之间没有区别 &apos;&apos;表示单行字符串，&apos;&apos;&apos; &apos;&apos;&apos;可以表示多行字符串 转义字符使用反斜杠（\）+ 字符 可以表示特殊字符 如 \n、 \t等，具体有哪些特殊字符可以在前面的Python基础里的数据类型中或网上可以查到 print(&quot;hello \t world!&quot;) 原始字符如果不想使用反斜杠转义，可以在字符串前面加上一个 (r) 表示原始字符串 path = r&apos;C:\windows\python #注意末尾不能有反斜杠，否则会报错 续行符反斜杠还可以当做续行符，表示下一行是上一行的延续 s = &apos;abcdefg \ higklmn&apos; 多行符分号表示前面的语句是一个完整的语句，多个命令可以写在同一行 a = 4;b = 5; c = a+b; 当然，我不建议这样写 加号与乘号加号可以将两个字符串连接在一起，乘号可将字符串重复 s = &apos;abc&apos;+&apos;def&apos; st = &apos;abc&apos; * 3 print(s,st) 打印 &apos;abcdef&apos; &apos;abcabcabc&apos; ###字符串的索引Python中的索引方式有两种：一种是从左到右，从0开始依次增加；一种是从右到左，从-1开始依次减少 word = &apos;Python&apos; print(word[0], word[5]) print(word[-1], word[-6]) ###字符串的切片对字符串进行切片可以得到一段子串，截取的范围是左闭右开区间 s = &apos;helloworld&apos; print(s[1:5]) print(s[:]) print(s[5:]) print(s[:-1]) print(s[1:5:2]) 打印 ello helloworld world helloworl el 详细内容看Python基础里的切片知识 注：不能改变字符串里的内容 s = &apos;helloworld&apos; s[2] = &apos;a&apos; #error 检测开头和结尾S.endswith(suffix[, start[, end]]) -&gt; bool S.startswith(prefix[, start[, end]]) -&gt; bool 案例 Web = &apos;https://www.zylin.xyz&apos; Web.endswith(&apos;.xyz&apos;) #检测结尾，如果符合返回True Web.startswith(&apos;http:&apos;) #检测开头，如果符合返回True choices = (&apos;http:&apos;,&apos;https:&apos;) 注意，这仅能接受一个字符元组，不支持列表 Web.startswith(choices) #只要开头符合两者之一就返回True 查找字符串S.find(sub[, start[, end]]) -&gt; int 案例 Web = &apos;花木成畦手自栽 https://www.zylin.xyz https:开朗大方&apos; result = Web.find(&apos;https:&apos;) #从左至右查找字符，查找到返回字符的当前位置，查找不到返回-1 print(result) #打印 8 ，汉字算一个字符 result = Web.rfind(&apos;https:&apos;) #从右至左查找字符，和上面一样 print(result) #打印30 忽略大小写查找字符串findall(pattern, string, flags=0) -&gt; list 案例 import re #需要导入re包 Web = &apos;UPPER PYTHON, lower python, Mixed Python&apos; re.findall(&apos;python&apos;,Web, flags = re.IGNORECASE) #IGNORECASE是一个标志 打印 [&apos;PYTHON&apos;, &apos;python&apos;, &apos;Python&apos;] 想要详细了解需要学习Python的 正则表达式 替换字符串S.replace(old, new[, count]) -&gt; str #不写count参数则默认替换所有字符 案例 text = &apos;hello world,hello python, hello anaconda&apos; text.replace(&apos;hello&apos;,&apos;hi&apos;) 打印 &apos;hi world,hi python, hi anaconda&apos; 忽略大小写替换字符串sub(pattern, repl, string, count=0, flags=0) -&gt; str 案例 import re #需要导入re包 Web = &apos;UPPER PYTHON, lower python, Mixed Python&apos; re.sub(&apos;python&apos;, &apos;text&apos;,Web, flags = re.IGNORECASE) 打印 &apos;UPPER text, lower text, Mixed text&apos; 合并拼接字符串S.join(iterable) -&gt; str 案例 parts = [&apos;My&apos;, &apos;name&apos;, &apos;is&apos;, &apos;Zylin&apos;, &apos;and&apos;,&apos;I&apos;, &apos;am&apos;, &apos;a&apos;, &apos;student&apos;] &apos;&apos;.join(parts) &apos; &apos;.join(parts) &apos;,&apos;.join(parts) 打印 &apos;MynameisZylinandIamastudent&apos; &apos;My name is Zylin and I am a student&apos; &apos;My,name,is,Zylin,and,I,am,a,student&apos; 注数据结构请找到前面的元组、列表、字典、集合进行学习]]></content>
   </entry>
   <entry>
     <title><![CDATA[Anaconda的安装]]></title>
@@ -229,17 +254,6 @@
       </categories>
       <tags>
         <tag>Python数据分析</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[基础知识]]></title>
-    <url>%2F2018%2F08%2F26%2F%E5%BA%9F%E5%BC%83%E5%8D%9A%E6%96%87%2F01%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
-    <content type="text"><![CDATA[赋值：将定义好的数据，传递给变量 变量：本义指其值可以改变的量，这里说的是数据赋值的对象，我们通过变量名来操作数据 举例 x = 10 y = x-7 z = &apos;string&apos; t = True 变量的命名规则变量名可以由字母、数字、下划线组成，但不能以数字开头 区分字母的大小写 不能与系统关键字重名 如： 有效标识符名称的例子有i、__my_name、name_23和a1b2_c3。 无效标识符名称的例子有2things、this is spaced out和my-name。 许多系统变量以下划线开头，所以最好不用下划线开头命名变量 数据类型逻辑型又叫布尔型，用于只有两种取值（真 or 假， 0 or 1， 开 or 关等）的场合 值 注释 True 真 False 假 运算规则运算符 注释 运算规则 &amp; 按位与 两个逻辑型数据中，有一个逻辑型数据为假，结果为假 | 按位或 两个逻辑型数据中，有一个逻辑型数据为真，结果为真 not 取反 取相反的值，真为假，假为真 关于数字间的逻辑比较请看python基础里面的运算符一章 数值型运算规则运算符 注释 运算规则 + 加 - 减 * 乘 / 除 % 求余 // 整除 只保留整数部分 ** 乘方 指数幂运算 注意a = 4.2 b = 2.1 print(a+b) 打印 6.300000000000001 小数的运算是浮点数的运算，精度会有一点点的偏差，每种编程语言都有这个问题，在Python中的解决方法 from decimal import Decimal a = Decimal(&apos;4.2&apos;) b = Decimal(&apos;2.1&apos;) print(a+b) 打印 6.3 字符型字符型数据代表了所有可定义的字符 定义方式：使用 ‘’ 或 “” 或 “”””””将其包含起来 &apos;hello world&apos; &quot;&quot;&quot; 床前明月光 疑是地上霜 &quot;&quot;&quot; 注意： &apos;&apos; 和 &quot;&quot;之间没有区别,&apos;&apos;&apos; &apos;&apos;&apos; 和 &quot;&quot;&quot; &quot;&quot;&quot;之间没有区别 &apos;&apos;表示单行字符串，&apos;&apos;&apos; &apos;&apos;&apos;可以表示多行字符串 转义字符使用反斜杠（\）+ 字符 可以表示特殊字符 如 \n、 \t等，具体有哪些特殊字符可以在前面的Python基础里的数据类型中或网上可以查到 print(&quot;hello \t world!&quot;) 原始字符如果不想使用反斜杠转义，可以在字符串前面加上一个 (r) 表示原始字符串 path = r&apos;C:\windows\python #注意末尾不能有反斜杠，否则会报错 续行符反斜杠还可以当做续行符，表示下一行是上一行的延续 s = &apos;abcdefg \ higklmn&apos; 多行符分号表示前面的语句是一个完整的语句，多个命令可以写在同一行 a = 4;b = 5; c = a+b; 当然，我不建议这样写 加号与乘号加号可以将两个字符串连接在一起，乘号可将字符串重复 s = &apos;abc&apos;+&apos;def&apos; st = &apos;abc&apos; * 3 print(s,st) 打印 &apos;abcdef&apos; &apos;abcabcabc&apos; ###字符串的索引Python中的索引方式有两种：一种是从左到右，从0开始依次增加；一种是从右到左，从-1开始依次减少 word = &apos;Python&apos; print(word[0], word[5]) print(word[-1], word[-6]) ###字符串的切片对字符串进行切片可以得到一段子串，截取的范围是左闭右开区间 s = &apos;helloworld&apos; print(s[1:5]) print(s[:]) print(s[5:]) print(s[:-1]) print(s[1:5:2]) 打印 ello helloworld world helloworl el 详细内容看Python基础里的切片知识 注：不能改变字符串里的内容 s = &apos;helloworld&apos; s[2] = &apos;a&apos; #error 检测开头和结尾S.endswith(suffix[, start[, end]]) -&gt; bool S.startswith(prefix[, start[, end]]) -&gt; bool 案例 Web = &apos;https://www.zylin.xyz&apos; Web.endswith(&apos;.xyz&apos;) #检测结尾，如果符合返回True Web.startswith(&apos;http:&apos;) #检测开头，如果符合返回True choices = (&apos;http:&apos;,&apos;https:&apos;) 注意，这仅能接受一个字符元组，不支持列表 Web.startswith(choices) #只要开头符合两者之一就返回True 查找字符串S.find(sub[, start[, end]]) -&gt; int 案例 Web = &apos;花木成畦手自栽 https://www.zylin.xyz https:开朗大方&apos; result = Web.find(&apos;https:&apos;) #从左至右查找字符，查找到返回字符的当前位置，查找不到返回-1 print(result) #打印 8 ，汉字算一个字符 result = Web.rfind(&apos;https:&apos;) #从右至左查找字符，和上面一样 print(result) #打印30 忽略大小写查找字符串findall(pattern, string, flags=0) -&gt; list 案例 import re #需要导入re包 Web = &apos;UPPER PYTHON, lower python, Mixed Python&apos; re.findall(&apos;python&apos;,Web, flags = re.IGNORECASE) #IGNORECASE是一个标志 打印 [&apos;PYTHON&apos;, &apos;python&apos;, &apos;Python&apos;] 想要详细了解需要学习Python的 正则表达式 替换字符串S.replace(old, new[, count]) -&gt; str #不写count参数则默认替换所有字符 案例 text = &apos;hello world,hello python, hello anaconda&apos; text.replace(&apos;hello&apos;,&apos;hi&apos;) 打印 &apos;hi world,hi python, hi anaconda&apos; 忽略大小写替换字符串sub(pattern, repl, string, count=0, flags=0) -&gt; str 案例 import re #需要导入re包 Web = &apos;UPPER PYTHON, lower python, Mixed Python&apos; re.sub(&apos;python&apos;, &apos;text&apos;,Web, flags = re.IGNORECASE) 打印 &apos;UPPER text, lower text, Mixed text&apos; 合并拼接字符串S.join(iterable) -&gt; str 案例 parts = [&apos;My&apos;, &apos;name&apos;, &apos;is&apos;, &apos;Zylin&apos;, &apos;and&apos;,&apos;I&apos;, &apos;am&apos;, &apos;a&apos;, &apos;student&apos;] &apos;&apos;.join(parts) &apos; &apos;.join(parts) &apos;,&apos;.join(parts) 打印 &apos;MynameisZylinandIamastudent&apos; &apos;My name is Zylin and I am a student&apos; &apos;My,name,is,Zylin,and,I,am,a,student&apos; 注数据结构请找到前面的元组、列表、字典、集合进行学习]]></content>
-      <categories>
-        <category>废弃博文</category>
-      </categories>
-      <tags>
-        <tag>废弃博文</tag>
       </tags>
   </entry>
   <entry>
@@ -452,17 +466,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[返回多个值]]></title>
-    <url>%2F2018%2F07%2F10%2Fpython%2Fpython%E4%B8%8A%2F18%E8%BF%94%E5%9B%9E%E5%A4%9A%E4%B8%AA%E5%80%BC%2F</url>
-    <content type="text"><![CDATA[return语句return [表达式] 语句用于退出函数，选择性地向调用方返回一个表达式。不带参数值的return语句返None。之前的例子都没有示范如何返回数值，以下实例演示了 return 语句的用法 比如在游戏中经常需要从一个点移动到另一个点，给出坐标、位移和角度，就可以计算出新的新的坐标： import math def move(x, y, step, angle=0): nx = x + step * math.cos(angle) ny = y - step * math.sin(angle) return nx, ny import math语句表示导入math包，并允许后续代码引用math包里的sin、cos等函数。 然后，我们就可以同时获得返回值： &gt;&gt;&gt; x, y = move(100, 100, 60, math.pi / 6) &gt;&gt;&gt; print(x, y) 151.96152422706632 70.0 但其实这只是一种假象，Python函数返回的仍然是单一值： &gt;&gt;&gt; r = move(100, 100, 60, math.pi / 6) &gt;&gt;&gt; print(r) (151.96152422706632, 70.0) 原来返回值是一个tuple！但是，在语法上，返回一个tuple可以省略括号，而多个变量可以同时接收一个tuple，按位置赋给对应的值，所以，Python的函数返回多值其实就是返回一个tuple，但写起来更方便，当然，你也可以用列表、字典来返回数据。 小结定义函数时，需要确定函数名和参数个数；如果有必要，可以先对参数的数据类型做检查；函数体内部可以用return随时返回函数结果；函数执行完毕也没有return语句时，自动return None。]]></content>
-      <categories>
-        <category>python基础编程</category>
-      </categories>
-      <tags>
-        <tag>python基础编程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[基础知识]]></title>
     <url>%2F2018%2F07%2F10%2F%E7%AE%97%E6%B3%95%2F%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%2F0%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
     <content type="text"><![CDATA[什么是算法？解决特定问题的方法 为何要学习算法？&emsp;&emsp;从上面知道了算法就是解决特定问题的方法，而我们用的编程语言是用来解决问题的工具，工具有了，如何去使用工具才是我们应该要去学习的。如果说编程语言是利器，那么算法就是灵魂。算法很难，但也需要我们去学习。 什么是数据结构？数据结构是计算机存储、组织数据的方式。通常情况下，精心选择的数据结构可以带来更高的运行或者存储效率。 算法与数据结构的区别程序 = 数据结构 + 算法总结：算法是为了解决实际问题而设计的，数据结构是算法需要处理的问题载体 算法的特性：* 有限的 * 每一步是明确的(不能有歧义) * 至少有一个输出 什么是好的算法？分析指标： * 空间复杂度S(n)：程序执行时占用存储单元的长度 * 时间复杂度T(n)：程序执行时耗费时间的长度 注：这两个指标与要处理的数据规模是相关的。 分析算法关注两种复杂度 * 最坏情况复杂度Tworst(n) * 平均情况复杂度Tavg(n) 不同复杂度的函数，在不同的数据规模下的增长趋势。 算法时间复杂度的计算点击链接学习 ：算法时间复杂度的计算 时间复杂度的几条基本计算规则基本操作，即只有常数项，认为其时间复杂度为O(1) 顺序结构，时间复杂度按加法进行计算 循环结构，时间复杂度按乘法进行计算 分支结构，时间复杂度取最大值 判断一个算法的效率时，只需要关注操作数量的最高次项，其它次要项和常数项可以忽略 在没有特殊说明时，我们所分析的算法的时间复杂度都是指最坏时间复杂度 若两段算法分别有复杂度T1(n) = O(f1(n)) 和 T2(n) = O(f2(n))，则: 两个算法拼在一起时，等于两段的和 T1(n) + T2(n) 两个算法嵌套时，等于两段的积 T1(n) * T2(n) 抽象数据类型(ADT)抽象数据类型(Abstract Data Type)的含义是指一个数学模型以及定义在此数学模型上的一组操作。即把数据类型和数据类型上的运算捆在一起，进行封装。引入抽象数据类型的目的是把数据类型的表示和数据类型上运算的实现与这些数据类型和运算在程序中的引用隔开，使它们相互独立。 最常用的数据运算有五种插入 修改 删除 查找 排序 案例一：写程序,计算给定多项式在定点x处的值 算法一上面写法不推荐 算法二&emsp;&emsp;秦九韶算法是中国南宋时期的数学家秦九韶提出的一种多项式简化算法。在西方被称作霍纳算法。是一种将一元n次多项式的求值问题转化为n个一次式的算法。其大大简化了计算过程，即使在现代，利用计算机解决多项式的求值问题时，霍纳规则依然是最优的算法规则。具体计算过程自行百度。 f(x) = A0 + X (A1 + X( … ( An - 1 + X( An ) ) ) ) 自行验证第一种与第二种时间复杂度，运行效率自行测试 案例二：给定N个整数的序列{A1,A2,……,An}，求下面函数的最大值。 算法一 算法二 算法三：分治思想 注：代码比较复杂，这里不展示，过程就是利用分治思想解决这个问题(分治思想后面会说) 算法四：在线处理“在线”指每输入一个数据进行即时处理，在任何一个地方终止，算法都能给出正解。]]></content>
@@ -471,6 +474,17 @@
       </categories>
       <tags>
         <tag>算法基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[返回多个值]]></title>
+    <url>%2F2018%2F07%2F10%2Fpython%2Fpython%E4%B8%8A%2F18%E8%BF%94%E5%9B%9E%E5%A4%9A%E4%B8%AA%E5%80%BC%2F</url>
+    <content type="text"><![CDATA[return语句return [表达式] 语句用于退出函数，选择性地向调用方返回一个表达式。不带参数值的return语句返None。之前的例子都没有示范如何返回数值，以下实例演示了 return 语句的用法 比如在游戏中经常需要从一个点移动到另一个点，给出坐标、位移和角度，就可以计算出新的新的坐标： import math def move(x, y, step, angle=0): nx = x + step * math.cos(angle) ny = y - step * math.sin(angle) return nx, ny import math语句表示导入math包，并允许后续代码引用math包里的sin、cos等函数。 然后，我们就可以同时获得返回值： &gt;&gt;&gt; x, y = move(100, 100, 60, math.pi / 6) &gt;&gt;&gt; print(x, y) 151.96152422706632 70.0 但其实这只是一种假象，Python函数返回的仍然是单一值： &gt;&gt;&gt; r = move(100, 100, 60, math.pi / 6) &gt;&gt;&gt; print(r) (151.96152422706632, 70.0) 原来返回值是一个tuple！但是，在语法上，返回一个tuple可以省略括号，而多个变量可以同时接收一个tuple，按位置赋给对应的值，所以，Python的函数返回多值其实就是返回一个tuple，但写起来更方便，当然，你也可以用列表、字典来返回数据。 小结定义函数时，需要确定函数名和参数个数；如果有必要，可以先对参数的数据类型做检查；函数体内部可以用return随时返回函数结果；函数执行完毕也没有return语句时，自动return None。]]></content>
+      <categories>
+        <category>python基础编程</category>
+      </categories>
+      <tags>
+        <tag>python基础编程</tag>
       </tags>
   </entry>
   <entry>
