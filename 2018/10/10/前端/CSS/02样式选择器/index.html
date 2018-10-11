@@ -98,18 +98,18 @@
 
 
 
-<meta name="description" content="自古开篇献简介，将介绍CSS基本语法、CSS页面引入方法、常用的应用文本的css样式及页面引入案例">
+<meta name="description" content="星号选择器将样式应用于所有的标签，慎用 *{margin:0;padding:0} 标签选择器建议尽量应用在层级选择器中,不建议直接给标签使用 div{color:red}      &amp;lt;div&amp;gt;     .... &amp;lt;/div&amp;gt; eg:下例演示标签选择器的使用，但不建议这样使用 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot">
 <meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS的基本语法">
-<meta property="og:url" content="https://zylingx.github.io/2018/09/30/前端/CSS/01CSS的基本语法/index.html">
+<meta property="og:title" content="样式选择器">
+<meta property="og:url" content="https://zylingx.github.io/2018/10/10/前端/CSS/02样式选择器/index.html">
 <meta property="og:site_name" content="朝阳旅行者">
-<meta property="og:description" content="自古开篇献简介，将介绍CSS基本语法、CSS页面引入方法、常用的应用文本的css样式及页面引入案例">
+<meta property="og:description" content="星号选择器将样式应用于所有的标签，慎用 *{margin:0;padding:0} 标签选择器建议尽量应用在层级选择器中,不建议直接给标签使用 div{color:red}      &amp;lt;div&amp;gt;     .... &amp;lt;/div&amp;gt; eg:下例演示标签选择器的使用，但不建议这样使用 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-30T03:17:00.094Z">
+<meta property="og:updated_time" content="2018-10-11T08:55:49.498Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS的基本语法">
-<meta name="twitter:description" content="自古开篇献简介，将介绍CSS基本语法、CSS页面引入方法、常用的应用文本的css样式及页面引入案例">
+<meta name="twitter:title" content="样式选择器">
+<meta name="twitter:description" content="星号选择器将样式应用于所有的标签，慎用 *{margin:0;padding:0} 标签选择器建议尽量应用在层级选择器中,不建议直接给标签使用 div{color:red}      &amp;lt;div&amp;gt;     .... &amp;lt;/div&amp;gt; eg:下例演示标签选择器的使用，但不建议这样使用 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot">
 
 
 
@@ -139,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="https://zylingx.github.io/2018/09/30/前端/CSS/01CSS的基本语法/"/>
+  <link rel="canonical" href="https://zylingx.github.io/2018/10/10/前端/CSS/02样式选择器/"/>
 
 
 
 
 
-  <title>CSS的基本语法 | 朝阳旅行者</title>
+  <title>样式选择器 | 朝阳旅行者</title>
   
 
 
@@ -324,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zylingx.github.io/2018/09/30/前端/CSS/01CSS的基本语法/">
+    <link itemprop="mainEntityOfPage" href="https://zylingx.github.io/2018/10/10/前端/CSS/02样式选择器/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zylin">
@@ -341,7 +341,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">CSS的基本语法</h1>
+          <h1 class="post-title" itemprop="name headline">样式选择器</h1>
         
 
         <div class="post-meta">
@@ -353,8 +353,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-30T00:00:00+08:00">
-                2018-09-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-10T00:00:00+08:00">
+                2018-10-10
               </time>
             
 
@@ -394,8 +394,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/09/30/前端/CSS/01CSS的基本语法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/30/前端/CSS/01CSS的基本语法/" itemprop="commentCount"></span>
+                <a href="/2018/10/10/前端/CSS/02样式选择器/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/10/10/前端/CSS/02样式选择器/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -408,10 +408,6 @@
 
           
 
-          
-              <div class="post-description">
-                  自古开篇献简介，将介绍CSS基本语法、CSS页面引入方法、常用的应用文本的css样式及页面引入案例
-              </div>
           
 
         </div>
@@ -427,78 +423,23 @@
       
 
       
-        <p>CSS是 Cascading Style Sheets 的首字母缩写，意思是层叠样式表。</p>
-<p>为了让网页元素的样式更加丰富，也为了让网页的内容和样式能拆分开，CSS由此思想而诞生。</p>
-<p>有了CSS，html中大部分表现样式的标签就废弃不用了，html只负责文档的结构和内容，表现形式完全交给CSS，html文档变得更加简洁。</p>
-<h1 id="css基本语法"><a href="#css基本语法" class="headerlink" title="css基本语法"></a>css基本语法</h1><h2 id="定义方法"><a href="#定义方法" class="headerlink" title="定义方法"></a>定义方法</h2><pre><code>选择器 { 属性:值; 属性:值; 属性:值;}
+        <h1 id="星号选择器"><a href="#星号选择器" class="headerlink" title="星号选择器"></a>星号选择器</h1><p>将样式应用于所有的标签，慎用</p>
+<pre><code>*{margin:0;padding:0}
+</code></pre><h1 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器"></a>标签选择器</h1><p>建议尽量应用在层级选择器中,不建议直接给标签使用</p>
+<pre><code>div{color:red}   
 
-div{ width:100px; height:100px; color:red }
-</code></pre><p>选择器是将样式和页面元素关联起来的名称，属性是希望设置的样式属性,每个属性有一个或多个值。</p>
-<h2 id="CSS-注释"><a href="#CSS-注释" class="headerlink" title="CSS 注释"></a>CSS 注释</h2><p>注释是用来解释你的代码，并且可以随意编辑它，浏览器会忽略它。</p>
-<p>CSS注释以 “/<em>“ 开始, 以 “</em>/“ 结束, 实例如下:</p>
-<pre><code>/*这是个注释*/
-p{
-    text-align:center;
-    /*这是另一个注释*/
-    color:black;
-    font-family:arial;
-}
-</code></pre><h1 id="CSS页面引入方法"><a href="#CSS页面引入方法" class="headerlink" title="CSS页面引入方法"></a>CSS页面引入方法</h1><h2 id="内联式"><a href="#内联式" class="headerlink" title="内联式"></a>内联式</h2><p>通过标签的style属性，在标签上直接写样式。</p>
-<pre><code>&lt;div style=&quot;width:100px; height:100px; color:red &quot;&gt;......&lt;/div&gt;
-</code></pre><p>注：不建议使用</p>
-<h2 id="嵌入式"><a href="#嵌入式" class="headerlink" title="嵌入式"></a>嵌入式</h2><p>通过style标签，在网页上创建嵌入的样式表。</p>
-<pre><code>&lt;style type=&quot;text/css&quot;&gt;
-    div{ width:100px; height:100px; color:red }
-    ......
-&lt;/style&gt;
-</code></pre><p>注：在实际开发过程中，嵌入式多用于首页中，这可以使首页加载速度更快(如淘宝网)，其他页面使用外联式</p>
-<h2 id="外联式：通过link标签，链接到外部样式表到页面中。"><a href="#外联式：通过link标签，链接到外部样式表到页面中。" class="headerlink" title="外联式：通过link标签，链接到外部样式表到页面中。"></a>外联式：通过link标签，链接到外部样式表到页面中。</h2><pre><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/main.css&quot;&gt;
-</code></pre><p>注：在实际开发的过程中，建议使用第三种方式：外联式</p>
-<h1 id="常用的应用文本的css样式"><a href="#常用的应用文本的css样式" class="headerlink" title="常用的应用文本的css样式"></a>常用的应用文本的css样式</h1><pre><code>color 设置文字的颜色，如： color:red;
 
-font-size 设置文字的大小，如：font-size:12px;
-
-font-family 设置文字的字体，如：font-family:&apos;微软雅黑&apos;;
-
-注：如果设置字体样式后出现中文乱码，可以试试改成英文的microsoft-Yahei
-
-font-style 设置字体是否倾斜，&apos;italic&apos;设置文字倾斜，&apos;normal&apos;设置不倾斜
-
-font-weight 设置文字是否加粗，bold 设置加粗 ，normal 设置不加粗
-
-font 可以同时设置文字的几个属性，但写的顺序有兼容问题，建议按照如下顺序写： 
-    font：是否加粗 字号/行高 字体；如： font:normal 12px/36px &apos;微软雅黑&apos;;
-
-line-height 设置文字的行高，如：line-height:24px;
-
-text-decoration 设置文字的下划线，如：text-decoration:none; 将文字下划线去掉
-
-text-indent 设置文字首行缩进，如：text-indent:24px; 设置文字首行缩进24px
-
-text-align 设置文字水平对齐方式，如text-align:center 设置文字水平居中
-</code></pre><h1 id="页面引入案例"><a href="#页面引入案例" class="headerlink" title="页面引入案例"></a>页面引入案例</h1><h2 id="内联式-1"><a href="#内联式-1" class="headerlink" title="内联式"></a>内联式</h2><pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;CSS页面引入_内联式&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div style=&quot;width: 800px; height: 500px; color: gold&quot;&gt;
-        CSS是 Cascading Style Sheets 的首字母缩写，意思是层叠样式表。&lt;br /&gt;
-
-        为了让网页元素的样式更加丰富，也为了让网页的内容和样式能拆分开，CSS由此思想而诞生。&lt;br /&gt;
-
-        有了CSS，html中大部分表现样式的标签就废弃不用了，html只负责文档的结构和内容，表现形式完全交给CSS，html文档变得更加简洁。&lt;br /&gt;
-    &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre><h2 id="嵌入式-1"><a href="#嵌入式-1" class="headerlink" title="嵌入式"></a>嵌入式</h2><pre><code>&lt;!DOCTYPE html&gt;
+&lt;div&gt;
+    ....
+&lt;/div&gt;
+</code></pre><p>eg:下例演示标签选择器的使用，但不建议这样使用</p>
+<pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
     &lt;meta charset=&quot;UTF-8&quot;&gt;
     &lt;title&gt;CSS页面引入_嵌入式&lt;/title&gt;
 
-    &lt;style type=&quot;text/css&quot;&gt;
+    &lt;style&gt;
         div{
             width: 800px;
             height: 500px;
@@ -521,25 +462,27 @@ text-align 设置文字水平对齐方式，如text-align:center 设置文字水
     &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre><h2 id="外联式"><a href="#外联式" class="headerlink" title="外联式"></a>外联式</h2><p>文件所在目录</p>
-<pre><code>/前端
-    css外联式.html
+</code></pre><h1 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h1><p>id选择器以<code>#</code>号开头，通过id名来选择元素，元素的id名称不能重复，所以一个样式设置项只能对应于页面上一个元素，不能复用，id名一般给程序使用，所以不推荐使用id作为选择器。</p>
+<pre><code>#box{color:red} 
 
-    /css
-        main.css
-</code></pre><p>如上所示，在css外联式.html文件 目录下，新建了一个css文件夹，在里面又新建了一个main.css文件</p>
-<pre><code>/前端/css外联式.html
-
-&lt;!DOCTYPE html&gt;
+&lt;div id=&quot;box&quot;&gt;
+    ....
+&lt;/div&gt;   &lt;!-- 对应以上一条样式，其它元素不允许应用此样式 --&gt;
+</code></pre><p>eg:下例演示id选择器的使用，但不建议这样使用</p>
+<pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
     &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;CSS页面引入_嵌入式&lt;/title&gt;
-    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/main.css&quot;&gt;
-&lt;/head&gt;
+    &lt;title&gt;选择器&lt;/title&gt;
 
+    &lt;style type=&quot;text/css&quot;&gt;
+        #box{
+            color:red;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
 &lt;body&gt;
-    &lt;div&gt;
+    &lt;div id=&quot;box&quot;&gt;
         CSS是 Cascading Style Sheets 的首字母缩写，意思是层叠样式表。&lt;br /&gt;
 
         为了让网页元素的样式更加丰富，也为了让网页的内容和样式能拆分开，CSS由此思想而诞生。&lt;br /&gt;
@@ -548,19 +491,193 @@ text-align 设置文字水平对齐方式，如text-align:center 设置文字水
     &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
+</code></pre><h1 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h1><p>通过类名来选择元素，一个类可应用于多个元素，一个元素上也可以使用多个类，可复用，是css中应用最多的一种选择器。</p>
+<pre><code>.red{color:red}
+.big{font-size:20px}
+.mt10{margin-top:10px} 
 
-/前端/css/main.css
+&lt;div class=&quot;red&quot;&gt;
+    ....
+&lt;/div&gt;
 
-div{
-    width: 800px;
-    height: 500px;
-    color: gold;
+&lt;h1 class=&quot;red big mt10&quot;&gt;
+    ....
+&lt;/h1&gt;
 
-    font-size: 24px;
-    font-family: &apos;微软雅黑&apos;;
-    text-align: center;
-}
-</code></pre>
+&lt;p class=&quot;red mt10&quot;&gt;
+    ....
+&lt;/p&gt;
+</code></pre><p>eg：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;类选择器&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        .red{color:red}
+        .big{font-size:20px}
+        .mt10{margin-top:10px} 
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;red&quot;&gt;
+        CSS是 Cascading Style Sheets 的首字母缩写，意思是层叠样式表。&lt;br /&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;mt10 big&quot;&gt;
+        为了让网页元素的样式更加丰富，也为了让网页的内容和样式能拆分开，CSS由此思想而诞生。&lt;br /&gt;
+    &lt;/div&gt;    
+
+    &lt;div class=&quot;red big mt10&quot;&gt;
+        有了CSS，html中大部分表现样式的标签就废弃不用了，html只负责文档的结构和内容，表现形式完全交给CSS，html文档变得更加简洁。&lt;br /&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h1 id="层级选择器"><a href="#层级选择器" class="headerlink" title="层级选择器"></a>层级选择器</h1><p>主要应用在选择父元素下的子元素，或者子元素下面的子元素，可与标签元素结合使用，减少命名，同时也可以通过层级，防止命名冲突。</p>
+<pre><code>.box span{color:red}
+.box .red{color:pink}
+.red{color:red}
+
+&lt;div class=&quot;box&quot;&gt;
+    &lt;span&gt;....&lt;/span&gt;
+    &lt;a href=&quot;#&quot; class=&quot;red&quot;&gt;....&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h3 class=&quot;red&quot;&gt;....&lt;/h3&gt;
+</code></pre><p>eg: 层级选择器的层数最好不要超过4层，层数越少越好，层数越多，解析的越慢</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;层级选择器&lt;/title&gt;
+
+    &lt;style type=&quot;text/css&quot;&gt;
+        .list li{
+            height: 30px;
+            list-style: none;
+        }
+        .list .color{
+            color: red;
+        }
+
+        .list a{
+            text-decoration: none;
+            color: gold;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;ul class=&quot;list&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt; 严重脱发，难道就只能剃头了吗？&lt;/a&gt;&lt;/li&gt;
+        &lt;li &gt;&lt;a href=&quot;#&quot; class=&quot;color&quot;&gt; 豆芽怎么种？两种高大上的种植方法，让你在家也可以种出美味！&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt; 一部荣耀畅玩8C等于几部iPhone XS Max?&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h1 id="组选择器"><a href="#组选择器" class="headerlink" title="组选择器"></a>组选择器</h1><p>多个选择器，如果有同样的样式设置，可以使用组选择器。</p>
+<pre><code>.box1,.box2,.box3{width:100px;height:100px}
+.box1{background:red}
+.box2{background:pink}
+.box2{background:gold}
+
+&lt;div class=&quot;box1&quot;&gt;....&lt;/div&gt;
+&lt;div class=&quot;box2&quot;&gt;....&lt;/div&gt;
+&lt;div class=&quot;box3&quot;&gt;....&lt;/div&gt;
+</code></pre><p>eg:选择器之间用逗号隔开，简化样式的写法</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;组选择器&lt;/title&gt;
+
+    &lt;style type=&quot;text/css&quot;&gt;
+        .box1,.box2,.box3{
+            font-size: 24px;
+            height: 30px;
+        }
+        .box1{
+            color: red;
+        }
+        .box2{
+            color: gold;
+
+        }
+        .box3{
+            font-weight: bold;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;box1&quot;&gt;hello world&lt;/div&gt;
+    &lt;div class=&quot;box2&quot;&gt;hello world&lt;/div&gt;
+    &lt;div class=&quot;box3&quot;&gt;hello world&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h1 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h1><p>常用的伪类选择器有hover，表示鼠标悬浮在元素上时的状态</p>
+<pre><code>.box1:hover{color:red}
+
+&lt;div class=&quot;box1&quot;&gt;....&lt;/div&gt;
+</code></pre><p>eg:伪类选择器，常与 a标签搭配使用，设置鼠标悬停在元素上的状态，如下面例子中，设置 a标签的颜色</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;伪类选择器&lt;/title&gt;
+
+    &lt;style type=&quot;text/css&quot;&gt;
+        .list li{
+            height: 30px;
+            list-style: none;
+        }
+        .list a:hover{
+            color: gold;
+            text-decoration: none;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;ul class=&quot;list&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt; 严重脱发，难道就只能剃头了吗？&lt;/a&gt;&lt;/li&gt;
+        &lt;li &gt;&lt;a href=&quot;#&quot;&gt; 豆芽怎么种？两种高大上的种植方法，让你在家也可以种出美味！&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt; 一部荣耀畅玩8C等于几部iPhone XS Max?&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h1 id="伪元素选择器"><a href="#伪元素选择器" class="headerlink" title="伪元素选择器"></a>伪元素选择器</h1><p>伪元素选择器有before和after,它们可以通过样式在元素中插入内容。</p>
+<pre><code>.box1:before{content:&apos;行首文字&apos;;}
+.box2:after{content:&apos;行尾文字&apos;;}
+
+&lt;div class=&quot;box1&quot;&gt;....&lt;/div&gt;
+&lt;div class=&quot;box2&quot;&gt;....&lt;/div&gt;
+</code></pre><p>eg:伪元素选择器是通过样式在文字的前面或后面插入文字，常与content属性配合使用，插入的文字无法被选中</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;伪元素选择器&lt;/title&gt;
+
+    &lt;style type=&quot;text/css&quot;&gt;
+        .list .box1:before{
+            content: &quot;在前面插入文字 &quot;;
+            color: red;
+        }
+
+        .list .box2:after{
+            content: &quot; 在后面插入文字&quot;;
+            color: blue;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;ul class=&quot;list&quot;&gt;
+        &lt;li class=&quot;box1&quot;&gt;新闻一&lt;/li&gt;
+        &lt;li class=&quot;box2&quot;&gt;新闻二&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>注：伪元素选择器一般用来插入个小图片什么的</p>
+<p>常用的选择器大概就这么多，不常用的就不介绍了，更多花里胡哨的选择器将在CSS3里学习</p>
+
       
     </div>
     
@@ -619,8 +736,8 @@ div{
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/21/前端/HTML/10内嵌框架/" rel="next" title="内嵌框架">
-                <i class="fa fa-chevron-left"></i> 内嵌框架
+              <a href="/2018/10/08/前端/CSS/01CSS的基本语法/" rel="next" title="CSS的基本语法">
+                <i class="fa fa-chevron-left"></i> CSS的基本语法
               </a>
             
           </div>
@@ -628,10 +745,6 @@ div{
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/10/01/前端/CSS/02样式选择器/" rel="prev" title="样式选择器">
-                样式选择器 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -770,7 +883,7 @@ div{
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#css基本语法"><span class="nav-number">1.</span> <span class="nav-text">css基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义方法"><span class="nav-number">1.1.</span> <span class="nav-text">定义方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS-注释"><span class="nav-number">1.2.</span> <span class="nav-text">CSS 注释</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS页面引入方法"><span class="nav-number">2.</span> <span class="nav-text">CSS页面引入方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#内联式"><span class="nav-number">2.1.</span> <span class="nav-text">内联式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#嵌入式"><span class="nav-number">2.2.</span> <span class="nav-text">嵌入式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#外联式：通过link标签，链接到外部样式表到页面中。"><span class="nav-number">2.3.</span> <span class="nav-text">外联式：通过link标签，链接到外部样式表到页面中。</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常用的应用文本的css样式"><span class="nav-number">3.</span> <span class="nav-text">常用的应用文本的css样式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#页面引入案例"><span class="nav-number">4.</span> <span class="nav-text">页面引入案例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#内联式-1"><span class="nav-number">4.1.</span> <span class="nav-text">内联式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#嵌入式-1"><span class="nav-number">4.2.</span> <span class="nav-text">嵌入式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#外联式"><span class="nav-number">4.3.</span> <span class="nav-text">外联式</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#星号选择器"><span class="nav-number">1.</span> <span class="nav-text">星号选择器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标签选择器"><span class="nav-number">2.</span> <span class="nav-text">标签选择器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#id选择器"><span class="nav-number">3.</span> <span class="nav-text">id选择器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类选择器"><span class="nav-number">4.</span> <span class="nav-text">类选择器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#层级选择器"><span class="nav-number">5.</span> <span class="nav-text">层级选择器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#组选择器"><span class="nav-number">6.</span> <span class="nav-text">组选择器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#伪类选择器"><span class="nav-number">7.</span> <span class="nav-text">伪类选择器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#伪元素选择器"><span class="nav-number">8.</span> <span class="nav-text">伪元素选择器</span></a></li></ol></div>
             
 
           </div>

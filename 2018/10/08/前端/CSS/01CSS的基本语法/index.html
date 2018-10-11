@@ -98,18 +98,18 @@
 
 
 
-<meta name="description" content="每一个不曾轻舞的日子，都是对生命的辜负">
+<meta name="description" content="自古开篇献简介，将介绍CSS基本语法、CSS页面引入方法、常用的应用文本的css样式、颜色的表示及页面引入案例">
 <meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="样式选择器">
-<meta property="og:url" content="https://zylingx.github.io/2018/10/01/前端/CSS/02样式选择器/index.html">
+<meta property="og:title" content="CSS的基本语法">
+<meta property="og:url" content="https://zylingx.github.io/2018/10/08/前端/CSS/01CSS的基本语法/index.html">
 <meta property="og:site_name" content="朝阳旅行者">
-<meta property="og:description" content="每一个不曾轻舞的日子，都是对生命的辜负">
+<meta property="og:description" content="自古开篇献简介，将介绍CSS基本语法、CSS页面引入方法、常用的应用文本的css样式、颜色的表示及页面引入案例">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-30T03:24:26.717Z">
+<meta property="og:updated_time" content="2018-10-11T07:42:54.029Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="样式选择器">
-<meta name="twitter:description" content="每一个不曾轻舞的日子，都是对生命的辜负">
+<meta name="twitter:title" content="CSS的基本语法">
+<meta name="twitter:description" content="自古开篇献简介，将介绍CSS基本语法、CSS页面引入方法、常用的应用文本的css样式、颜色的表示及页面引入案例">
 
 
 
@@ -139,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="https://zylingx.github.io/2018/10/01/前端/CSS/02样式选择器/"/>
+  <link rel="canonical" href="https://zylingx.github.io/2018/10/08/前端/CSS/01CSS的基本语法/"/>
 
 
 
 
 
-  <title>样式选择器 | 朝阳旅行者</title>
+  <title>CSS的基本语法 | 朝阳旅行者</title>
   
 
 
@@ -324,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zylingx.github.io/2018/10/01/前端/CSS/02样式选择器/">
+    <link itemprop="mainEntityOfPage" href="https://zylingx.github.io/2018/10/08/前端/CSS/01CSS的基本语法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zylin">
@@ -341,7 +341,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">样式选择器</h1>
+          <h1 class="post-title" itemprop="name headline">CSS的基本语法</h1>
         
 
         <div class="post-meta">
@@ -353,8 +353,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-01T00:00:00+08:00">
-                2018-10-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-08T00:00:00+08:00">
+                2018-10-08
               </time>
             
 
@@ -394,8 +394,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/10/01/前端/CSS/02样式选择器/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/10/01/前端/CSS/02样式选择器/" itemprop="commentCount"></span>
+                <a href="/2018/10/08/前端/CSS/01CSS的基本语法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/10/08/前端/CSS/01CSS的基本语法/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -408,6 +408,10 @@
 
           
 
+          
+              <div class="post-description">
+                  自古开篇献简介，将介绍CSS基本语法、CSS页面引入方法、常用的应用文本的css样式、颜色的表示及页面引入案例
+              </div>
           
 
         </div>
@@ -423,7 +427,149 @@
       
 
       
-        
+        <p>CSS是 Cascading Style Sheets 的首字母缩写，意思是层叠样式表。</p>
+<p>为了让网页元素的样式更加丰富，也为了让网页的内容和样式能拆分开，CSS由此思想而诞生。</p>
+<p>有了CSS，html中大部分表现样式的标签就废弃不用了，html只负责文档的结构和内容，表现形式完全交给CSS，html文档变得更加简洁。</p>
+<h1 id="css基本语法"><a href="#css基本语法" class="headerlink" title="css基本语法"></a>css基本语法</h1><h2 id="定义方法"><a href="#定义方法" class="headerlink" title="定义方法"></a>定义方法</h2><pre><code>选择器 { 属性:值; 属性:值; 属性:值;}
+
+div{ width:100px; height:100px; color:red }
+</code></pre><p>选择器是将样式和页面元素关联起来的名称，属性是希望设置的样式属性,每个属性有一个或多个值。</p>
+<h2 id="CSS-注释"><a href="#CSS-注释" class="headerlink" title="CSS 注释"></a>CSS 注释</h2><p>注释是用来解释你的代码，并且可以随意编辑它，浏览器会忽略它。</p>
+<p>CSS注释以 “/<em>“ 开始, 以 “</em>/“ 结束, 实例如下:</p>
+<pre><code>/*这是个注释*/
+p{
+    text-align:center;
+    /*这是另一个注释*/
+    color:black;
+    font-family:arial;
+}
+</code></pre><h1 id="CSS页面引入方法"><a href="#CSS页面引入方法" class="headerlink" title="CSS页面引入方法"></a>CSS页面引入方法</h1><h2 id="内联式"><a href="#内联式" class="headerlink" title="内联式"></a>内联式</h2><p>通过标签的style属性，在标签上直接写样式。</p>
+<pre><code>&lt;div style=&quot;width:100px; height:100px; color:red &quot;&gt;......&lt;/div&gt;
+</code></pre><p>注：不建议使用</p>
+<h2 id="嵌入式"><a href="#嵌入式" class="headerlink" title="嵌入式"></a>嵌入式</h2><p>通过style标签，在网页上创建嵌入的样式表。</p>
+<pre><code>&lt;style type=&quot;text/css&quot;&gt;
+    div{ width:100px; height:100px; color:red }
+    ......
+&lt;/style&gt;
+</code></pre><p>注：在实际开发过程中，嵌入式多用于首页中，这可以使首页加载速度更快(如淘宝网)，其他页面使用外联式</p>
+<h2 id="外联式：通过link标签，链接到外部样式表到页面中。"><a href="#外联式：通过link标签，链接到外部样式表到页面中。" class="headerlink" title="外联式：通过link标签，链接到外部样式表到页面中。"></a>外联式：通过link标签，链接到外部样式表到页面中。</h2><pre><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/main.css&quot;&gt;
+</code></pre><p>注：在实际开发的过程中，建议使用第三种方式：外联式</p>
+<h1 id="常用的应用文本的css样式"><a href="#常用的应用文本的css样式" class="headerlink" title="常用的应用文本的css样式"></a>常用的应用文本的css样式</h1><pre><code>color 设置文字的颜色，如： color:red;
+
+font-size 设置文字的大小，如：font-size:12px;
+
+font-family 设置文字的字体，如：font-family:&apos;微软雅黑&apos;;
+
+注：如果设置字体样式后出现中文乱码，可以试试改成英文，如上例可以改为microsoft-Yahei
+
+font-style 设置字体是否倾斜，&apos;italic&apos;设置文字倾斜，&apos;normal&apos;设置不倾斜
+
+font-weight 设置文字是否加粗，bold 设置加粗 ，normal 设置不加粗
+
+font 可以同时设置文字的几个属性，但写的顺序有兼容问题，建议按照如下顺序写： 
+    font：是否加粗 字号/行高 字体；如： font:normal 12px/36px &apos;微软雅黑&apos;;
+
+line-height 设置文字的行高，如：line-height:24px;
+
+text-decoration 设置文字的下划线，如：text-decoration:none; 将文字下划线去掉
+
+text-indent 设置文字首行缩进，如：text-indent:24px; 设置文字首行缩进24px
+
+text-align 设置文字水平对齐方式，如text-align:center 设置文字水平居中
+</code></pre><h1 id="css颜色表示法"><a href="#css颜色表示法" class="headerlink" title="css颜色表示法"></a>css颜色表示法</h1><pre><code>css颜色值主要有三种表示方法：
+
+1、颜色名表示，比如：red 红色，gold 金色
+
+2、rgb表示，比如：rgb(255,0,0)表示红色
+
+3、16进制数值表示，比如：#ff0000 表示红色，这种可以简写成 #f00
+</code></pre><h1 id="页面引入案例"><a href="#页面引入案例" class="headerlink" title="页面引入案例"></a>页面引入案例</h1><h2 id="内联式-1"><a href="#内联式-1" class="headerlink" title="内联式"></a>内联式</h2><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS页面引入_内联式&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div style=&quot;width: 800px; height: 500px; color: gold&quot;&gt;
+        CSS是 Cascading Style Sheets 的首字母缩写，意思是层叠样式表。&lt;br /&gt;
+
+        为了让网页元素的样式更加丰富，也为了让网页的内容和样式能拆分开，CSS由此思想而诞生。&lt;br /&gt;
+
+        有了CSS，html中大部分表现样式的标签就废弃不用了，html只负责文档的结构和内容，表现形式完全交给CSS，html文档变得更加简洁。&lt;br /&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="嵌入式-1"><a href="#嵌入式-1" class="headerlink" title="嵌入式"></a>嵌入式</h2><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS页面引入_嵌入式&lt;/title&gt;
+
+    &lt;style type=&quot;text/css&quot;&gt;
+        div{
+            width: 800px;
+            height: 500px;
+            color: gold;
+
+            font-size: 24px;
+            font-family: &apos;微软雅黑&apos;;
+            text-align: center;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div&gt;
+        CSS是 Cascading Style Sheets 的首字母缩写，意思是层叠样式表。&lt;br /&gt;
+
+        为了让网页元素的样式更加丰富，也为了让网页的内容和样式能拆分开，CSS由此思想而诞生。&lt;br /&gt;
+
+        有了CSS，html中大部分表现样式的标签就废弃不用了，html只负责文档的结构和内容，表现形式完全交给CSS，html文档变得更加简洁。&lt;br /&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="外联式"><a href="#外联式" class="headerlink" title="外联式"></a>外联式</h2><p>文件所在目录</p>
+<pre><code>/前端
+    css外联式.html
+
+    /css
+        main.css
+</code></pre><p>如上所示，在css外联式.html文件 目录下，新建了一个css文件夹，在里面又新建了一个main.css文件</p>
+<pre><code>/前端/css外联式.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS页面引入_嵌入式&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/main.css&quot;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div&gt;
+        CSS是 Cascading Style Sheets 的首字母缩写，意思是层叠样式表。&lt;br /&gt;
+
+        为了让网页元素的样式更加丰富，也为了让网页的内容和样式能拆分开，CSS由此思想而诞生。&lt;br /&gt;
+
+        有了CSS，html中大部分表现样式的标签就废弃不用了，html只负责文档的结构和内容，表现形式完全交给CSS，html文档变得更加简洁。&lt;br /&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+
+/前端/css/main.css
+
+div{
+    width: 800px;
+    height: 500px;
+    color: gold;
+
+    font-size: 24px;
+    font-family: &apos;微软雅黑&apos;;
+    text-align: center;
+}
+</code></pre>
       
     </div>
     
@@ -482,8 +628,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/30/前端/CSS/01CSS的基本语法/" rel="next" title="CSS的基本语法">
-                <i class="fa fa-chevron-left"></i> CSS的基本语法
+              <a href="/2018/09/21/前端/HTML/10内嵌框架/" rel="next" title="内嵌框架">
+                <i class="fa fa-chevron-left"></i> 内嵌框架
               </a>
             
           </div>
@@ -491,6 +637,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/10/前端/CSS/02样式选择器/" rel="prev" title="样式选择器">
+                样式选择器 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -545,8 +695,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -610,6 +769,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#css基本语法"><span class="nav-number">1.</span> <span class="nav-text">css基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义方法"><span class="nav-number">1.1.</span> <span class="nav-text">定义方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS-注释"><span class="nav-number">1.2.</span> <span class="nav-text">CSS 注释</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS页面引入方法"><span class="nav-number">2.</span> <span class="nav-text">CSS页面引入方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#内联式"><span class="nav-number">2.1.</span> <span class="nav-text">内联式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#嵌入式"><span class="nav-number">2.2.</span> <span class="nav-text">嵌入式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#外联式：通过link标签，链接到外部样式表到页面中。"><span class="nav-number">2.3.</span> <span class="nav-text">外联式：通过link标签，链接到外部样式表到页面中。</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常用的应用文本的css样式"><span class="nav-number">3.</span> <span class="nav-text">常用的应用文本的css样式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#css颜色表示法"><span class="nav-number">4.</span> <span class="nav-text">css颜色表示法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#页面引入案例"><span class="nav-number">5.</span> <span class="nav-text">页面引入案例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#内联式-1"><span class="nav-number">5.1.</span> <span class="nav-text">内联式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#嵌入式-1"><span class="nav-number">5.2.</span> <span class="nav-text">嵌入式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#外联式"><span class="nav-number">5.3.</span> <span class="nav-text">外联式</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
