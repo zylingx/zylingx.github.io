@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="朝阳旅行者">
 <meta property="og:description" content="了解 浮动的特性及如何设置浮动与清除浮动">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-17T07:28:58.994Z">
+<meta property="og:updated_time" content="2018-10-18T01:23:24.611Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浮动">
 <meta name="twitter:description" content="了解 浮动的特性及如何设置浮动与清除浮动">
@@ -482,12 +482,12 @@
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre><h1 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h1><pre><code>父级上增加属性overflow：hidden
-在最后一个子元素的后面加一个空的div，给它样式属性 clear:both（不推荐）
+在最后一个子元素的后面加一个空的div，给它样式属性 clear:both(不推荐，会破坏结构，多出一个控件)
 使用成熟的清浮动样式类，clearfix
 
-.clearfix:after,.clearfix:before{ content: &quot;&quot;;display: table;}
-.clearfix:after{ clear:both;}
-.clearfix{zoom:1;}
+.clearfix:after,.clearfix:before{ content: &quot;&quot;;display: table;} /*清除margin-top塌陷*/
+.clearfix:after{ clear:both;}    /*使用样式清除浮动*/
+.clearfix{zoom:1;}    /*为了支持IE浏览器*/
 </code></pre>
       
     </div>
@@ -556,6 +556,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/18/前端/CSS/07定位/" rel="prev" title="定位">
+                定位 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -639,7 +643,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">79</span>
+                  <span class="site-state-item-count">96</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -650,7 +654,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -661,7 +665,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
